@@ -1,5 +1,6 @@
 /work/
 /output/
+/validation-results/
 __pycache__/
 *.py[cod]
 *.deb

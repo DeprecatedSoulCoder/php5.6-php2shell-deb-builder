@@ -18,7 +18,7 @@ An earlier manual Xenial build is not a validation of this script. Passing Pytho
 
 ## Quick start
 
-Requirements: Bash, a working Docker installation with Linux amd64 containers, internet access, and sufficient disk/RAM for a full PHP and C++ extension build. Start with 2 compiler jobs; gRPC can consume substantial RAM. Python 3 is needed on the host only for `--plan`.
+Requirements: Bash, a working Docker installation with Linux amd64 containers (the default), internet access, and sufficient disk/RAM for a full PHP and C++ extension build. Explicit native mode is also available on a matching disposable Ubuntu amd64 system. Start with 2 compiler jobs; gRPC can consume substantial RAM. Python 3 is needed on the host for `--plan`.
 
 Inspect the plan without downloads, package installation or compilation:
 
@@ -58,7 +58,29 @@ Run the original full core PHPT suite in addition to the required checks:
 
 This option is deliberately strict: any unexpected PHPT failure stops the run. Legacy tests can fail for environmental reasons; investigate those failures instead of labeling them as passes. The default runs the three patch-specific PHPTs, Apache checks and the selected extension smoke checks. External PECL suites are logged by their historical recipes; they are **not** a complete passing integration suite. Some extensions need external services for deeper tests.
 
-The first real build downloads the Ubuntu image and installs build dependencies **inside the container**. No PHP packages are installed on the host. No credentials or access to a private VM are needed. A target uses its own distribution's libraries; a Xenial `.deb` must not be reused on Bionic/Focal.
+In the default Docker mode the first real build downloads the Ubuntu image and installs build dependencies **inside the container**, without installing PHP packages on the host. No credentials or access to a private VM are needed. A target uses its own distribution's libraries; a Xenial `.deb` must not be reused on Bionic/Focal.
+
+### Native builds without Docker
+
+On a disposable Ubuntu VM that already runs the target release, run the same pipeline directly:
+
+```bash
+sudo ./build.sh --ubuntu 16.04 --native --jobs 2 --debug
+```
+
+For Bionic or Focal, substitute `18.04` or `20.04` **and run on that matching OS**. Native mode requires root, supports one target per invocation, and installs build dependencies, core PHP packages and header dependencies on the VM. It does not reset or reinstall the operating system. Begin with a fresh VM/snapshot if a clean environment is required. Use absolute `--work` and `--output` paths when running through sudo if needed.
+
+Service starts requested by package maintainer scripts are temporarily blocked during the build. The previous service policy is restored on normal completion or failure. Existing application services are not a suitable environment for this mode; use a disposable build/test VM. Review native logs before publishing them because they can contain local build paths.
+
+After a successful build, the optional native installation test installs the compatible catalog together and exercises CLI and Apache:
+
+```bash
+sudo python3 validation/run-native-install.py \
+  --release "$PWD/output/16.04" \
+  --evidence "$PWD/validation-results/16.04" --debug --apply
+```
+
+This test changes packages and Apache configuration and starts Apache, FPM, Memcached and Redis on the VM. It prefers APCu/OPcache and Imagick, excludes YAC/Xcache/Gmagick, simulates APT first, verifies installed versions and runs the extension smoke checks with all selected modules loaded together. It is an installation test for disposable VMs, not an unattended production deployment tool. Its raw results are ignored by Git; publish only reviewed/redacted evidence. All target status labels still require actual compilation and installation evidence.
 
 ## What it does
 

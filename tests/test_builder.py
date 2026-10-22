@@ -148,7 +148,7 @@ class BuilderTests(unittest.TestCase):
             self.assertNotEqual(result.returncode, 0)
 
     def test_legacy_python_syntax(self):
-        for directory in ['scripts', 'tools']:
+        for directory in ['scripts', 'tools', 'validation']:
             for path in (ROOT / directory).glob('*.py'):
                 ast.parse(path.read_text(), filename=str(path), feature_version=(3, 5))
 

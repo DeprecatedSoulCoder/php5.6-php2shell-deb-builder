@@ -17,7 +17,7 @@ Usage: ./build.sh --ubuntu 16.04|18.04|20.04|all [options]
   --plan               Print the plan without Docker, downloads or compilation
 
 All targets REQUIRE A COMPILATION TEST. No target is pre-certified.
-Requires Docker with Linux amd64 containers. Builds run only when invoked.
+Requires Docker, or --native on matching Ubuntu amd64. Builds run only when invoked.
 EOF
 }
 while (($#)); do
