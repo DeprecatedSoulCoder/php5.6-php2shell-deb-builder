@@ -134,8 +134,8 @@ These steps belong to the operator. **Test on an isolated disposable VM matching
 Clone the repository and inspect the build plan before starting a compilation:
 
 ```bash
-git clone https://github.com/DeprecatedSoulCoder/php56-php2shell-deb-builder.git
-cd php56-php2shell-deb-builder
+git clone https://github.com/DeprecatedSoulCoder/php5.6-php2shell-deb-builder.git
+cd php5.6-php2shell-deb-builder
 ./build.sh --ubuntu 20.04 --plan
 ./build.sh --ubuntu 20.04 --jobs 2
 ```

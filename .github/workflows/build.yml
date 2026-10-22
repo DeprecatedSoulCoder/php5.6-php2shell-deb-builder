@@ -1,4 +1,4 @@
-name: Manual compilation tests (all targets initially unverified)
+name: Manual compilation tests (Docker)
 on:
   workflow_dispatch:
     inputs:
