@@ -114,7 +114,8 @@ php_admin_flag display_errors Off
         run(['apache2', '-f', config, '-t'], evidence, 'apache-installed-configtest')
         with (evidence / 'apache-installed-process.log').open('w') as log:
             process = subprocess.Popen(['apache2', '-f', str(config), '-DFOREGROUND'],
-                                       stdout=log, stderr=subprocess.STDOUT, env=dict(os.environ, MIBS=''))
+                                       stdout=log, stderr=subprocess.STDOUT, start_new_session=True,
+                                       env=dict(os.environ, MIBS=''))
             for attempt in range(50):
                 try:
                     info = http_json(18057, '/probe.php')
