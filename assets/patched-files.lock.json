@@ -1,0 +1,16 @@
+{
+  "Zend/zend_alloc.c": "ad65f5f8d2f31f7aff88ee32640425a73a68759789c8264c89d3823445fdddee",
+  "Zend/zend_alloc.h": "9f42bb3f5f6b0a95ac424b7d4e0b9502ec74f1ba8987b21ee56bcd910c9159f2",
+  "ext/session/php_session.h": "d16f88213778535d56742fb5b9d8eafd2cfc613eeadbdfb202ecc84509e0adf3",
+  "ext/session/session.c": "02233d9895f045855ab1d12f37da18640e5c7124b6dd3b3ad53d61266977748f",
+  "ext/session/tests/rfc1867_incomplete_class_reserved_props.phpt": "81dc0cb6cd878d16aff014075e1bf759fb640e363f83a791ac9726fea40b7abb",
+  "ext/session/tests/rfc1867_no_user_code.phpt": "5871277875865128804ba72d9616d89453dbe364501e32b426e8f4358342e07b",
+  "ext/standard/php_incomplete_class.h": "5bde61ba02f8758efa6804d10d8d2f25e6be1dd4a23c34e83bc51f81041d6ff6",
+  "ext/standard/php_var.h": "8a16af01b833f513a5bc11d6a923ab20b940482a37dc99b7b510d49efb4cf7f4",
+  "ext/standard/tests/serialize/incomplete_class_raw_payload_markers.phpt": "70ca8e1af205957d831959f552f91b2ca9c735ef644469dd6d5accd9190d4374",
+  "ext/standard/var.c": "b9248618344629e44b5ee3f8d03d702594d2a3a6b3cc232e85634996447f83ae",
+  "ext/standard/var_unserializer.c": "61c023c3af1e8dcb4048278aaf39ff32b43917b179eaa4a6f32cd91ebb4120a2",
+  "ext/standard/var_unserializer.re": "07f6350dcf611610521982cdd14ec305617e3906cc40901656f35b1b8dd04672",
+  "main/main.c": "0c4caa0c2894374f8b4bc50aec2e19afd8da46f6da4d5ebaa87109b21d5bc2d4",
+  "main/rfc1867.c": "826fa5be949ce148ec0bafd7cd09f5589096cf7af8960955d6c118ecd33f1c06"
+}

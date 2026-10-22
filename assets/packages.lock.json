@@ -1,0 +1,476 @@
+{
+  "libapache2-mod-php5.6": {
+    "source": "php5.6"
+  },
+  "libapache2-mod-php5.6-dbgsym": {
+    "source": "php5.6"
+  },
+  "libphp5.6-embed": {
+    "source": "php5.6"
+  },
+  "libphp5.6-embed-dbgsym": {
+    "source": "php5.6"
+  },
+  "php5.6": {
+    "source": "php5.6"
+  },
+  "php5.6-amqp": {
+    "source": "php-amqp"
+  },
+  "php5.6-amqp-dbgsym": {
+    "source": "php-amqp"
+  },
+  "php5.6-apcu": {
+    "source": "php-apcu"
+  },
+  "php5.6-apcu-dbgsym": {
+    "source": "php-apcu"
+  },
+  "php5.6-bcmath": {
+    "source": "php5.6"
+  },
+  "php5.6-bcmath-dbgsym": {
+    "source": "php5.6"
+  },
+  "php5.6-bz2": {
+    "source": "php5.6"
+  },
+  "php5.6-bz2-dbgsym": {
+    "source": "php5.6"
+  },
+  "php5.6-cgi": {
+    "source": "php5.6"
+  },
+  "php5.6-cgi-dbgsym": {
+    "source": "php5.6"
+  },
+  "php5.6-cli": {
+    "source": "php5.6"
+  },
+  "php5.6-cli-dbgsym": {
+    "source": "php5.6"
+  },
+  "php5.6-common": {
+    "source": "php5.6"
+  },
+  "php5.6-common-dbgsym": {
+    "source": "php5.6"
+  },
+  "php5.6-curl": {
+    "source": "php5.6"
+  },
+  "php5.6-curl-dbgsym": {
+    "source": "php5.6"
+  },
+  "php5.6-dba": {
+    "source": "php5.6"
+  },
+  "php5.6-dba-dbgsym": {
+    "source": "php5.6"
+  },
+  "php5.6-dbg": {
+    "source": "php5.6"
+  },
+  "php5.6-dev": {
+    "source": "php5.6"
+  },
+  "php5.6-enchant": {
+    "source": "php5.6"
+  },
+  "php5.6-enchant-dbgsym": {
+    "source": "php5.6"
+  },
+  "php5.6-fpm": {
+    "source": "php5.6"
+  },
+  "php5.6-fpm-dbgsym": {
+    "source": "php5.6"
+  },
+  "php5.6-gd": {
+    "source": "php5.6"
+  },
+  "php5.6-gd-dbgsym": {
+    "source": "php5.6"
+  },
+  "php5.6-gearman": {
+    "source": "php-gearman"
+  },
+  "php5.6-gearman-dbgsym": {
+    "source": "php-gearman"
+  },
+  "php5.6-geoip": {
+    "source": "php-geoip"
+  },
+  "php5.6-geoip-dbgsym": {
+    "source": "php-geoip"
+  },
+  "php5.6-gmagick": {
+    "source": "php-gmagick"
+  },
+  "php5.6-gmagick-dbgsym": {
+    "source": "php-gmagick"
+  },
+  "php5.6-gmp": {
+    "source": "php5.6"
+  },
+  "php5.6-gmp-dbgsym": {
+    "source": "php5.6"
+  },
+  "php5.6-gnupg": {
+    "source": "php-gnupg"
+  },
+  "php5.6-gnupg-dbgsym": {
+    "source": "php-gnupg"
+  },
+  "php5.6-grpc": {
+    "source": "php-grpc"
+  },
+  "php5.6-grpc-dbgsym": {
+    "source": "php-grpc"
+  },
+  "php5.6-http": {
+    "source": "php-pecl-http"
+  },
+  "php5.6-http-dbgsym": {
+    "source": "php-pecl-http"
+  },
+  "php5.6-igbinary": {
+    "source": "php-igbinary"
+  },
+  "php5.6-igbinary-dbgsym": {
+    "source": "php-igbinary"
+  },
+  "php5.6-imagick": {
+    "source": "php-imagick"
+  },
+  "php5.6-imagick-dbgsym": {
+    "source": "php-imagick"
+  },
+  "php5.6-imap": {
+    "source": "php5.6"
+  },
+  "php5.6-imap-dbgsym": {
+    "source": "php5.6"
+  },
+  "php5.6-inotify": {
+    "source": "php-inotify"
+  },
+  "php5.6-inotify-dbgsym": {
+    "source": "php-inotify"
+  },
+  "php5.6-interbase": {
+    "source": "php5.6"
+  },
+  "php5.6-interbase-dbgsym": {
+    "source": "php5.6"
+  },
+  "php5.6-intl": {
+    "source": "php5.6"
+  },
+  "php5.6-intl-dbgsym": {
+    "source": "php5.6"
+  },
+  "php5.6-json": {
+    "source": "php5.6"
+  },
+  "php5.6-json-dbgsym": {
+    "source": "php5.6"
+  },
+  "php5.6-ldap": {
+    "source": "php5.6"
+  },
+  "php5.6-ldap-dbgsym": {
+    "source": "php5.6"
+  },
+  "php5.6-lua": {
+    "source": "php-lua"
+  },
+  "php5.6-lua-dbgsym": {
+    "source": "php-lua"
+  },
+  "php5.6-lz4": {
+    "source": "php-lz4"
+  },
+  "php5.6-lz4-dbgsym": {
+    "source": "php-lz4"
+  },
+  "php5.6-mailparse": {
+    "source": "php-mailparse"
+  },
+  "php5.6-mailparse-dbgsym": {
+    "source": "php-mailparse"
+  },
+  "php5.6-mbstring": {
+    "source": "php5.6"
+  },
+  "php5.6-mbstring-dbgsym": {
+    "source": "php5.6"
+  },
+  "php5.6-mcrypt": {
+    "source": "php5.6"
+  },
+  "php5.6-mcrypt-dbgsym": {
+    "source": "php5.6"
+  },
+  "php5.6-memcache": {
+    "source": "php-memcache"
+  },
+  "php5.6-memcache-dbgsym": {
+    "source": "php-memcache"
+  },
+  "php5.6-memcached": {
+    "source": "php-memcached"
+  },
+  "php5.6-memcached-dbgsym": {
+    "source": "php-memcached"
+  },
+  "php5.6-mongo": {
+    "source": "php-mongo"
+  },
+  "php5.6-mongo-dbgsym": {
+    "source": "php-mongo"
+  },
+  "php5.6-mongodb": {
+    "source": "php-mongodb"
+  },
+  "php5.6-mongodb-dbgsym": {
+    "source": "php-mongodb"
+  },
+  "php5.6-msgpack": {
+    "source": "php-msgpack"
+  },
+  "php5.6-msgpack-dbgsym": {
+    "source": "php-msgpack"
+  },
+  "php5.6-mysql": {
+    "source": "php5.6"
+  },
+  "php5.6-mysql-dbgsym": {
+    "source": "php5.6"
+  },
+  "php5.6-mysqlnd-ms": {
+    "source": "php-mysqlnd-ms"
+  },
+  "php5.6-mysqlnd-ms-dbgsym": {
+    "source": "php-mysqlnd-ms"
+  },
+  "php5.6-oauth": {
+    "source": "php-oauth"
+  },
+  "php5.6-oauth-dbgsym": {
+    "source": "php-oauth"
+  },
+  "php5.6-odbc": {
+    "source": "php5.6"
+  },
+  "php5.6-odbc-dbgsym": {
+    "source": "php5.6"
+  },
+  "php5.6-opcache": {
+    "source": "php5.6"
+  },
+  "php5.6-opcache-dbgsym": {
+    "source": "php5.6"
+  },
+  "php5.6-pgsql": {
+    "source": "php5.6"
+  },
+  "php5.6-pgsql-dbgsym": {
+    "source": "php5.6"
+  },
+  "php5.6-phalcon3": {
+    "source": "php-phalcon3"
+  },
+  "php5.6-phalcon3-dbgsym": {
+    "source": "php-phalcon3"
+  },
+  "php5.6-phpdbg": {
+    "source": "php5.6"
+  },
+  "php5.6-phpdbg-dbgsym": {
+    "source": "php5.6"
+  },
+  "php5.6-propro": {
+    "source": "php-propro"
+  },
+  "php5.6-propro-dbgsym": {
+    "source": "php-propro"
+  },
+  "php5.6-protobuf": {
+    "source": "php-protobuf"
+  },
+  "php5.6-protobuf-dbgsym": {
+    "source": "php-protobuf"
+  },
+  "php5.6-ps": {
+    "source": "php-ps"
+  },
+  "php5.6-ps-dbgsym": {
+    "source": "php-ps"
+  },
+  "php5.6-pspell": {
+    "source": "php5.6"
+  },
+  "php5.6-pspell-dbgsym": {
+    "source": "php5.6"
+  },
+  "php5.6-radius": {
+    "source": "php-radius"
+  },
+  "php5.6-radius-dbgsym": {
+    "source": "php-radius"
+  },
+  "php5.6-raphf": {
+    "source": "php-raphf"
+  },
+  "php5.6-raphf-dbgsym": {
+    "source": "php-raphf"
+  },
+  "php5.6-readline": {
+    "source": "php5.6"
+  },
+  "php5.6-readline-dbgsym": {
+    "source": "php5.6"
+  },
+  "php5.6-recode": {
+    "source": "php5.6"
+  },
+  "php5.6-recode-dbgsym": {
+    "source": "php5.6"
+  },
+  "php5.6-redis": {
+    "source": "php-redis"
+  },
+  "php5.6-redis-dbgsym": {
+    "source": "php-redis"
+  },
+  "php5.6-rrd": {
+    "source": "php-rrd"
+  },
+  "php5.6-rrd-dbgsym": {
+    "source": "php-rrd"
+  },
+  "php5.6-smbclient": {
+    "source": "php-smbclient"
+  },
+  "php5.6-smbclient-dbgsym": {
+    "source": "php-smbclient"
+  },
+  "php5.6-snmp": {
+    "source": "php5.6"
+  },
+  "php5.6-snmp-dbgsym": {
+    "source": "php5.6"
+  },
+  "php5.6-soap": {
+    "source": "php5.6"
+  },
+  "php5.6-soap-dbgsym": {
+    "source": "php5.6"
+  },
+  "php5.6-solr": {
+    "source": "php-solr"
+  },
+  "php5.6-solr-dbgsym": {
+    "source": "php-solr"
+  },
+  "php5.6-sqlite3": {
+    "source": "php5.6"
+  },
+  "php5.6-sqlite3-dbgsym": {
+    "source": "php5.6"
+  },
+  "php5.6-ssh2": {
+    "source": "php-ssh2"
+  },
+  "php5.6-ssh2-dbgsym": {
+    "source": "php-ssh2"
+  },
+  "php5.6-stomp": {
+    "source": "php-stomp"
+  },
+  "php5.6-stomp-dbgsym": {
+    "source": "php-stomp"
+  },
+  "php5.6-sybase": {
+    "source": "php5.6"
+  },
+  "php5.6-sybase-dbgsym": {
+    "source": "php5.6"
+  },
+  "php5.6-tidy": {
+    "source": "php5.6"
+  },
+  "php5.6-tidy-dbgsym": {
+    "source": "php5.6"
+  },
+  "php5.6-uploadprogress": {
+    "source": "php-uploadprogress"
+  },
+  "php5.6-uploadprogress-dbgsym": {
+    "source": "php-uploadprogress"
+  },
+  "php5.6-xcache": {
+    "source": "xcache"
+  },
+  "php5.6-xcache-dbgsym": {
+    "source": "xcache"
+  },
+  "php5.6-xdebug": {
+    "source": "xdebug"
+  },
+  "php5.6-xdebug-dbgsym": {
+    "source": "xdebug"
+  },
+  "php5.6-xhprof": {
+    "source": "php-xhprof"
+  },
+  "php5.6-xhprof-dbgsym": {
+    "source": "php-xhprof"
+  },
+  "php5.6-xml": {
+    "source": "php5.6"
+  },
+  "php5.6-xml-dbgsym": {
+    "source": "php5.6"
+  },
+  "php5.6-xmlrpc": {
+    "source": "php5.6"
+  },
+  "php5.6-xmlrpc-dbgsym": {
+    "source": "php5.6"
+  },
+  "php5.6-xsl": {
+    "source": "php5.6"
+  },
+  "php5.6-yac": {
+    "source": "php-yac"
+  },
+  "php5.6-yac-dbgsym": {
+    "source": "php-yac"
+  },
+  "php5.6-yaml": {
+    "source": "php-yaml"
+  },
+  "php5.6-yaml-dbgsym": {
+    "source": "php-yaml"
+  },
+  "php5.6-zip": {
+    "source": "php5.6"
+  },
+  "php5.6-zip-dbgsym": {
+    "source": "php5.6"
+  },
+  "php5.6-zmq": {
+    "source": "php-zmq"
+  },
+  "php5.6-zmq-dbgsym": {
+    "source": "php-zmq"
+  },
+  "php5.6-zstd": {
+    "source": "php-zstd"
+  },
+  "php5.6-zstd-dbgsym": {
+    "source": "php-zstd"
+  }
+}

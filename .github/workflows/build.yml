@@ -1,0 +1,65 @@
+name: Manual compilation tests (all targets initially unverified)
+on:
+  workflow_dispatch:
+    inputs:
+      ubuntu:
+        description: Ubuntu target requiring a real compilation test
+        type: choice
+        options: ['all', '16.04', '18.04', '20.04']
+        default: all
+      core_only:
+        description: Build/test only the core, including mod_php
+        type: boolean
+        default: false
+      extensions:
+        description: Optional comma-separated extensions; empty means the full catalog
+        type: string
+        default: ''
+      debug:
+        description: Build matching debug packages
+        type: boolean
+        default: false
+permissions:
+  contents: read
+jobs:
+  compilation-test:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+    strategy:
+      fail-fast: false
+      matrix:
+        ubuntu: ${{ fromJSON(inputs.ubuntu == 'all' && '["16.04","18.04","20.04"]' || format('["{0}"]', inputs.ubuntu)) }}
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Compile and run required runtime checks
+        env:
+          TARGET: ${{ matrix.ubuntu }}
+          CORE_ONLY: ${{ inputs.core_only }}
+          EXTENSIONS: ${{ inputs.extensions }}
+          DEBUG: ${{ inputs.debug }}
+        run: |
+          args=(--ubuntu "$TARGET" --jobs 2)
+          [[ "$CORE_ONLY" != true ]] || args+=(--core-only)
+          [[ -z "$EXTENSIONS" ]] || args+=(--extensions "$EXTENSIONS")
+          [[ "$DEBUG" != true ]] || args+=(--debug)
+          ./build.sh "${args[@]}"
+      - name: Record actual image identity
+        if: always()
+        env:
+          TARGET: ${{ matrix.ubuntu }}
+        run: |
+          mkdir -p "output/$TARGET/evidence"
+          docker image inspect "ubuntu:$TARGET" > "output/$TARGET/evidence/ubuntu-image.json" || true
+          git rev-parse HEAD > "output/$TARGET/evidence/builder-commit.txt"
+      - name: Upload evidence only (no public binary release)
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: compilation-evidence-ubuntu-${{ matrix.ubuntu }}
+          path: |
+            output/${{ matrix.ubuntu }}/evidence/
+            output/${{ matrix.ubuntu }}/build-status.json
+            output/${{ matrix.ubuntu }}/package-catalog.json
+            output/${{ matrix.ubuntu }}/debug-catalog.json
+            output/${{ matrix.ubuntu }}/SHA256SUMS
+          retention-days: 14

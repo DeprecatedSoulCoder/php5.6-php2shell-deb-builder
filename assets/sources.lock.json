@@ -1,0 +1,842 @@
+[
+  {
+    "source": "php-amqp",
+    "version": "1.10.2-8+ubuntu16.04.1+deb.sury.org+1",
+    "dsc": "php-amqp_1.10.2-8+ubuntu16.04.1+deb.sury.org+1.dsc",
+    "url": "https://ondrej-ppa-php.program-language.mirror.naxonet.net/ubuntu/pool/main/p/php-amqp/",
+    "files": [
+      {
+        "filename": "php-amqp_1.10.2.orig.tar.gz",
+        "sha256": "0ebc61052eb12406dddf5eabfe8749a12d52c566816b8aab04fb9916d0c26ed2",
+        "size": 107350
+      },
+      {
+        "filename": "php-amqp_1.10.2-8+ubuntu16.04.1+deb.sury.org+1.debian.tar.xz",
+        "sha256": "61c1a4aa0046afa0c804f3e257f93409505d018d19d3cf6ee526a621b49f56fc",
+        "size": 13268
+      }
+    ],
+    "dsc_sha256": "a84804618337e035bfc9dfd8c9deb4da1645ff0c96fc443ce40d4ac27993b246"
+  },
+  {
+    "source": "php-apcu",
+    "version": "5.1.19+4.0.11-7+ubuntu16.04.1+deb.sury.org+1",
+    "dsc": "php-apcu_5.1.19+4.0.11-7+ubuntu16.04.1+deb.sury.org+1.dsc",
+    "url": "https://ondrej-ppa-php.program-language.mirror.naxonet.net/ubuntu/pool/main/p/php-apcu/",
+    "files": [
+      {
+        "filename": "php-apcu_5.1.19+4.0.11.orig.tar.xz",
+        "sha256": "545fbbf223cffebe02d4c6e1562af750e697469f39fe0e551a2e175a83fdd905",
+        "size": 130104
+      },
+      {
+        "filename": "php-apcu_5.1.19+4.0.11-7+ubuntu16.04.1+deb.sury.org+1.debian.tar.xz",
+        "sha256": "c540828fe51197680dbb283ab9c4522fa24d034e245e43d884f2ff17f2fb3a21",
+        "size": 6092
+      }
+    ],
+    "dsc_sha256": "652997968eee17c7421805186374040fadaa8055241cc7c29996eb3bdaffd76e"
+  },
+  {
+    "source": "php-geoip",
+    "version": "1.1.1-12+ubuntu16.04.1+deb.sury.org+1",
+    "dsc": "php-geoip_1.1.1-12+ubuntu16.04.1+deb.sury.org+1.dsc",
+    "url": "https://ondrej-ppa-php.program-language.mirror.naxonet.net/ubuntu/pool/main/p/php-geoip/",
+    "files": [
+      {
+        "filename": "php-geoip_1.1.1.orig.tar.gz",
+        "sha256": "b2d05c03019d46135c249b5a7fa0dbd43ca5ee98aea8ed807bc7aa90ac8c0f06",
+        "size": 13004
+      },
+      {
+        "filename": "php-geoip_1.1.1-12+ubuntu16.04.1+deb.sury.org+1.debian.tar.xz",
+        "sha256": "79d7033d85791bc42bcc939484c964b99ff4b1c2601c81644ea1f579c6944f93",
+        "size": 7660
+      }
+    ],
+    "dsc_sha256": "44f1a148abb29b5171667e4904906fe628fa073315bce42e0f0195d79bc3ca43"
+  },
+  {
+    "source": "php-gmagick",
+    "version": "2.0.6~rc1+1.1.7~rc3-5+ubuntu16.04.1+deb.sury.org+1",
+    "dsc": "php-gmagick_2.0.6~rc1+1.1.7~rc3-5+ubuntu16.04.1+deb.sury.org+1.dsc",
+    "url": "https://ondrej-ppa-php.program-language.mirror.naxonet.net/ubuntu/pool/main/p/php-gmagick/",
+    "files": [
+      {
+        "filename": "php-gmagick_2.0.6~rc1+1.1.7~rc3.orig.tar.xz",
+        "sha256": "fadb1aac746fcbe8a3b2b220bc3c5e416bcc251818631048a6e43d528e4b86ab",
+        "size": 119696
+      },
+      {
+        "filename": "php-gmagick_2.0.6~rc1+1.1.7~rc3-5+ubuntu16.04.1+deb.sury.org+1.debian.tar.xz",
+        "sha256": "0a64009c76ae5578cb50b4c6bfbacbc1a11035eeb417f0085869065d1bb520d3",
+        "size": 4784
+      }
+    ],
+    "dsc_sha256": "ef4e78fe536a850968b4cd2263c72965b2e933dc03595df90c901734fd64d9cd"
+  },
+  {
+    "source": "php-gearman",
+    "version": "2.1.0+1.1.2-5+ubuntu16.04.1+deb.sury.org+1",
+    "dsc": "php-gearman_2.1.0+1.1.2-5+ubuntu16.04.1+deb.sury.org+1.dsc",
+    "url": "https://ondrej-ppa-php.program-language.mirror.naxonet.net/ubuntu/pool/main/p/php-gearman/",
+    "files": [
+      {
+        "filename": "php-gearman_2.1.0+1.1.2.orig.tar.xz",
+        "sha256": "7b549b0c2f6e63a6413f177615117848c855124b6438d94f14417741d0d37ae1",
+        "size": 50268
+      },
+      {
+        "filename": "php-gearman_2.1.0+1.1.2-5+ubuntu16.04.1+deb.sury.org+1.debian.tar.xz",
+        "sha256": "12eaf282bbaa3b4c694446d26c1c1fd2ee5d83966c2038f74469dcc61b86623c",
+        "size": 4496
+      }
+    ],
+    "dsc_sha256": "fa46f8a4dcf1b47b8692c8c7b844200f7a72be14307de3a09ac046ac30967645"
+  },
+  {
+    "source": "php5.6",
+    "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1",
+    "dsc": "php5.6_5.6.40-50+ubuntu16.04.1+deb.sury.org+1.dsc",
+    "url": "https://ondrej-ppa-php.program-language.mirror.naxonet.net/ubuntu/pool/main/p/php5.6/",
+    "files": [
+      {
+        "filename": "php5.6_5.6.40.orig.tar.xz",
+        "sha256": "1369a51eee3995d7fbd1c5342e5cc917760e276d561595b6052b21ace2656d1c",
+        "size": 12472236
+      },
+      {
+        "filename": "php5.6_5.6.40-50+ubuntu16.04.1+deb.sury.org+1.debian.tar.xz",
+        "sha256": "cef8068b709d16f148102f3c8f86f3fe6bbebf936d4249a8745c9586e3870993",
+        "size": 1437024
+      }
+    ],
+    "dsc_sha256": "391167ad0bb3df7156cd3bc3766af6635b329b75bb32b93c2256ec72de05a5e8"
+  },
+  {
+    "source": "php-gnupg",
+    "version": "1.5.0~rc2+1.4.0-1+ubuntu16.04.1+deb.sury.org+1",
+    "dsc": "php-gnupg_1.5.0~rc2+1.4.0-1+ubuntu16.04.1+deb.sury.org+1.dsc",
+    "url": "https://ondrej-ppa-php.program-language.mirror.naxonet.net/ubuntu/pool/main/p/php-gnupg/",
+    "files": [
+      {
+        "filename": "php-gnupg_1.5.0~rc2+1.4.0.orig.tar.xz",
+        "sha256": "9011fb8d500a2e0716ce97276d4aabc5dfe08eba1636af9bf57604bde2ee05c5",
+        "size": 37336
+      },
+      {
+        "filename": "php-gnupg_1.5.0~rc2+1.4.0-1+ubuntu16.04.1+deb.sury.org+1.debian.tar.xz",
+        "sha256": "0ef7758221037de69aa761f67872833bfde105da18590fc66d163ff47bbc2a13",
+        "size": 2996
+      }
+    ],
+    "dsc_sha256": "81361f6f58349d255cef0ec6fbd2c9a040a16d9c9adbe89499bda387bc345680"
+  },
+  {
+    "source": "php-pecl-http",
+    "version": "4.0.0+3.2.4+2.6.0-7+ubuntu16.04.1+deb.sury.org+1",
+    "dsc": "php-pecl-http_4.0.0+3.2.4+2.6.0-7+ubuntu16.04.1+deb.sury.org+1.dsc",
+    "url": "https://ondrej-ppa-php.program-language.mirror.naxonet.net/ubuntu/pool/main/p/php-pecl-http/",
+    "files": [
+      {
+        "filename": "php-pecl-http_4.0.0+3.2.4+2.6.0.orig.tar.xz",
+        "sha256": "987d417022949fda5c9f401d72c93e466f251e78987269c66ce3c74ef297da30",
+        "size": 230548
+      },
+      {
+        "filename": "php-pecl-http_4.0.0+3.2.4+2.6.0-7+ubuntu16.04.1+deb.sury.org+1.debian.tar.xz",
+        "sha256": "eba46d430e45b564c174ed6b8af533e9937d47d0e8b8a2957904d077f1252a7d",
+        "size": 5264
+      }
+    ],
+    "dsc_sha256": "168ef07a4585cde12c44166ee9b4de07bb4c5d7d279bdb2052ea538616e20899"
+  },
+  {
+    "source": "php-igbinary",
+    "version": "3.2.1+2.0.8-6+ubuntu16.04.1+deb.sury.org+1",
+    "dsc": "php-igbinary_3.2.1+2.0.8-6+ubuntu16.04.1+deb.sury.org+1.dsc",
+    "url": "https://ondrej-ppa-php.program-language.mirror.naxonet.net/ubuntu/pool/main/p/php-igbinary/",
+    "files": [
+      {
+        "filename": "php-igbinary_3.2.1+2.0.8.orig.tar.xz",
+        "sha256": "63686b56aeaa5dc0daf7882462bf58d57fe74d7c39fef29c64432d1e3bfbf4f8",
+        "size": 81340
+      },
+      {
+        "filename": "php-igbinary_3.2.1+2.0.8-6+ubuntu16.04.1+deb.sury.org+1.debian.tar.xz",
+        "sha256": "adb4710aea0db922939f1c51e7ecea07710bc44d0ecf5f517598604a6b346570",
+        "size": 4752
+      }
+    ],
+    "dsc_sha256": "ccc6b2ba6bde95fd985f9c3ebe86c6bad022af05c5cd6b49bb8a24c144ac3ae3"
+  },
+  {
+    "source": "php-imagick",
+    "version": "3.4.4+php8.0+3.4.4-7+ubuntu16.04.1+deb.sury.org+1",
+    "dsc": "php-imagick_3.4.4+php8.0+3.4.4-7+ubuntu16.04.1+deb.sury.org+1.dsc",
+    "url": "https://ondrej-ppa-php.program-language.mirror.naxonet.net/ubuntu/pool/main/p/php-imagick/",
+    "files": [
+      {
+        "filename": "php-imagick_3.4.4+php8.0+3.4.4.orig.tar.xz",
+        "sha256": "190b49d1aa562b529529b72c92ccaa25ddd9a7a400e1f486134971f912d75972",
+        "size": 199196
+      },
+      {
+        "filename": "php-imagick_3.4.4+php8.0+3.4.4-7+ubuntu16.04.1+deb.sury.org+1.debian.tar.xz",
+        "sha256": "80ec60dd4506f8a0071019025af66cfec70d30e42a89efdc04b83fcfa68ed0fd",
+        "size": 23524
+      }
+    ],
+    "dsc_sha256": "7f225ec83ce73d7957f7b91c682874c37aba4239726576ea92a2e1adc9325e07"
+  },
+  {
+    "source": "php-grpc",
+    "version": "1.36.0+1.33.1-1+ubuntu16.04.1+deb.sury.org+1",
+    "dsc": "php-grpc_1.36.0+1.33.1-1+ubuntu16.04.1+deb.sury.org+1.dsc",
+    "url": "https://ondrej-ppa-php.program-language.mirror.naxonet.net/ubuntu/pool/main/p/php-grpc/",
+    "files": [
+      {
+        "filename": "php-grpc_1.36.0+1.33.1.orig.tar.xz",
+        "sha256": "a02cfd3e38f18c38908ad915cf90ae6f6f7030879d844d74938e56a8db43527f",
+        "size": 5876352
+      },
+      {
+        "filename": "php-grpc_1.36.0+1.33.1-1+ubuntu16.04.1+deb.sury.org+1.debian.tar.xz",
+        "sha256": "bb03f906915b656171827382ccca3da33c3e1aedddc4ce98610ed5a3e448f9ec",
+        "size": 3120
+      }
+    ],
+    "dsc_sha256": "53c03658c7084e1a01614fab521ee63317a540c6c00a2493d8605056b465bbcd"
+  },
+  {
+    "source": "php-inotify",
+    "version": "3.0.0+0.1.6-1+ubuntu16.04.1+deb.sury.org+1",
+    "dsc": "php-inotify_3.0.0+0.1.6-1+ubuntu16.04.1+deb.sury.org+1.dsc",
+    "url": "https://ondrej-ppa-php.program-language.mirror.naxonet.net/ubuntu/pool/main/p/php-inotify/",
+    "files": [
+      {
+        "filename": "php-inotify_3.0.0+0.1.6.orig.tar.xz",
+        "sha256": "8738142ea3d14d73e3223c454abfbb8a95689cd0e84b0e9953975fbe50b442d4",
+        "size": 8780
+      },
+      {
+        "filename": "php-inotify_3.0.0+0.1.6-1+ubuntu16.04.1+deb.sury.org+1.debian.tar.xz",
+        "sha256": "1ba2158ac62eae9e7788cf758adaa230712b2a666c0a9c47045e962137661455",
+        "size": 2796
+      }
+    ],
+    "dsc_sha256": "6bb9194e0ebcc99b0930c55633e0c885c6459b73c061bab79fcad54796dbde53"
+  },
+  {
+    "source": "php-lua",
+    "version": "2.0.7+1.1.0-8+ubuntu16.04.1+deb.sury.org+1",
+    "dsc": "php-lua_2.0.7+1.1.0-8+ubuntu16.04.1+deb.sury.org+1.dsc",
+    "url": "https://ondrej-ppa-php.program-language.mirror.naxonet.net/ubuntu/pool/main/p/php-lua/",
+    "files": [
+      {
+        "filename": "php-lua_2.0.7+1.1.0.orig.tar.xz",
+        "sha256": "895561fc2d1e49d401f40f297050e3a66227657c1fc79407de69ee5edc8ffa35",
+        "size": 17208
+      },
+      {
+        "filename": "php-lua_2.0.7+1.1.0-8+ubuntu16.04.1+deb.sury.org+1.debian.tar.xz",
+        "sha256": "1f35748418118a194f4c0630bb4f79014fea86fd77a8c40bcf70414fe98c6e1e",
+        "size": 7384
+      }
+    ],
+    "dsc_sha256": "ae04ebe6677168702d9d16d25b34e4c6501dda9bd1c5264fe825a21fd632f265"
+  },
+  {
+    "source": "php-lz4",
+    "version": "0.4.3-2+ubuntu16.04.1+deb.sury.org+1",
+    "dsc": "php-lz4_0.4.3-2+ubuntu16.04.1+deb.sury.org+1.dsc",
+    "url": "https://ondrej-ppa-php.program-language.mirror.naxonet.net/ubuntu/pool/main/p/php-lz4/",
+    "files": [
+      {
+        "filename": "php-lz4_0.4.3.orig.tar.gz",
+        "sha256": "65f9b633a07d4cb356d4ed005878aec7788a1c62cb8e2a9038b18b486bb4fdb8",
+        "size": 68774
+      },
+      {
+        "filename": "php-lz4_0.4.3-2+ubuntu16.04.1+deb.sury.org+1.debian.tar.xz",
+        "sha256": "37b57f57e21cccd3b3a8c2435bcae67da19d6f5a155affe300e3d09af1a59ed8",
+        "size": 2316
+      }
+    ],
+    "dsc_sha256": "a395b2ccd8ed65abb97fff52775ed9950fc08810175163829da5ab725c1a06a1"
+  },
+  {
+    "source": "php-memcache",
+    "version": "8.0+4.0.5.2+3.0.9~20170802.e702b5f9+-1+ubuntu16.04.1+deb.sury.org+2",
+    "dsc": "php-memcache_8.0+4.0.5.2+3.0.9~20170802.e702b5f9+-1+ubuntu16.04.1+deb.sury.org+2.dsc",
+    "url": "https://ondrej-ppa-php.program-language.mirror.naxonet.net/ubuntu/pool/main/p/php-memcache/",
+    "files": [
+      {
+        "filename": "php-memcache_8.0+4.0.5.2+3.0.9~20170802.e702b5f9+.orig.tar.xz",
+        "sha256": "d8a0bb350b9b54350d0845af7a10f4bea0f4a93a62cb58efd1d969565d0d5a72",
+        "size": 80556
+      },
+      {
+        "filename": "php-memcache_8.0+4.0.5.2+3.0.9~20170802.e702b5f9+-1+ubuntu16.04.1+deb.sury.org+2.debian.tar.xz",
+        "sha256": "08c6ea58999dcff930e154f51ea54bb08f9684827324ea6772be24608b131d99",
+        "size": 6992
+      }
+    ],
+    "dsc_sha256": "435651c966d7671b14640f48e6ccf09e7f26a31b893a3491953dae91a80b42a9"
+  },
+  {
+    "source": "php-mailparse",
+    "version": "3.1.1+2.1.7~dev20160128-7+ubuntu16.04.1+deb.sury.org+1",
+    "dsc": "php-mailparse_3.1.1+2.1.7~dev20160128-7+ubuntu16.04.1+deb.sury.org+1.dsc",
+    "url": "https://ondrej-ppa-php.program-language.mirror.naxonet.net/ubuntu/pool/main/p/php-mailparse/",
+    "files": [
+      {
+        "filename": "php-mailparse_3.1.1+2.1.7~dev20160128.orig.tar.xz",
+        "sha256": "60e61479d50ca4dd38f735e215eb555c0808b353d06c0ba64bb6042ab9459ee2",
+        "size": 940772
+      },
+      {
+        "filename": "php-mailparse_3.1.1+2.1.7~dev20160128-7+ubuntu16.04.1+deb.sury.org+1.debian.tar.xz",
+        "sha256": "e6ddf618c6370b13282318146231bbb5ee8985ac440ae189393c30c4087ecf35",
+        "size": 4296
+      }
+    ],
+    "dsc_sha256": "91532d5017f7f2055a8aa4692c30b9397888c738098322161006e637e7bbc0d5"
+  },
+  {
+    "source": "php-memcached",
+    "version": "3.1.5+2.2.0-9+ubuntu16.04.1+deb.sury.org+1",
+    "dsc": "php-memcached_3.1.5+2.2.0-9+ubuntu16.04.1+deb.sury.org+1.dsc",
+    "url": "https://ondrej-ppa-php.program-language.mirror.naxonet.net/ubuntu/pool/main/p/php-memcached/",
+    "files": [
+      {
+        "filename": "php-memcached_3.1.5+2.2.0.orig.tar.xz",
+        "sha256": "14f77efda1f1e89c7362051a0f94029f91a777a44522c67ba742c6d4f25dfa51",
+        "size": 87628
+      },
+      {
+        "filename": "php-memcached_3.1.5+2.2.0-9+ubuntu16.04.1+deb.sury.org+1.debian.tar.xz",
+        "sha256": "0d7eb676eb37fd9a48781986cb3fd153eb5a2fa18b0ca599a68f7005543039a5",
+        "size": 14356
+      }
+    ],
+    "dsc_sha256": "4f8157b4324afbb04a92986acb4cd4d460c141cd8b49fd0ec346116007d67ab9"
+  },
+  {
+    "source": "php-mongo",
+    "version": "1.6.16-8+ubuntu16.04.1+deb.sury.org+1",
+    "dsc": "php-mongo_1.6.16-8+ubuntu16.04.1+deb.sury.org+1.dsc",
+    "url": "https://ondrej-ppa-php.program-language.mirror.naxonet.net/ubuntu/pool/main/p/php-mongo/",
+    "files": [
+      {
+        "filename": "php-mongo_1.6.16.orig.tar.gz",
+        "sha256": "c061ebbeb6618568a71d7a6a9d7a31a34fe107f09c8c01a43c934fbed0665457",
+        "size": 210341
+      },
+      {
+        "filename": "php-mongo_1.6.16-8+ubuntu16.04.1+deb.sury.org+1.debian.tar.xz",
+        "sha256": "ccc63bbe081849782d0936adcb3257fe52788c81b05756d048d7f14366d2c0e7",
+        "size": 3056
+      }
+    ],
+    "dsc_sha256": "93a746f5a9dd73e59b04327851631a4414ca30994a200ab20c31003b17fb20cf"
+  },
+  {
+    "source": "php-mongodb",
+    "version": "1.9.0+1.7.5-6+ubuntu16.04.1+deb.sury.org+1",
+    "dsc": "php-mongodb_1.9.0+1.7.5-6+ubuntu16.04.1+deb.sury.org+1.dsc",
+    "url": "https://ondrej-ppa-php.program-language.mirror.naxonet.net/ubuntu/pool/main/p/php-mongodb/",
+    "files": [
+      {
+        "filename": "php-mongodb_1.9.0+1.7.5.orig.tar.xz",
+        "sha256": "e41ed92673b7f83ebe6cc3b0b6abdc81398360dcb4b2f84f6d43566ed8a56c5a",
+        "size": 1810644
+      },
+      {
+        "filename": "php-mongodb_1.9.0+1.7.5-6+ubuntu16.04.1+deb.sury.org+1.debian.tar.xz",
+        "sha256": "9ee82a468bf44134c353c0122e1786af57f32f5d2d141b12eef1b936b8a9dd91",
+        "size": 6720
+      }
+    ],
+    "dsc_sha256": "31665ba89726e8f9b54b85f6405d4f36d5d1fd121d15db8aad9a697619aa87e7"
+  },
+  {
+    "source": "php-msgpack",
+    "version": "2.1.2+0.5.7-6+ubuntu16.04.1+deb.sury.org+1",
+    "dsc": "php-msgpack_2.1.2+0.5.7-6+ubuntu16.04.1+deb.sury.org+1.dsc",
+    "url": "https://ondrej-ppa-php.program-language.mirror.naxonet.net/ubuntu/pool/main/p/php-msgpack/",
+    "files": [
+      {
+        "filename": "php-msgpack_2.1.2+0.5.7.orig.tar.xz",
+        "sha256": "aee75b5db31437e0c428ab22bba27188ee9a00223e0bbce567a8d05432d97ed1",
+        "size": 126124
+      },
+      {
+        "filename": "php-msgpack_2.1.2+0.5.7-6+ubuntu16.04.1+deb.sury.org+1.debian.tar.xz",
+        "sha256": "b16fe7ed524b47e081d595f9d9f53426f2323743644dec3475d03db67fd797c6",
+        "size": 3672
+      }
+    ],
+    "dsc_sha256": "620e28781277232c257e0f1686d854ee115f1ad8dc4d846bde79d40c966db0fc"
+  },
+  {
+    "source": "php-mysqlnd-ms",
+    "version": "1.6.0+svn333622-10+ubuntu16.04.1+deb.sury.org+1",
+    "dsc": "php-mysqlnd-ms_1.6.0+svn333622-10+ubuntu16.04.1+deb.sury.org+1.dsc",
+    "url": "https://ondrej-ppa-php.program-language.mirror.naxonet.net/ubuntu/pool/main/p/php-mysqlnd-ms/",
+    "files": [
+      {
+        "filename": "php-mysqlnd-ms_1.6.0+svn333622.orig.tar.xz",
+        "sha256": "88efbbcad213eb8eb71c6c71396c7e0d543f7be18d48c39f582154a8d788ec8f",
+        "size": 272216
+      },
+      {
+        "filename": "php-mysqlnd-ms_1.6.0+svn333622-10+ubuntu16.04.1+deb.sury.org+1.debian.tar.xz",
+        "sha256": "19692909f9f632d7ce5cf46ebbb6de67364012bdf0a0f70d7ae76590fdd61035",
+        "size": 3852
+      }
+    ],
+    "dsc_sha256": "9c1295765d73d48f9c7033957bc33702128638073ebc8ba238121aa27b847a10"
+  },
+  {
+    "source": "php-oauth",
+    "version": "2.0.7+1.2.3-7+ubuntu16.04.1+deb.sury.org+1",
+    "dsc": "php-oauth_2.0.7+1.2.3-7+ubuntu16.04.1+deb.sury.org+1.dsc",
+    "url": "https://ondrej-ppa-php.program-language.mirror.naxonet.net/ubuntu/pool/main/p/php-oauth/",
+    "files": [
+      {
+        "filename": "php-oauth_2.0.7+1.2.3.orig.tar.xz",
+        "sha256": "2951503e091aa0d6cec9c42f1a191e8d3741028141f26795f9bedcbbd71c1444",
+        "size": 78276
+      },
+      {
+        "filename": "php-oauth_2.0.7+1.2.3-7+ubuntu16.04.1+deb.sury.org+1.debian.tar.xz",
+        "sha256": "9184e3a76eac0ac2846e31ee9e13ab6a105fede56ac9f53d04ab1e2e7ddd2021",
+        "size": 3188
+      }
+    ],
+    "dsc_sha256": "2639a605a1a73e9478262f65ad87ab115367039f2bd693056fc0049d6bbbfa4f"
+  },
+  {
+    "source": "php-phalcon3",
+    "version": "3.4.5-5+ubuntu16.04.1+deb.sury.org+1",
+    "dsc": "php-phalcon3_3.4.5-5+ubuntu16.04.1+deb.sury.org+1.dsc",
+    "url": "https://ondrej-ppa-php.program-language.mirror.naxonet.net/ubuntu/pool/main/p/php-phalcon3/",
+    "files": [
+      {
+        "filename": "php-phalcon3_3.4.5.orig.tar.gz",
+        "sha256": "4c56420641a4a12f95e93e65a107aba8ef793817da57a4c29346c012faf66777",
+        "size": 6707873
+      },
+      {
+        "filename": "php-phalcon3_3.4.5-5+ubuntu16.04.1+deb.sury.org+1.debian.tar.xz",
+        "sha256": "22df8096b0f191779b7ff58cbc6d0f00dbb7af2e2387522714f9dfd53a700062",
+        "size": 4304
+      }
+    ],
+    "dsc_sha256": "5236576e2d1063de02f3f02bc1b0a6ee64ae6d420ec87bbd6bf3cdd19291e680"
+  },
+  {
+    "source": "php-propro",
+    "version": "2.1.0+1.0.2+nophp8-8+ubuntu16.04.1+deb.sury.org+1",
+    "dsc": "php-propro_2.1.0+1.0.2+nophp8-8+ubuntu16.04.1+deb.sury.org+1.dsc",
+    "url": "https://ondrej-ppa-php.program-language.mirror.naxonet.net/ubuntu/pool/main/p/php-propro/",
+    "files": [
+      {
+        "filename": "php-propro_2.1.0+1.0.2+nophp8.orig.tar.xz",
+        "sha256": "9db269379bbe006e3aaa5baf3777883efe1dbcea513f3057cd8f89d6f8c7e3da",
+        "size": 15716
+      },
+      {
+        "filename": "php-propro_2.1.0+1.0.2+nophp8-8+ubuntu16.04.1+deb.sury.org+1.debian.tar.xz",
+        "sha256": "7cc8ecbb02748f8582359357d131ee6561a21071a754080722b0ac8a68319fe5",
+        "size": 3876
+      }
+    ],
+    "dsc_sha256": "737410271a5d5b17cc2b4c9553e180bce8d7d69a360279ad394c3f7c566526ee"
+  },
+  {
+    "source": "php-protobuf",
+    "version": "3.15.6+3.12.4-1+ubuntu16.04.1+deb.sury.org+1",
+    "dsc": "php-protobuf_3.15.6+3.12.4-1+ubuntu16.04.1+deb.sury.org+1.dsc",
+    "url": "https://ondrej-ppa-php.program-language.mirror.naxonet.net/ubuntu/pool/main/p/php-protobuf/",
+    "files": [
+      {
+        "filename": "php-protobuf_3.15.6+3.12.4.orig.tar.xz",
+        "sha256": "e691428685baf1cdaa0e09c63723b316646f0a29443b1780b479c710ba082454",
+        "size": 234892
+      },
+      {
+        "filename": "php-protobuf_3.15.6+3.12.4-1+ubuntu16.04.1+deb.sury.org+1.debian.tar.xz",
+        "sha256": "c958291e4ff3efab07e82f2da92e943cf389c56a46e3591b36b4a1c7453d545c",
+        "size": 2764
+      }
+    ],
+    "dsc_sha256": "e773ab50daeecf386b1a857fcc585723f3fbd57f6630ce2d244080f2a55ba5ad"
+  },
+  {
+    "source": "php-ps",
+    "version": "1.4.1+pecl+nophp8+1.3.7-6+ubuntu16.04.1+deb.sury.org+1",
+    "dsc": "php-ps_1.4.1+pecl+nophp8+1.3.7-6+ubuntu16.04.1+deb.sury.org+1.dsc",
+    "url": "https://ondrej-ppa-php.program-language.mirror.naxonet.net/ubuntu/pool/main/p/php-ps/",
+    "files": [
+      {
+        "filename": "php-ps_1.4.1+pecl+nophp8+1.3.7-6+ubuntu16.04.1+deb.sury.org+1.tar.gz",
+        "sha256": "e8892c2cfb412817e511e9a13fcf82d8dd3c54f60de6cea964240acb07f508d0",
+        "size": 1219247
+      }
+    ],
+    "dsc_sha256": "fbcee421d66bea2db02a91c570df1ab4af841d6710ec91f9adcda97a5b8f9d36"
+  },
+  {
+    "source": "php-radius",
+    "version": "1.4.0~b1-17+ubuntu16.04.1+deb.sury.org+1",
+    "dsc": "php-radius_1.4.0~b1-17+ubuntu16.04.1+deb.sury.org+1.dsc",
+    "url": "https://ondrej-ppa-php.program-language.mirror.naxonet.net/ubuntu/pool/main/p/php-radius/",
+    "files": [
+      {
+        "filename": "php-radius_1.4.0~b1.orig.tar.gz",
+        "sha256": "97dcf2e497131a20804cc508873a123012b773f42d077af398334f3caf86ee54",
+        "size": 50953
+      },
+      {
+        "filename": "php-radius_1.4.0~b1-17+ubuntu16.04.1+deb.sury.org+1.debian.tar.xz",
+        "sha256": "6eef9c6ac004e610e8f5d454c52f492ea70bb171478fccc2c4c7230c4b5524bc",
+        "size": 6172
+      }
+    ],
+    "dsc_sha256": "99e5ae0bdbaa6311d2b13b9b6e4a128349c567f6fad00d660bfbb439ee8f78fc"
+  },
+  {
+    "source": "php-raphf",
+    "version": "2.0.1+1.1.2-8+ubuntu16.04.1+deb.sury.org+1",
+    "dsc": "php-raphf_2.0.1+1.1.2-8+ubuntu16.04.1+deb.sury.org+1.dsc",
+    "url": "https://ondrej-ppa-php.program-language.mirror.naxonet.net/ubuntu/pool/main/p/php-raphf/",
+    "files": [
+      {
+        "filename": "php-raphf_2.0.1+1.1.2.orig.tar.xz",
+        "sha256": "4dd4087c2e276795e7efadc32947732243cb4fe7284da54e330f08ea52ffa964",
+        "size": 17016
+      },
+      {
+        "filename": "php-raphf_2.0.1+1.1.2-8+ubuntu16.04.1+deb.sury.org+1.debian.tar.xz",
+        "sha256": "5cc5df793f02ac15a779c23d40a65ce46d0fe0a1721b7bfad91aea1cb201de10",
+        "size": 3844
+      }
+    ],
+    "dsc_sha256": "501b0fc903670b24ee31aa50307c1a82edda0b32c28bd51fc751ce3f5d27730a"
+  },
+  {
+    "source": "php-redis",
+    "version": "5.3.4+4.3.0-1+ubuntu16.04.1+deb.sury.org+1",
+    "dsc": "php-redis_5.3.4+4.3.0-1+ubuntu16.04.1+deb.sury.org+1.dsc",
+    "url": "https://ondrej-ppa-php.program-language.mirror.naxonet.net/ubuntu/pool/main/p/php-redis/",
+    "files": [
+      {
+        "filename": "php-redis_5.3.4+4.3.0.orig.tar.xz",
+        "sha256": "8a7c984d79faeb76841ad62366d653fe411932184d47985a19a344135c3ccac6",
+        "size": 243472
+      },
+      {
+        "filename": "php-redis_5.3.4+4.3.0-1+ubuntu16.04.1+deb.sury.org+1.debian.tar.xz",
+        "sha256": "fbf570888aaecd927e3dd847bcf0976ade29452176fbab440d5cf2632a73976c",
+        "size": 5736
+      }
+    ],
+    "dsc_sha256": "6943bafcb01d37b93918143d72b9e88fb585909e5b5903a7963ad8e85fa0c6b0"
+  },
+  {
+    "source": "php-rrd",
+    "version": "2.0.1+1.1.3-14+ubuntu16.04.1+deb.sury.org+1",
+    "dsc": "php-rrd_2.0.1+1.1.3-14+ubuntu16.04.1+deb.sury.org+1.dsc",
+    "url": "https://ondrej-ppa-php.program-language.mirror.naxonet.net/ubuntu/pool/main/p/php-rrd/",
+    "files": [
+      {
+        "filename": "php-rrd_2.0.1+1.1.3.orig.tar.xz",
+        "sha256": "2544c23d21d86ce274ef8baa1730eb72f1307bf293d24e22b4461ad4caaa6bc2",
+        "size": 20668
+      },
+      {
+        "filename": "php-rrd_2.0.1+1.1.3-14+ubuntu16.04.1+deb.sury.org+1.debian.tar.xz",
+        "sha256": "a02e930e8e25f404e4369460eab8eb993f26f600b71fdb9296b6cf94271aebab",
+        "size": 5172
+      }
+    ],
+    "dsc_sha256": "2a23c364cd269ba2a4e1224d24466f751d7c90f294be4be6520a2803c21b29d9"
+  },
+  {
+    "source": "php-smbclient",
+    "version": "1.0.6-1+ubuntu16.04.1+deb.sury.org+1",
+    "dsc": "php-smbclient_1.0.6-1+ubuntu16.04.1+deb.sury.org+1.dsc",
+    "url": "https://ondrej-ppa-php.program-language.mirror.naxonet.net/ubuntu/pool/main/p/php-smbclient/",
+    "files": [
+      {
+        "filename": "php-smbclient_1.0.6.orig.tar.gz",
+        "sha256": "66c433743b7a34b45606c03be689bdce4c52bc1eb306cbef3e15c966b5ff28d7",
+        "size": 33207
+      },
+      {
+        "filename": "php-smbclient_1.0.6-1+ubuntu16.04.1+deb.sury.org+1.debian.tar.xz",
+        "sha256": "ed351f9fafe5fbf64d4a2e0493267819af7749190edfd004a8fe03bdc6628313",
+        "size": 3300
+      }
+    ],
+    "dsc_sha256": "0d0626842387792f17308e17e6fcfc3c57a0751cf71a933cfb4c48aff5cffe72"
+  },
+  {
+    "source": "php-ssh2",
+    "version": "1.3.1+0.13-1+ubuntu16.04.1+deb.sury.org+1",
+    "dsc": "php-ssh2_1.3.1+0.13-1+ubuntu16.04.1+deb.sury.org+1.dsc",
+    "url": "https://ondrej-ppa-php.program-language.mirror.naxonet.net/ubuntu/pool/main/p/php-ssh2/",
+    "files": [
+      {
+        "filename": "php-ssh2_1.3.1+0.13.orig.tar.xz",
+        "sha256": "c8921680c96730c179d31e349b38edcff3081f435408115aaa2a25b17b1abf50",
+        "size": 34772
+      },
+      {
+        "filename": "php-ssh2_1.3.1+0.13-1+ubuntu16.04.1+deb.sury.org+1.debian.tar.xz",
+        "sha256": "a72b7dedbdeeefbca4f0288bb0a127ec3cf7911713082b14d120877b8263d887",
+        "size": 4632
+      }
+    ],
+    "dsc_sha256": "b1e53a33aabbb805ecab06ff081097af2c07246c7184bf7adb16c84515e2cef9"
+  },
+  {
+    "source": "php-solr",
+    "version": "2.5.1+2.4.0-9+ubuntu16.04.1+deb.sury.org+1",
+    "dsc": "php-solr_2.5.1+2.4.0-9+ubuntu16.04.1+deb.sury.org+1.dsc",
+    "url": "https://ondrej-ppa-php.program-language.mirror.naxonet.net/ubuntu/pool/main/p/php-solr/",
+    "files": [
+      {
+        "filename": "php-solr_2.5.1+2.4.0.orig.tar.gz",
+        "sha256": "d09f28bdd3bada7619e8501f82b80a6bd32d160a2cfbf6f933e7791615def1e7",
+        "size": 876943
+      },
+      {
+        "filename": "php-solr_2.5.1+2.4.0-9+ubuntu16.04.1+deb.sury.org+1.debian.tar.xz",
+        "sha256": "1f5520e0cf16508face13bd3cc4f37bd306294b2ffc208670f97c0fe1d9c95f1",
+        "size": 5908
+      }
+    ],
+    "dsc_sha256": "66e9979f02e6bcff5e222024a8d84137b64e08d31fb891a43d5eb6b1f8aff6ea"
+  },
+  {
+    "source": "php-stomp",
+    "version": "2.0.2+1.0.9-10+ubuntu16.04.1+deb.sury.org+1",
+    "dsc": "php-stomp_2.0.2+1.0.9-10+ubuntu16.04.1+deb.sury.org+1.dsc",
+    "url": "https://ondrej-ppa-php.program-language.mirror.naxonet.net/ubuntu/pool/main/p/php-stomp/",
+    "files": [
+      {
+        "filename": "php-stomp_2.0.2+1.0.9.orig.tar.xz",
+        "sha256": "9e58805a712d51857f2f4829d1510c65d3d737a3dec11a0d5235b9fa71d82169",
+        "size": 24992
+      },
+      {
+        "filename": "php-stomp_2.0.2+1.0.9-10+ubuntu16.04.1+deb.sury.org+1.debian.tar.xz",
+        "sha256": "b06d4d53b3b89cdf6c68062df9be76b721c33077ed63a28a02767f7a121c32d2",
+        "size": 4404
+      }
+    ],
+    "dsc_sha256": "42b35427868f8b721c544e719ce0ea03806543e74b51ac070f4302099505d7e4"
+  },
+  {
+    "source": "php-uploadprogress",
+    "version": "1.1.3-9+ubuntu16.04.1+deb.sury.org+1",
+    "dsc": "php-uploadprogress_1.1.3-9+ubuntu16.04.1+deb.sury.org+1.dsc",
+    "url": "https://ondrej-ppa-php.program-language.mirror.naxonet.net/ubuntu/pool/main/p/php-uploadprogress/",
+    "files": [
+      {
+        "filename": "php-uploadprogress_1.1.3.orig.tar.gz",
+        "sha256": "bcbf96631d257113ef7e85d21870d9b937bed9e00d68a6f1c0accab089af0e69",
+        "size": 14798
+      },
+      {
+        "filename": "php-uploadprogress_1.1.3-9+ubuntu16.04.1+deb.sury.org+1.debian.tar.xz",
+        "sha256": "1d0eb077639331cfb3cf6c8f85cca7f3d76bc962b53c057799f3d06fb5bd3364",
+        "size": 4804
+      }
+    ],
+    "dsc_sha256": "184a416607d31aff527f18c3e5e9885ec332acb4cbe722ee4ef786a8f1729e84"
+  },
+  {
+    "source": "xcache",
+    "version": "3.2.0-8+ubuntu16.04.1+deb.sury.org+1",
+    "dsc": "xcache_3.2.0-8+ubuntu16.04.1+deb.sury.org+1.dsc",
+    "url": "https://ondrej-ppa-php.program-language.mirror.naxonet.net/ubuntu/pool/main/x/xcache/",
+    "files": [
+      {
+        "filename": "xcache_3.2.0.orig.tar.gz",
+        "sha256": "9d7bea91dabb3e0c859195a85562f24c77a5967722753018966beb7a421c6bc0",
+        "size": 173368
+      },
+      {
+        "filename": "xcache_3.2.0-8+ubuntu16.04.1+deb.sury.org+1.debian.tar.xz",
+        "sha256": "94e18df09e7db4e09fb2f9e26d59e39cd37210e1cc4c1b9f6ac6cce7efb1bfce",
+        "size": 4288
+      }
+    ],
+    "dsc_sha256": "91899c14588df0233d248de9dd90c69e8931ff389e071c63a4c6d6130adc3d38"
+  },
+  {
+    "source": "xdebug",
+    "version": "3.0.3+2.9.8+2.8.1+2.5.5-1+ubuntu16.04.1+deb.sury.org+1",
+    "dsc": "xdebug_3.0.3+2.9.8+2.8.1+2.5.5-1+ubuntu16.04.1+deb.sury.org+1.dsc",
+    "url": "https://ondrej-ppa-php.program-language.mirror.naxonet.net/ubuntu/pool/main/x/xdebug/",
+    "files": [
+      {
+        "filename": "xdebug_3.0.3+2.9.8+2.8.1+2.5.5.orig.tar.xz",
+        "sha256": "164c364831910949f5a046ca73b6d0944a25580c1aab7fc93d2675d5c448698c",
+        "size": 358968
+      },
+      {
+        "filename": "xdebug_3.0.3+2.9.8+2.8.1+2.5.5-1+ubuntu16.04.1+deb.sury.org+1.debian.tar.xz",
+        "sha256": "34644c2f4874be1b7839f920d75769ff13d268de2963284462545da9c14bd06c",
+        "size": 6820
+      }
+    ],
+    "dsc_sha256": "fa11643358468160f6fc703aaa2ea83be41a6e55162164e1f6603329d5156854"
+  },
+  {
+    "source": "php-xhprof",
+    "version": "2.2.3+0.9.2-5+ubuntu16.04.1+deb.sury.org+1",
+    "dsc": "php-xhprof_2.2.3+0.9.2-5+ubuntu16.04.1+deb.sury.org+1.dsc",
+    "url": "https://ondrej-ppa-php.program-language.mirror.naxonet.net/ubuntu/pool/main/p/php-xhprof/",
+    "files": [
+      {
+        "filename": "php-xhprof_2.2.3+0.9.2.orig.tar.xz",
+        "sha256": "28c192328b0bda73f57ff5af9971b6939c793cb662c9b81ed3c5f13ceec6b0c1",
+        "size": 833224
+      },
+      {
+        "filename": "php-xhprof_2.2.3+0.9.2-5+ubuntu16.04.1+deb.sury.org+1.debian.tar.xz",
+        "sha256": "ba9cddd84deb769bb1f8190e1b2ec651c8aa824a5e3141d6c187cc8f58996004",
+        "size": 4428
+      }
+    ],
+    "dsc_sha256": "f6ae314cb2fafad8c80f51f2998f1e63d0b4eb5df52f013d59ba08e15a37a622"
+  },
+  {
+    "source": "php-yac",
+    "version": "2.3.0+0.9.2-6+ubuntu16.04.1+deb.sury.org+1",
+    "dsc": "php-yac_2.3.0+0.9.2-6+ubuntu16.04.1+deb.sury.org+1.dsc",
+    "url": "https://ondrej-ppa-php.program-language.mirror.naxonet.net/ubuntu/pool/main/p/php-yac/",
+    "files": [
+      {
+        "filename": "php-yac_2.3.0+0.9.2.orig.tar.xz",
+        "sha256": "51f77e9e88e38e1499fc94ccf0f92cb41176a9a4872f1c5e6d277ad8ae071bfa",
+        "size": 38064
+      },
+      {
+        "filename": "php-yac_2.3.0+0.9.2-6+ubuntu16.04.1+deb.sury.org+1.debian.tar.xz",
+        "sha256": "6da5f1ba9539556cb02a6b8613bf62a4d17eb8a3e2790572eb8d916bf3984b8b",
+        "size": 4500
+      }
+    ],
+    "dsc_sha256": "230720a7186e5a12dd00317f3435fd3dc7d0816f14f534eddd8909963e5ccbc4"
+  },
+  {
+    "source": "php-yaml",
+    "version": "2.2.1+2.1.0+2.0.4+1.3.2-6+ubuntu16.04.1+deb.sury.org+1",
+    "dsc": "php-yaml_2.2.1+2.1.0+2.0.4+1.3.2-6+ubuntu16.04.1+deb.sury.org+1.dsc",
+    "url": "https://ondrej-ppa-php.program-language.mirror.naxonet.net/ubuntu/pool/main/p/php-yaml/",
+    "files": [
+      {
+        "filename": "php-yaml_2.2.1+2.1.0+2.0.4+1.3.2.orig.tar.xz",
+        "sha256": "b314af8ce40d7a692a71f3e3cb7fbfcfe294867d6b69400c852d9a644336fb07",
+        "size": 45416
+      },
+      {
+        "filename": "php-yaml_2.2.1+2.1.0+2.0.4+1.3.2-6+ubuntu16.04.1+deb.sury.org+1.debian.tar.xz",
+        "sha256": "4eb375e46d0fa9ffa0a791b65550149e175eabef5887248ed833e04e9d7e206c",
+        "size": 2936
+      }
+    ],
+    "dsc_sha256": "765037b3fe9ba7f2a7a13d429b309fcee48dd6d72559729d116fb36ec0ceafe7"
+  },
+  {
+    "source": "php-zmq",
+    "version": "1.1.3-18+ubuntu16.04.1+deb.sury.org+1",
+    "dsc": "php-zmq_1.1.3-18+ubuntu16.04.1+deb.sury.org+1.dsc",
+    "url": "https://ondrej-ppa-php.program-language.mirror.naxonet.net/ubuntu/pool/main/p/php-zmq/",
+    "files": [
+      {
+        "filename": "php-zmq_1.1.3.orig.tar.gz",
+        "sha256": "c492375818bd51b355352798fb94f04d6828c6aeda41ba813849624af74144ce",
+        "size": 82397
+      },
+      {
+        "filename": "php-zmq_1.1.3-18+ubuntu16.04.1+deb.sury.org+1.debian.tar.xz",
+        "sha256": "01da13a9f91cb7129f07dfc8c99fecf4d3da4dd6daeaff608717c9ad9e7474b4",
+        "size": 32840
+      }
+    ],
+    "dsc_sha256": "b5f14e2a000fbe9e0f07eef74b1f32ae6fe98108fb0e1d8d2510faafbf7c49c8"
+  },
+  {
+    "source": "php-zstd",
+    "version": "0.10.0-2+ubuntu16.04.1+deb.sury.org+3",
+    "dsc": "php-zstd_0.10.0-2+ubuntu16.04.1+deb.sury.org+3.dsc",
+    "url": "https://ondrej-ppa-php.program-language.mirror.naxonet.net/ubuntu/pool/main/p/php-zstd/",
+    "files": [
+      {
+        "filename": "php-zstd_0.10.0.orig.tar.gz",
+        "sha256": "0e354333c57f55d7a775f0cccd20ab1fac3ad4dca391c9a90f1db1b334317af2",
+        "size": 320778
+      },
+      {
+        "filename": "php-zstd_0.10.0-2+ubuntu16.04.1+deb.sury.org+3.debian.tar.xz",
+        "sha256": "b9c179da417e505107d448c66da00e9e18487d794d9229aca7e811699565a338",
+        "size": 2132
+      }
+    ],
+    "dsc_sha256": "6605000a2ca6a99cda0aa22132b16ff8a3f124b13681942b8ef9a1d360375815"
+  },
+  {
+    "source": "php-defaults",
+    "version": "82+ubuntu16.04.1+deb.sury.org+1",
+    "dsc": "php-defaults_82+ubuntu16.04.1+deb.sury.org+1.dsc",
+    "url": "https://ondrej-ppa-php.program-language.mirror.naxonet.net/ubuntu/pool/main/p/php-defaults/",
+    "files": [
+      {
+        "filename": "php-defaults_82+ubuntu16.04.1+deb.sury.org+1.tar.xz",
+        "sha256": "1353eaebe2894998000283b9bdf5afaff54d71e13acd54d4d68f25b2429459e0",
+        "size": 18124
+      }
+    ],
+    "dsc_sha256": "d3b95c99e537840ad0dd2de783cade7ba4ee0ca44959a31cc7fac68907ad797a"
+  },
+  {
+    "source": "dh-php",
+    "version": "3.1+ubuntu16.04.1+deb.sury.org+1",
+    "dsc": "dh-php_3.1+ubuntu16.04.1+deb.sury.org+1.dsc",
+    "url": "https://ondrej-ppa-php.program-language.mirror.naxonet.net/ubuntu/pool/main/d/dh-php/",
+    "files": [
+      {
+        "filename": "dh-php_3.1+ubuntu16.04.1+deb.sury.org+1.tar.xz",
+        "sha256": "362ac74d6ace7a98175fdfb47a4d8b1fba8af866c87cd696e715dad4e72d0e4c",
+        "size": 10260
+      }
+    ],
+    "dsc_sha256": "37dbdd43a3dfd3019cd05c8b6d91797bf78f43deecdec93ebb75ede10ced5abc"
+  },
+  {
+    "source": "tidy-html5",
+    "version": "5.6.0-6+ubuntu16.04.1+deb.sury.org+2",
+    "dsc": "tidy-html5_5.6.0-6+ubuntu16.04.1+deb.sury.org+2.dsc",
+    "url": "https://ondrej-ppa-php.program-language.mirror.naxonet.net/ubuntu/pool/main/t/tidy-html5/",
+    "files": [
+      {
+        "filename": "tidy-html5_5.6.0.orig.tar.gz",
+        "sha256": "08a63bba3d9e7618d1570b4ecd6a7daa83c8e18a41c82455b6308bc11fe34958",
+        "size": 665438
+      },
+      {
+        "filename": "tidy-html5_5.6.0-6+ubuntu16.04.1+deb.sury.org+2.debian.tar.xz",
+        "sha256": "675db2475b0bf070ac73aca2c5cccbf0f528da56f51558ff77d3029e08e4d064",
+        "size": 14764
+      }
+    ],
+    "dsc_sha256": "d1b4361e380e8dd8b80529e732062760f1ea5b8bffb6e5b4a909f1163dadec0c"
+  }
+]

@@ -1,0 +1,9 @@
+/work/
+/output/
+__pycache__/
+*.py[cod]
+*.deb
+*.ddeb
+*.tar.*
+*.log
+*.part
