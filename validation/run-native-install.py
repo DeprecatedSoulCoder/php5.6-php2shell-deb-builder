@@ -158,8 +158,9 @@ def main():
     args = parser.parse_args()
     if not args.apply or os.geteuid() != 0:
         raise RuntimeError('Use explicit --apply as root on a disposable matching VM')
-    release, evidence = args.release.resolve(), args.evidence.resolve()
+    release, evidence = args.release.resolve(), args.evidence
     evidence.mkdir(parents=True, exist_ok=True)
+    evidence = evidence.resolve()
     kit = Path(__file__).resolve().parent.parent
     status = json.loads((release / 'build-status.json').read_text())
     if status.get('status') != 'PASS':
