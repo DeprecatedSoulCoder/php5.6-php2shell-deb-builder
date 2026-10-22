@@ -72,7 +72,7 @@ For Bionic or Focal, substitute `18.04` or `20.04` **and run on that matching OS
 
 Service starts requested by package maintainer scripts are temporarily blocked during the build. The previous service policy is restored on normal completion or failure. Existing application services are not a suitable environment for this mode; use a disposable build/test VM. Review native logs before publishing them because they can contain local build paths.
 
-After a successful build, the optional native installation test installs the compatible catalog together and exercises CLI and Apache:
+After a successful build, the optional native installation test installs the compatible catalog together and exercises CLI and Apache. Its default selection excludes YAC, Xcache and Gmagick in favor of APCu/OPcache and Imagick. It also excludes SMBClient: native 16.04/18.04 tests found a shutdown crash when SMBClient and MongoDB were loaded together. All four packages are still built and tested individually. Review and remove any already installed excluded extension before running this test:
 
 ```bash
 sudo python3 validation/run-native-install.py \
@@ -121,7 +121,7 @@ cd output/16.04
 sha256sum -c SHA256SUMS
 ```
 
-Select the core/SAPI packages and extensions actually in use. Do not install every `.deb` indiscriminately: APCu/YAC/Xcache and Imagick/Gmagick include historical alternatives/conflicts. APT still needs matching Ubuntu repositories for system-library dependencies. Existing PHP extensions may need updating together because of exact `php5.6-common` dependencies. Validate an upgrade and rollback on a clone of the application server first.
+Select the core/SAPI packages and extensions actually in use. Do not install every `.deb` indiscriminately: APCu/YAC/Xcache and Imagick/Gmagick include historical alternatives/conflicts. SMBClient and MongoDB also crashed together during shutdown in native 16.04/18.04 tests; APT does not detect this runtime conflict. Select one of that pair unless you independently resolve and validate it. APT still needs matching Ubuntu repositories for system-library dependencies. Existing PHP extensions may need updating together because of exact `php5.6-common` dependencies. Validate an upgrade and rollback on a clone of the application server first.
 
 The generated local APT index is unsigned. Publishing a production APT repository, signing releases, and automatic deployment are separate work; this project does not perform them.
 

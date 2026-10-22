@@ -22,6 +22,7 @@ EXCLUDED = {
     'php5.6-yac': 'APCu selected; YAC conflicts with the APCu virtual package.',
     'php5.6-xcache': 'APCu and OPcache selected; Xcache is an alternative cache.',
     'php5.6-gmagick': 'Imagick selected; Gmagick conflicts with the Imagick virtual package.',
+    'php5.6-smbclient': 'MongoDB selected; SMBClient plus MongoDB crashed during SASL cleanup on native 16.04/18.04 tests.',
 }
 
 
@@ -177,6 +178,12 @@ def main():
                          'External service tests use local Memcached/Redis; other backend integrations are bounded smoke checks.']}
     save(evidence / 'installation-result.json', report)
     try:
+        for name in EXCLUDED:
+            state = subprocess.Popen(['dpkg-query', '-W', '-f', '${db:Status-Status}', name],
+                                     stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            stdout, unused = state.communicate()
+            if state.returncode == 0 and stdout == b'installed':
+                raise RuntimeError('Excluded extension is already installed: %s; review and remove it before this test' % name)
         files = []
         for record in selected:
             path = release / 'packages' / record['filename']
@@ -263,6 +270,7 @@ def main():
                 raise RuntimeError('Installed CLI extension test timeout: ' + name)
             passed = process.returncode == 0 and stdout.strip() == ('PASS ' + name).encode() and not stderr.strip()
             results.append({'name': 'php5.6-' + name, 'status': 'PASS' if passed else 'FAIL',
+                            'exit_code': process.returncode,
                             'stdout': stdout.decode(errors='replace'), 'stderr': stderr.decode(errors='replace')})
             save(evidence / 'cli-installed-extensions.json', results)
             if not passed:
