@@ -210,8 +210,8 @@ def adapt_pecl(tree, name, ubuntu, core_version):
         if not control.exists():
             continue
         text = control.read_text()
-        text = re.sub(r'\bphp-all-dev\s*(?:\([^)]*\))?', 'php5.6-dev', text)
-        text = re.sub(r'\bphp-([a-z0-9-]+)-all-dev\s*(?:\([^)]*\))?', r'php5.6-\1', text)
+        text = re.sub(r'\bphp-all-dev[ \t]*(?:\([^)]*\))?', 'php5.6-dev', text)
+        text = re.sub(r'\bphp-([a-z0-9-]+)-all-dev[ \t]*(?:\([^)]*\))?', r'php5.6-\1', text)
         text = re.sub(r'\bphp-(mbstring|curl|xml)\b', r'php5.6-\1', text)
         if ubuntu == '16.04':
             text = text.replace('libidn2-dev', 'libidn2-0-dev')

@@ -55,6 +55,12 @@ class BuilderTests(unittest.TestCase):
         for target, version in zip(['16.04', '18.04', '20.04'], versions):
             self.assertIn('+ubuntu' + target + '.1', version)
 
+    def test_tidy_preserves_signed_source_epoch(self):
+        # Without epoch 2 the built library cannot satisfy libtidy-dev >= 1:5.2.
+        value = builder.version('tidy-html5', '16.04')
+        self.assertTrue(value.startswith('2:5.6.0-'))
+        self.assertEqual(subprocess.call(['dpkg', '--compare-versions', value, 'ge', '1:5.2.0']), 0)
+
     def test_lock_files_contain_only_pinned_https_components(self):
         for name, record in builder.SOURCES.items():
             self.assertEqual(name, record['source'])
@@ -116,6 +122,23 @@ class BuilderTests(unittest.TestCase):
         plan = json.loads(result)
         self.assertEqual(plan['status'], 'COMPILATION TEST REQUIRED')
         self.assertEqual(len(plan['sources_in_order']), 4)
+
+    def test_native_plan_does_not_install_packages(self):
+        result = subprocess.check_output(['bash', str(ROOT / 'build.sh'), '--ubuntu', '16.04',
+                                          '--native', '--core-only', '--plan']).decode()
+        self.assertEqual(json.loads(result)['status'], 'COMPILATION TEST REQUIRED')
+
+    def test_pecl_last_dependency_keeps_the_following_control_field(self):
+        with tempfile.TemporaryDirectory() as directory:
+            tree = Path(directory)
+            (tree / 'debian').mkdir()
+            (tree / 'debian/rules').write_text('#!/usr/bin/make -f\ninclude /usr/share/dh-php/pkg-pecl.mk\n')
+            (tree / 'debian/control').write_text('Source: php-amqp\nBuild-Depends: php-all-dev\n'
+                                                'Standards-Version: 4.5.1\n\nPackage: php-amqp\nDepends: ${misc:Depends}\n')
+            (tree / 'debian/changelog').write_text('Original changelog\n')
+            builder.adapt_pecl(tree, 'php-amqp', '16.04', builder.version('php5.6', '16.04'))
+            self.assertIn('Build-Depends: php5.6-dev\nStandards-Version: 4.5.1\n',
+                          (tree / 'debian/control').read_text())
 
     def test_invalid_cli_options_fail(self):
         for options in [['--ubuntu', '22.04', '--plan'], ['--ubuntu', '16.04', '--jobs', '0', '--plan'],
