@@ -1,10 +1,10 @@
 # Required compilation tests
 
-**A complete compilation test is required independently for Ubuntu 16.04, 18.04 and 20.04.** All three targets are currently unverified with this automation. Do not infer support from a static check, source preparation, another Ubuntu release, or a previous manual build.
+**A complete compilation test is required independently for Ubuntu 16.04, 18.04 and 20.04.** Dated native build/installation results exist for 16.04 and 18.04; 20.04 remains untested. Do not infer support from a static check, source preparation, another Ubuntu release, or a previous manual build.
 
-For each target, run the script in a fresh matching Ubuntu container and record:
+For each target, run the script in a fresh matching Ubuntu container or disposable native VM and record:
 
-1. Repository commit, Ubuntu image digest, architecture, command/options, APT package versions and date.
+1. Repository commit, Ubuntu image digest (Docker) or native OS/baseline, architecture, command/options, APT package versions and date. State explicitly when a reused OS or retained build dependencies differ from a fresh baseline.
 2. Successful verified source downloads, original DSC signature checks and patch application.
 3. Successful compilation of the full selected catalog. A core-only run validates only the core scope.
 4. Three passing security PHPTs; successful actual mod_php Apache checks, including OOM worker replacement and multipart/session upload progress.
@@ -18,10 +18,12 @@ Publish evidence per target/scope, for example:
 
 | Target | Catalog/scope | Builder commit | Result | Logs | Upgrade/application test |
 | --- | --- | --- | --- | --- | --- |
-| 16.04 amd64 | — | — | COMPILATION TEST REQUIRED | — | Required |
-| 18.04 amd64 | — | — | COMPILATION TEST REQUIRED | — | Required |
+| 16.04 amd64 | Full build; 36 co-installed external extensions | `84a43ea` build / `a7a17e2` installation | Native build + bounded installation PASS | [Reviewed evidence](validation/results/2026-10-22/ubuntu-16.04.json) | Required |
+| 18.04 amd64 | Full build; 36 co-installed external extensions | `84a43ea` build / `a7a17e2` installation | Native build + bounded installation PASS | [Reviewed evidence](validation/results/2026-10-22/ubuntu-18.04.json) | Required |
 | 20.04 amd64 | — | — | COMPILATION TEST REQUIRED | — | Required |
 
 A PASS in `build-status.json` belongs only to that run and its selected checks. Update documentation manually with an evidence link; never turn it into an unconditional “secure” badge.
+
+See the [2026-10-22 native report](validation/results/2026-10-22/README.md) for baselines, exclusions, observed runtime conflicts and remaining gaps. Docker mode was not validated by these native runs. Raw logs are retained privately because they contain host identities and local paths; public evidence includes reviewed structured results and package hashes.
 
 Initial release: scripts/documentation only, tagged as a preview. Binary/source release redistribution requires reviewing the respective upstream licenses first.

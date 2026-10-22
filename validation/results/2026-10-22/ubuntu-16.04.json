@@ -1,0 +1,3272 @@
+{
+  "architecture": "amd64",
+  "baseline": "Reused Ubuntu VM; existing PHP and helper packages purged after configuration/package backups. Build dependencies from earlier work were retained. This was not a fresh OS reinstall.",
+  "build_apache_checks": [
+    {
+      "check": "Apache module, version, mapped binary, patch symbol, configuration and extensions",
+      "info": {
+        "extensions": [
+          "Core",
+          "date",
+          "ereg",
+          "libxml",
+          "openssl",
+          "pcre",
+          "zlib",
+          "filter",
+          "hash",
+          "Reflection",
+          "SPL",
+          "session",
+          "standard",
+          "apache2handler",
+          "mysqlnd",
+          "PDO",
+          "xml",
+          "apcu",
+          "bcmath",
+          "bz2",
+          "calendar",
+          "ctype",
+          "curl",
+          "dba",
+          "dom",
+          "enchant",
+          "mbstring",
+          "fileinfo",
+          "ftp",
+          "gd",
+          "gettext",
+          "gmp",
+          "iconv",
+          "igbinary",
+          "imap",
+          "interbase",
+          "intl",
+          "json",
+          "ldap",
+          "exif",
+          "mcrypt",
+          "msgpack",
+          "mssql",
+          "mysql",
+          "mysqli",
+          "odbc",
+          "pdo_dblib",
+          "PDO_Firebird",
+          "pdo_mysql",
+          "PDO_ODBC",
+          "pdo_pgsql",
+          "pdo_sqlite",
+          "pgsql",
+          "Phar",
+          "posix",
+          "propro",
+          "pspell",
+          "raphf",
+          "readline",
+          "recode",
+          "shmop",
+          "SimpleXML",
+          "snmp",
+          "soap",
+          "sockets",
+          "sqlite3",
+          "sysvmsg",
+          "sysvsem",
+          "sysvshm",
+          "tidy",
+          "tokenizer",
+          "wddx",
+          "xmlreader",
+          "xmlrpc",
+          "xmlwriter",
+          "xsl",
+          "zip",
+          "mhash",
+          "apc",
+          "Zend OPcache"
+        ],
+        "ini": "/etc/php/5.6/apache2/php.ini",
+        "module_sha256": "d3c33cf1a289146bf6308814bcdeba2ef1fe876d0d9bbf9fa2ac5c4e34e2de6b",
+        "progress": "1",
+        "sapi": "apache2handler",
+        "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+      },
+      "result": "PASS"
+    },
+    {
+      "check": "multipart fields, file upload, hash and session cleanup",
+      "result": "PASS"
+    },
+    {
+      "check": "upload progress object/custom payload round-trip and counters",
+      "result": "PASS"
+    },
+    {
+      "check": "reserved properties and corrupt session records rejected",
+      "result": "PASS"
+    },
+    {
+      "check": "40 consecutive uploads in the same Apache worker",
+      "result": "PASS"
+    },
+    {
+      "check": "post_max_size enforced on chunked multipart without Content-Length",
+      "result": "PASS"
+    },
+    {
+      "check": "OOM exits Apache worker before shutdown callbacks; server recovers",
+      "result": "PASS"
+    }
+  ],
+  "build_cache_identity": "142694fb47ce4e6db55169a4d972a13bcbbfe2e6dc0cfe525d2838d51654ea48",
+  "build_command": "./build.sh --ubuntu 16.04 --native --jobs 2 --debug --work \"$WORK\" --output \"$OUTPUT\"",
+  "build_recipe_commit": "84a43eaf09cf9e19baf01ea2a7db4fe4ec3d67ed",
+  "build_status": {
+    "checks": [
+      "compilation",
+      "3 security PHPTs",
+      "Apache mod_php smoke",
+      "selected extension smoke"
+    ],
+    "compilation_test_required_for_every_target": true,
+    "execution_mode": "native",
+    "full_core_suite": "not_run",
+    "packages": 82,
+    "patch_commit": "add11c4715fbd62c2a7727136570b7e1d38a22cb",
+    "started_utc": "2026-10-22T19:15:10Z",
+    "status": "PASS",
+    "ubuntu": "16.04"
+  },
+  "coinstalled_apache_checks": [
+    {
+      "check": "Apache module, version, mapped binary, patch symbol, configuration and extensions",
+      "info": {
+        "extensions": [
+          "Core",
+          "date",
+          "ereg",
+          "libxml",
+          "openssl",
+          "pcre",
+          "zlib",
+          "filter",
+          "hash",
+          "Reflection",
+          "SPL",
+          "session",
+          "standard",
+          "apache2handler",
+          "mysqlnd",
+          "PDO",
+          "xml",
+          "amqp",
+          "apcu",
+          "bcmath",
+          "bz2",
+          "calendar",
+          "ctype",
+          "curl",
+          "dba",
+          "dom",
+          "enchant",
+          "mbstring",
+          "fileinfo",
+          "ftp",
+          "gd",
+          "gearman",
+          "geoip",
+          "gettext",
+          "gmp",
+          "gnupg",
+          "iconv",
+          "igbinary",
+          "imagick",
+          "imap",
+          "interbase",
+          "intl",
+          "json",
+          "ldap",
+          "lua",
+          "lz4",
+          "exif",
+          "mcrypt",
+          "memcache",
+          "mongo",
+          "mongodb",
+          "msgpack",
+          "mssql",
+          "mysql",
+          "mysqli",
+          "OAuth",
+          "odbc",
+          "pdo_dblib",
+          "PDO_Firebird",
+          "pdo_mysql",
+          "PDO_ODBC",
+          "pdo_pgsql",
+          "pdo_sqlite",
+          "pgsql",
+          "phalcon",
+          "Phar",
+          "posix",
+          "propro",
+          "ps",
+          "pspell",
+          "radius",
+          "raphf",
+          "readline",
+          "recode",
+          "redis",
+          "rrd",
+          "shmop",
+          "SimpleXML",
+          "snmp",
+          "soap",
+          "sockets",
+          "solr",
+          "sqlite3",
+          "ssh2",
+          "Stomp",
+          "sysvmsg",
+          "sysvsem",
+          "sysvshm",
+          "tidy",
+          "tokenizer",
+          "wddx",
+          "xhprof",
+          "xmlreader",
+          "xmlrpc",
+          "xmlwriter",
+          "xsl",
+          "yaml",
+          "zip",
+          "zmq",
+          "http",
+          "mailparse",
+          "memcached",
+          "grpc",
+          "inotify",
+          "mysqlnd_ms",
+          "protobuf",
+          "zstd",
+          "mhash",
+          "apc",
+          "Zend OPcache",
+          "xdebug"
+        ],
+        "ini": "/etc/php/5.6/apache2/php.ini",
+        "module_sha256": "d3c33cf1a289146bf6308814bcdeba2ef1fe876d0d9bbf9fa2ac5c4e34e2de6b",
+        "progress": "1",
+        "sapi": "apache2handler",
+        "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+      },
+      "result": "PASS"
+    },
+    {
+      "check": "multipart fields, file upload, hash and session cleanup",
+      "result": "PASS"
+    },
+    {
+      "check": "upload progress object/custom payload round-trip and counters",
+      "result": "PASS"
+    },
+    {
+      "check": "reserved properties and corrupt session records rejected",
+      "result": "PASS"
+    },
+    {
+      "check": "40 consecutive uploads in the same Apache worker",
+      "result": "PASS"
+    },
+    {
+      "check": "post_max_size enforced on chunked multipart without Content-Length",
+      "result": "PASS"
+    },
+    {
+      "check": "OOM exits Apache worker before shutdown callbacks; server recovers",
+      "result": "PASS"
+    }
+  ],
+  "command_paths": "WORK and OUTPUT are absolute private parent directories; the builder appends the target release. Paths are omitted from public evidence.",
+  "date_utc": "2026-10-22",
+  "debug_package_catalog": [
+    {
+      "build_ids": [
+        "2b557470f5148b59e784c8e0e95aeda150b027b0"
+      ],
+      "filename": "php5.6-intl-dbgsym_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-intl-dbgsym",
+      "sha256": "9f2530becf005409250a66744d75dc1a010cb26b7746503733143a8b906289e7",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "392d3c80baf56fb6f2e83707e168c8378d4a56f8"
+      ],
+      "filename": "php5.6-readline-dbgsym_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-readline-dbgsym",
+      "sha256": "21bfcbad34d7f7a74f33369bbed6136d32375381994eba457fc2682a4867011a",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "21abd5269bece98f1873f853e1176a623f93add9",
+        "a2c0848f33914c3e8c95cd9239a9230a657b46f7"
+      ],
+      "filename": "php5.6-odbc-dbgsym_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-odbc-dbgsym",
+      "sha256": "f3effc9afca4f88cc37d61f1e4799f730df4822e1045e78d0219449bf11b129e",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "656824e7c45710de6bbd83f5fdd04c8c4f1a2881"
+      ],
+      "filename": "php5.6-opcache-dbgsym_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-opcache-dbgsym",
+      "sha256": "9bf707553f84cb561829adc853efbd9cd9f58285ce693e414f73fef40e313025",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "81fded7bab59692340c9b3c38f507fffb6d7d551"
+      ],
+      "filename": "libphp5.6-embed-dbgsym_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "libphp5.6-embed-dbgsym",
+      "sha256": "d233a418a4d356e8243d03ea1f680d25f967d13b73df4d3a68dbfc25afdade1d",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "14f1183dd5b3469309eceabca42584b9070b7d2e",
+        "15c201e3efd4a8a0ed08da7dd47d0d0a89f72770",
+        "3117dd97267c996ce52dff94267f923c1f6fa1a6",
+        "4987f3b4fea5ac8c40bd33a1664c3337c9c0406e",
+        "580cbb3ebc8cc7cfe8806ee494681a9747db42f7",
+        "5d148167b27782a1aacaa2df6bf51c296d46dafd",
+        "6ab07f00a7be4debd746721bb7654adf34979eb5",
+        "7da79bebe8322d88967d15d755c41f50f065659f",
+        "93ffd8ea5e9d14416e4d58df936b5da52d5ea659",
+        "a32f6bd622805fc94cbd712b19730a7a7f31e170",
+        "aacdb540f1758a0b8d4eded63f86d6a0b3be9262",
+        "b126e4c68c135fbce8810f7e8ec8c2e4d45319da",
+        "b56b421a6be350e02f743a324b3a520471e149d4",
+        "bc9be6ec18c4ba7bc8373c1aac6129c517e6e1f9",
+        "ed3f5294f2da4ead960a92bbfeb1059a71715ab5",
+        "ff47ef13ded54f78b918093a8a7ea5e2d8e9fbe1"
+      ],
+      "filename": "php5.6-common-dbgsym_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-common-dbgsym",
+      "sha256": "d58e3a21d760bdf5c7ffb0daa5426d5450f9543bd0867fcf760024bcb4316078",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "5b6cb00b60bab5ecd42c176624043611511763de"
+      ],
+      "filename": "php5.6-mbstring-dbgsym_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-mbstring-dbgsym",
+      "sha256": "01f577fd95a1adfcdacde97542c0c8133680800f3be5dd1d2930b2a802ec05b6",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "e0db4a2399c887492d1886337bbd334dfedad849"
+      ],
+      "filename": "php5.6-dba-dbgsym_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-dba-dbgsym",
+      "sha256": "12cc4f193bb788c0cadc7dc8011af8c25b4af49ddcc5a522072958fb08fbe999",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "0921b6aa3df4b1681b7d443c5b3eba97406588dc",
+        "1fe9ab061dd22b8d16b58116084003b027365205"
+      ],
+      "filename": "php5.6-interbase-dbgsym_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-interbase-dbgsym",
+      "sha256": "106c5ea94490b609faf05351dfac20b39794b54d0cc322b024e35ba4b7864a07",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "26b19a9320851acc7bc2bcf66a2eb78cdaccf5eb",
+        "296583243b72facf4d8c2134d4652cf17180a303"
+      ],
+      "filename": "php5.6-sqlite3-dbgsym_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-sqlite3-dbgsym",
+      "sha256": "866da5a678a0418280031ee3429dc4825dcb9c958c7fd77372533209173813ec",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "105666352223e61e2ce6b8333c8690b12dd3ea0c",
+        "39a4015053ac9558027255fc2438d0dbaac8addb",
+        "3e47da8bdbb5c561a5bf406e103f67c25f72b0d9",
+        "be3ef4f88b42f55b17ccc4e34226fe1881df8680"
+      ],
+      "filename": "php5.6-mysql-dbgsym_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-mysql-dbgsym",
+      "sha256": "c74708c1b184d13f4ed8d5c646fd7d0327fc18897d4a626d691b8a85455869b0",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "478c75795c23ec64e9166d80fe27a97b1c092ad8"
+      ],
+      "filename": "php5.6-cli-dbgsym_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-cli-dbgsym",
+      "sha256": "d7799d808b59c0cec6910739f1e86bcd2bf507caa5ad64f17f5de54cc5b76d9b",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "ad60c5d7e0dce550a3f75528c980bf5760437dc8"
+      ],
+      "filename": "php5.6-gmp-dbgsym_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-gmp-dbgsym",
+      "sha256": "aeac7095082e9135f9874d03daa20c25c854287475820c172294349cf061a70d",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "78f9af46c22f6a7e6d432b8cf3a59e31310fad2e"
+      ],
+      "filename": "php5.6-recode-dbgsym_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-recode-dbgsym",
+      "sha256": "0d00a16f2f152f2551addc015a18d975c2919f726a583b6b02f64053849a70e9",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "aa261f6e00302409a0fb525f8efd2cea1f0819a1"
+      ],
+      "filename": "php5.6-cgi-dbgsym_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-cgi-dbgsym",
+      "sha256": "0fe837aded754ed2c95c30e6ab769dfb38abff165ac08795f1dc0a54a3c28b9c",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "5038e9467b989b7220da2899a2f03dbeacfb97fc"
+      ],
+      "filename": "php5.6-phpdbg-dbgsym_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-phpdbg-dbgsym",
+      "sha256": "a5d03a3f5ee62473561b7b4bc0cdb54e517b9ed6eaaa96da08d4ba5b971a34f4",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "950919a249e5f32c9ff5b09a2a9a7336c6fc651d"
+      ],
+      "filename": "php5.6-bz2-dbgsym_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-bz2-dbgsym",
+      "sha256": "cee40e42a3177ab7dcd1bb177901829392bd0bad52c77e78030fd5010084e57b",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "5a05a41f0a35aa9b2dd7adab8493a7ba1232f316"
+      ],
+      "filename": "php5.6-fpm-dbgsym_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-fpm-dbgsym",
+      "sha256": "0bb5e01707ce349b430af94eb609c3d6963958b7c21d4473a273140b60eaec74",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "5c522b6266974b051c076c7b5ca6ca85a3a097ce",
+        "6bb81e947533360ee0191503ce95c51c9d4be50a"
+      ],
+      "filename": "php5.6-sybase-dbgsym_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-sybase-dbgsym",
+      "sha256": "4088dda56dfa4d753ea783b19fee9496a4a63d4eedc982cdb98e41425645a5bf",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "bd70ed2f0bf9903e649da3b0279c7f862f45f6c1"
+      ],
+      "filename": "php5.6-imap-dbgsym_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-imap-dbgsym",
+      "sha256": "52715ccbb2eb23189655d962374a272fd3fae1529dd9dbb250ca281bc4dca73e",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "418f79bb211a6f2620888d1ce379725811c4122e",
+        "e71e0eac210ea225ea394bc5dace50bd1f47f48d"
+      ],
+      "filename": "php5.6-pgsql-dbgsym_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-pgsql-dbgsym",
+      "sha256": "24f7a6533c91f2204c0b61a915015ef7db83f56642645606f074bd0c439f989f",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "2799389f7d7a33ee0edcb7bdc6230108d8ad46b6"
+      ],
+      "filename": "php5.6-mcrypt-dbgsym_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-mcrypt-dbgsym",
+      "sha256": "cfa1b593b0d2694aa63e1338f26fb579f7d5337097b36a30c82b93ba27e0eb7d",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "03ba4e2c9f727d8147a2b8b75934bb7bccdc73d3"
+      ],
+      "filename": "php5.6-ldap-dbgsym_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-ldap-dbgsym",
+      "sha256": "17d4bb235c00194b8193e061366a7e75ac1bd2caae0dbc09da30baa59ce395e4",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "6279a292bbbd31b3a8e2782d1ec1da131076f994"
+      ],
+      "filename": "php5.6-tidy-dbgsym_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-tidy-dbgsym",
+      "sha256": "5a37d9d3acd8dc0a830a2d1ba8051943fe35d328398f2dc029cce82b0979b782",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "07703c25f42877c134ab8a8ffc54d23645728241",
+        "15e32fe3d873c5c633c2f6f0f40cfa47ae65cce4",
+        "2010872f54871e9d7e28f74a77a698150fb84a90",
+        "579e81818d9dcd3ca802807dfcebc4b705d14410",
+        "8811a176ea79ae7731d867bf8ff909f1c8d642b5",
+        "b19822691bdff21c94f8e42296ed02107a824d33",
+        "fc5419fbf74f7ff6d98ecd4198f7f08ca1421f6c"
+      ],
+      "filename": "php5.6-xml-dbgsym_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-xml-dbgsym",
+      "sha256": "ad78e710c723a9bf2aaf7fee0017679a36a0c657edf99136b7f1aefc2dd168e9",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "5d1e6f0d4eb1a07627828bb75cef4f4d0e1489f7"
+      ],
+      "filename": "php5.6-enchant-dbgsym_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-enchant-dbgsym",
+      "sha256": "c5d05fcbfd5707e3d93a88febc64d8513655b13d867d33923761620aef6a249f",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "e95e392ee1fb5bb1b2f7c67b94f3a13afd0a0357"
+      ],
+      "filename": "php5.6-pspell-dbgsym_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-pspell-dbgsym",
+      "sha256": "d78b625504f034a9c0688cf52180ca4d1180b719b6566cdb0c9bf90828d860b2",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "79493fe0ccb534b665ff7b46277843a48117788a"
+      ],
+      "filename": "php5.6-zip-dbgsym_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-zip-dbgsym",
+      "sha256": "8cc12a7716188506e48b18fae8ad241b676b23d1d353cb83717282e33fd01a06",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "735d9b85e68456a187768084bcdce13addd905cd"
+      ],
+      "filename": "php5.6-soap-dbgsym_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-soap-dbgsym",
+      "sha256": "58e94fe4f87cb9a2082784e2aa35b07e06bc32dbcfc874032088970082dae7d4",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "6b367405e4d7e898b90f2a8a6cd6360a5c45daaa"
+      ],
+      "filename": "php5.6-gd-dbgsym_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-gd-dbgsym",
+      "sha256": "5c4dc418f6c3ca9a1858a8d6e6f3b3ad16659459807525f92f9d78c387de87a1",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "3e56bd0c8261fc2d45066ed810799073a2eecf47"
+      ],
+      "filename": "libapache2-mod-php5.6-dbgsym_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "libapache2-mod-php5.6-dbgsym",
+      "sha256": "d81ed402af407f1526d335ad05cb32c2ee308390c088b95ddcee295b2d394c27",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "2ce03c2077611a094d2c6abe150cfd09f750a320"
+      ],
+      "filename": "php5.6-curl-dbgsym_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-curl-dbgsym",
+      "sha256": "54f983cb694de00751c1af3dbd035ef660096f6fd2e23487d27be2968210ce0d",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "25f2c97b20199af454088d3832fc4890a5769c57"
+      ],
+      "filename": "php5.6-snmp-dbgsym_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-snmp-dbgsym",
+      "sha256": "36b1015319eab88a79c09ee011e6e70e01be2b58b5e63ae6375012b0b098b11f",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "351601b31b33aac1ad569271f4febee524926e67"
+      ],
+      "filename": "php5.6-xmlrpc-dbgsym_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-xmlrpc-dbgsym",
+      "sha256": "7382acb086d0c3a2e6dee6503af79374f9abd6d24bd1150f8784a814e5209a83",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "b2ebf6253aff62c38e31761d31acc0d8e6e38c71"
+      ],
+      "filename": "php5.6-json-dbgsym_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-json-dbgsym",
+      "sha256": "d22e0b3a0af5d20a100e29f2c9ecf80d7a6dfb528dd506d7120f643fc40d7b85",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "3dc274df864133abdeb999d50b3c99e6aeb3abe8"
+      ],
+      "filename": "php5.6-bcmath-dbgsym_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-bcmath-dbgsym",
+      "sha256": "128c44ded589bb5b6c99ba19865c06a7f4b414bf75cdd39a0457ff46a5af6b4a",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "e58f1e12e1d15356b15af441ef21709d3024cb60"
+      ],
+      "filename": "php5.6-amqp-dbgsym_1.10.2-8+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-amqp-dbgsym",
+      "sha256": "6a7ad176ff9072e1e6dd75cc7e824ce670ff25fbc7dd530f127f25ce81fb13b7",
+      "version": "1.10.2-8+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "42eba739e956129c8ded9903e32b4b99670f1fb6"
+      ],
+      "filename": "php5.6-apcu-dbgsym_5.1.19+4.0.11-7+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-apcu-dbgsym",
+      "sha256": "3d6cdfe34c12bb08d3e78db015efc1804e4bf6e2fe062b37b0ee9a33e272b018",
+      "version": "5.1.19+4.0.11-7+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "0d683fc018f59b7c32d1acc914cffa507f66966a"
+      ],
+      "filename": "php5.6-gearman-dbgsym_2.1.0+1.1.2-5+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-gearman-dbgsym",
+      "sha256": "95b24c195232912d6d9a1ce59535f4ce4d9d54833fa5a24622f80dee582dd984",
+      "version": "2.1.0+1.1.2-5+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "d29707fcd65673343c7a8b10621226433b1892ed"
+      ],
+      "filename": "php5.6-geoip-dbgsym_1.1.1-12+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-geoip-dbgsym",
+      "sha256": "31cb4b440283cea0f8e8e41a7a108c26c2e7c6feb034dde93dcde3a3d6a4dab5",
+      "version": "1.1.1-12+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "9a673904150bf508863465c2c1641f3ee30103c2"
+      ],
+      "filename": "php5.6-gmagick-dbgsym_2.0.6~rc1+1.1.7~rc3-5+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-gmagick-dbgsym",
+      "sha256": "99d59cd4b7559a0a83884c6a0b1bf862f8e7d7b2e3c8996e34d7acd960ae2c0a",
+      "version": "2.0.6~rc1+1.1.7~rc3-5+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "b5f287a0bb9260663fa095eeacee7f63ffa1b2e3"
+      ],
+      "filename": "php5.6-gnupg-dbgsym_1.5.0~rc2+1.4.0-1+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-gnupg-dbgsym",
+      "sha256": "dd3086375c510152216dfaf0f18177e621bdadf796e8dacfbcefc8799bd3866b",
+      "version": "1.5.0~rc2+1.4.0-1+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "dccc1c7f0a0e66949d1cd59d1e96b604cdbc7024"
+      ],
+      "filename": "php5.6-grpc-dbgsym_1.36.0+1.33.1-1+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-grpc-dbgsym",
+      "sha256": "11fc5e50175315e88037196c69590c891896bc79a8a97e8853e0683dcc45a624",
+      "version": "1.36.0+1.33.1-1+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "c031d6597e48161c27a2e52f1774cad07dc0d041"
+      ],
+      "filename": "php5.6-igbinary-dbgsym_3.2.1+2.0.8-6+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-igbinary-dbgsym",
+      "sha256": "d4fb0addcf538c2a302b48217b3903837daf14a004eea337e4fb6252576f2a65",
+      "version": "3.2.1+2.0.8-6+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "a7ac09cfe422461abc3c327ff02ef3fcb56482e2"
+      ],
+      "filename": "php5.6-imagick-dbgsym_3.4.4+php8.0+3.4.4-7+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-imagick-dbgsym",
+      "sha256": "a43066aa609ad368dbe67754fbafe1013d0d5364d5de32099b5440341668a1cf",
+      "version": "3.4.4+php8.0+3.4.4-7+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "b4209e218e9cc762f87d0a7f6959699495373aa7"
+      ],
+      "filename": "php5.6-inotify-dbgsym_3.0.0+0.1.6-1+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-inotify-dbgsym",
+      "sha256": "6a56b48e4ae435413fb466202e89eaeaae35533f971fcbd15b8b980a1b0feda8",
+      "version": "3.0.0+0.1.6-1+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "4652760a510037874fcd1c65603857a3807ac161"
+      ],
+      "filename": "php5.6-lua-dbgsym_2.0.7+1.1.0-8+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-lua-dbgsym",
+      "sha256": "133dea285f1ba82de0da295dddcee9b3ad40ada50a1b7b8762fb64e56ca244b7",
+      "version": "2.0.7+1.1.0-8+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "7e2f3e8eec95dff4d4f621c93fca84399ab2a662"
+      ],
+      "filename": "php5.6-lz4-dbgsym_0.4.3-2+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-lz4-dbgsym",
+      "sha256": "cd4d5ccddb87580aa398327206b504a5cdfd5cdf67f6e72052aab0b167d21f77",
+      "version": "0.4.3-2+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "5298cd974a4cdf85b8f51eae884a89ad98c945df"
+      ],
+      "filename": "php5.6-mailparse-dbgsym_3.1.1+2.1.7~dev20160128-7+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-mailparse-dbgsym",
+      "sha256": "b747a87d2605c3d766d130bc5f5302e803f83f29d4ccb98aab47bad36d6dedc6",
+      "version": "3.1.1+2.1.7~dev20160128-7+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "94c19e4328f6a07094cee3c47860fdb97390ad58"
+      ],
+      "filename": "php5.6-memcache-dbgsym_8.0+4.0.5.2+3.0.9~20170802.e702b5f9+-1+ubuntu16.04.1+deb.sury.org+2+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-memcache-dbgsym",
+      "sha256": "eebf394b445e09e7b0a7a0cc4d510b3bd6dd21601321979f6c90beeeffaa332b",
+      "version": "8.0+4.0.5.2+3.0.9~20170802.e702b5f9+-1+ubuntu16.04.1+deb.sury.org+2+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "d58e97eef97e0324e8ea9e1bd3faeaa312540189"
+      ],
+      "filename": "php5.6-msgpack-dbgsym_2.1.2+0.5.7-6+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-msgpack-dbgsym",
+      "sha256": "7bb57ef40b2016d4dcb855fe363bd4d7782507c34646229b2a11e925064dc38b",
+      "version": "2.1.2+0.5.7-6+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "9b7f7887cab8cb316aab42c92fb888cf01552c28"
+      ],
+      "filename": "php5.6-memcached-dbgsym_3.1.5+2.2.0-9+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-memcached-dbgsym",
+      "sha256": "0e7b2de8a11f4af94aee5b0635a4323bb7e16240fc602232b1ec23a486bba972",
+      "version": "3.1.5+2.2.0-9+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "0dd09c07b12b8225998e1923bfc7a86c57168be9"
+      ],
+      "filename": "php5.6-mongo-dbgsym_1.6.16-8+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-mongo-dbgsym",
+      "sha256": "efda993b6d236f07e816729d880bbfbb4ac8e0d8e82c57756e2495e3c20144e5",
+      "version": "1.6.16-8+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "1ecb6de74207d37a8c0ed2c877dadba8c9bacc1f"
+      ],
+      "filename": "php5.6-mongodb-dbgsym_1.9.0+1.7.5-6+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-mongodb-dbgsym",
+      "sha256": "27f83f5a883261bcf8488a265682399f629d97c0e1fd880ee2863296fc9dbbd7",
+      "version": "1.9.0+1.7.5-6+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "97260d326eba265cc80a3abed796169c7692c17b"
+      ],
+      "filename": "php5.6-mysqlnd-ms-dbgsym_1.6.0+svn333622-10+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-mysqlnd-ms-dbgsym",
+      "sha256": "ed93eae208374801336556264d8bc4126edb554c201063a4049d45859b79b277",
+      "version": "1.6.0+svn333622-10+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "a2388e7518ffca3a370cc823c541c9d2c0802eb7"
+      ],
+      "filename": "php5.6-oauth-dbgsym_2.0.7+1.2.3-7+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-oauth-dbgsym",
+      "sha256": "9751fadb7313cfe327c6e21c975245d15dfc77ed5a95b12ca27e18b7c1d6d180",
+      "version": "2.0.7+1.2.3-7+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "c8d43dc968625fbf9d2d431f8a7898fc43106d1e"
+      ],
+      "filename": "php5.6-propro-dbgsym_2.1.0+1.0.2+nophp8-8+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-propro-dbgsym",
+      "sha256": "1a0e91ff9d1946212d2a99800662484e09fee6be063169ce2b7914eee26a5b3f",
+      "version": "2.1.0+1.0.2+nophp8-8+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "dfeae0d8ba02303386d54a877b00a71ebfd48965"
+      ],
+      "filename": "php5.6-raphf-dbgsym_2.0.1+1.1.2-8+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-raphf-dbgsym",
+      "sha256": "25a44b843d748c3bf757de7cabb4f3cd30f365f5a38e2ab8dd608a9c87088833",
+      "version": "2.0.1+1.1.2-8+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "abb56b9c13b206c3ab97a0dddd0317c7889de923"
+      ],
+      "filename": "php5.6-http-dbgsym_4.0.0+3.2.4+2.6.0-7+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-http-dbgsym",
+      "sha256": "9d76ba7f7faacf827d2849341debfd832d8dd09584b1d189179566882630567a",
+      "version": "4.0.0+3.2.4+2.6.0-7+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "5f509ae09f9e08fab76c5e1fa35acf2f2a1c3aa1"
+      ],
+      "filename": "php5.6-phalcon3-dbgsym_3.4.5-5+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-phalcon3-dbgsym",
+      "sha256": "ed5e305d01c522502bdf37c3a40a451b76ee35fceb3ca2212ea4b56b208317bf",
+      "version": "3.4.5-5+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "0f81afcf192bef8532be84cb5e82018bed18daab"
+      ],
+      "filename": "php5.6-protobuf-dbgsym_3.15.6+3.12.4-1+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-protobuf-dbgsym",
+      "sha256": "d858517789dc20fd9f14eb101c7bd98108c34346b82d520b00457ef3c3f6031e",
+      "version": "3.15.6+3.12.4-1+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "4dd8f137257cb14024804959f48ba28115cd627e"
+      ],
+      "filename": "php5.6-ps-dbgsym_1.4.1+pecl+nophp8+1.3.7-6+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-ps-dbgsym",
+      "sha256": "b5d211a9019e252b79ce691a14400e58f3478123bbe3a7755c057ea80723a424",
+      "version": "1.4.1+pecl+nophp8+1.3.7-6+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "43bab0a19ad665f4c91611cf39c78586cab8cc65"
+      ],
+      "filename": "php5.6-radius-dbgsym_1.4.0~b1-17+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-radius-dbgsym",
+      "sha256": "70a4c64381c72dc81874ffa5c8a165cb891802da783f296e4aa3c703e86b8488",
+      "version": "1.4.0~b1-17+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "349e3cff0057e2e0db9ecc11ce88973b3ed553bd"
+      ],
+      "filename": "php5.6-redis-dbgsym_5.3.4+4.3.0-1+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-redis-dbgsym",
+      "sha256": "1c0f0fecc7c8ed8a8f687e3b2be0fb4516a1d15769d35c7408161c9dcc47b5e2",
+      "version": "5.3.4+4.3.0-1+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "70cd4159f477f6ff956eef758d0beb13d4ac1b1a"
+      ],
+      "filename": "php5.6-rrd-dbgsym_2.0.1+1.1.3-14+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-rrd-dbgsym",
+      "sha256": "4570939c625407f108dd9ea089672276f22c80c4ecc70605786a6fc2f05cdab0",
+      "version": "2.0.1+1.1.3-14+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "00af971090731686a81b4b2e9f8cec34bdd753bd"
+      ],
+      "filename": "php5.6-smbclient-dbgsym_1.0.6-1+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-smbclient-dbgsym",
+      "sha256": "013a80708822e156a474f3893856f5e9b260b927792d94ac199504932dfeb9fd",
+      "version": "1.0.6-1+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "af4500c0f705c728840e931f39d0e33fe582da1d"
+      ],
+      "filename": "php5.6-solr-dbgsym_2.5.1+2.4.0-9+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-solr-dbgsym",
+      "sha256": "b1986795c056bacd172d8f541a3e2b7c4cf32d2cba5b12062e1c65c1a16e552d",
+      "version": "2.5.1+2.4.0-9+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "88727bee61ace7ef59c457c6a08dbcd6eaff8d79"
+      ],
+      "filename": "php5.6-ssh2-dbgsym_1.3.1+0.13-1+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-ssh2-dbgsym",
+      "sha256": "4a8c820c47bb15fb4b7fc990342556c3c24814425ae46673b8e08a31c568cfa4",
+      "version": "1.3.1+0.13-1+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "c7c2b3efbf22e0657ef00ba96eea59294cd71481"
+      ],
+      "filename": "php5.6-stomp-dbgsym_2.0.2+1.0.9-10+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-stomp-dbgsym",
+      "sha256": "bbf20d323df8bd1b207ffe8dfae660c04ac7ac76057ae4f90fdd66ea232f9561",
+      "version": "2.0.2+1.0.9-10+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "da46f0542843f1cebd4ea9a91bed8ec871a2655f"
+      ],
+      "filename": "php5.6-uploadprogress-dbgsym_1.1.3-9+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-uploadprogress-dbgsym",
+      "sha256": "57ef2bd333acc6c758d90693966fffdf5de063b4a95390a45c956bddb81db042",
+      "version": "1.1.3-9+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "ce502169bff3afeb6417ea95fbf884af4f58f287"
+      ],
+      "filename": "php5.6-xhprof-dbgsym_2.2.3+0.9.2-5+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-xhprof-dbgsym",
+      "sha256": "51b3c784e4c2abaf850fd7c3e1a93558f6da6418d6087e9b17858d81b7d35c6f",
+      "version": "2.2.3+0.9.2-5+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "004784e455e4a17780e2a8c5c3bf8739f1ac86a2"
+      ],
+      "filename": "php5.6-yac-dbgsym_2.3.0+0.9.2-6+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-yac-dbgsym",
+      "sha256": "6df62e97088bfe2845811291bc483a836a465c344e4c738c2f4834196bfa240f",
+      "version": "2.3.0+0.9.2-6+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "0147a1cbb6eadc89f9ba7f4edae093770185f3c1"
+      ],
+      "filename": "php5.6-yaml-dbgsym_2.2.1+2.1.0+2.0.4+1.3.2-6+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-yaml-dbgsym",
+      "sha256": "a6e7ccb8f5fe8fea527206dcebc4bff7b42b5dec42fc4a9183c96f30e964e731",
+      "version": "2.2.1+2.1.0+2.0.4+1.3.2-6+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "22efa3151a34980b59661ef6814d49f7aaa14467"
+      ],
+      "filename": "php5.6-zmq-dbgsym_1.1.3-18+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-zmq-dbgsym",
+      "sha256": "3aec0af220b0bc3e04f87f66bfa145841a857025353910a8c5a30d92992b9b28",
+      "version": "1.1.3-18+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "4b1c27d5ef58f24329bdc5438121a3b0e1c804d4"
+      ],
+      "filename": "php5.6-zstd-dbgsym_0.10.0-2+ubuntu16.04.1+deb.sury.org+3+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-zstd-dbgsym",
+      "sha256": "263bc71fa56a37d70b6597fa8d69dd4f410a99f08ea040c87041ee38f2007864",
+      "version": "0.10.0-2+ubuntu16.04.1+deb.sury.org+3+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "23198b1f74188fa11856c4fbe00bfb1d01ec4924"
+      ],
+      "filename": "php5.6-xcache-dbgsym_3.2.0-8+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-xcache-dbgsym",
+      "sha256": "36a8d152a5a5a1a8e58e60a28e452ec89a53798e46c315d2a06439758b47afab",
+      "version": "3.2.0-8+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "build_ids": [
+        "b8a25035bb6fb5cba3b54d57f384c5ed57a4f84f"
+      ],
+      "filename": "php5.6-xdebug-dbgsym_3.0.3+2.9.8+2.8.1+2.5.5-1+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-xdebug-dbgsym",
+      "sha256": "ab99e190f78c7fbc54ef60b9e7840b97534e50f4254835eb2a9e38bbae034ae1",
+      "version": "3.0.3+2.9.8+2.8.1+2.5.5-1+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "compatibility_metapackage": true,
+      "filename": "php5.6-dbg_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_all.deb",
+      "name": "php5.6-dbg",
+      "sha256": "a0deef3fcb4a6d04a334317f3ed455532ea7f8bfb42d2bf4e58f9a20581d87de",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    }
+  ],
+  "execution_mode": "native",
+  "final_state": {
+    "all_output_checksums_exit_code": 0,
+    "module_directives": 95,
+    "services": {
+      "apache2": "active",
+      "memcached": "active",
+      "php5.6-fpm": "active",
+      "redis-server": "active"
+    },
+    "status": "PASS",
+    "temporary_http_probes_removed": true
+  },
+  "installation": {
+    "apache_extension_checks_passed": 36,
+    "cli_extension_checks_passed": 36,
+    "core_suite": "not_run",
+    "dpkg_audit": "PASS",
+    "excluded_conflicting_packages": {
+      "php5.6-gmagick": "Imagick selected; Gmagick conflicts with the Imagick virtual package.",
+      "php5.6-smbclient": "MongoDB selected; SMBClient plus MongoDB crashed during SASL cleanup on native 16.04/18.04 tests.",
+      "php5.6-uploadprogress": "Core session upload progress selected; this PECL extension replaces its multipart callback and breaks the counter regression check.",
+      "php5.6-xcache": "APCu and OPcache selected; Xcache is an alternative cache.",
+      "php5.6-yac": "APCu selected; YAC conflicts with the APCu virtual package."
+    },
+    "limits": [
+      "No representative third-party application or production workload.",
+      "External service tests use local Memcached/Redis; other backend integrations are bounded smoke checks."
+    ],
+    "mode": "native",
+    "module_directives_verified_in_cli": [
+      "amqp",
+      "apcu",
+      "gearman",
+      "geoip",
+      "gnupg",
+      "grpc",
+      "http",
+      "igbinary",
+      "imagick",
+      "inotify",
+      "lua",
+      "lz4",
+      "mailparse",
+      "memcache",
+      "memcached",
+      "mongo",
+      "mongodb",
+      "msgpack",
+      "mysqlnd_ms",
+      "oauth",
+      "phalcon",
+      "propro",
+      "protobuf",
+      "ps",
+      "radius",
+      "raphf",
+      "redis",
+      "rrd",
+      "solr",
+      "ssh2",
+      "stomp",
+      "xdebug",
+      "xhprof",
+      "yaml",
+      "zmq",
+      "zstd"
+    ],
+    "security_checks_with_all_extensions": "PASS",
+    "selected_debug_packages": 73,
+    "selected_extensions": 36,
+    "selected_runtime_packages": 77,
+    "status": "PASS",
+    "system_apache": "PASS",
+    "ubuntu": "16.04"
+  },
+  "installation_validator_commit": "a7a17e2ddccc59fc78e27557c719c03777b14129",
+  "installed_apache_extension_checks": [
+    {
+      "name": "php5.6-amqp",
+      "status": "PASS"
+    },
+    {
+      "name": "php5.6-apcu",
+      "status": "PASS"
+    },
+    {
+      "name": "php5.6-gearman",
+      "status": "PASS"
+    },
+    {
+      "name": "php5.6-geoip",
+      "status": "PASS"
+    },
+    {
+      "name": "php5.6-gnupg",
+      "status": "PASS"
+    },
+    {
+      "name": "php5.6-grpc",
+      "status": "PASS"
+    },
+    {
+      "name": "php5.6-http",
+      "status": "PASS"
+    },
+    {
+      "name": "php5.6-igbinary",
+      "status": "PASS"
+    },
+    {
+      "name": "php5.6-imagick",
+      "status": "PASS"
+    },
+    {
+      "name": "php5.6-inotify",
+      "status": "PASS"
+    },
+    {
+      "name": "php5.6-lua",
+      "status": "PASS"
+    },
+    {
+      "name": "php5.6-lz4",
+      "status": "PASS"
+    },
+    {
+      "name": "php5.6-mailparse",
+      "status": "PASS"
+    },
+    {
+      "name": "php5.6-memcache",
+      "status": "PASS"
+    },
+    {
+      "name": "php5.6-memcached",
+      "status": "PASS"
+    },
+    {
+      "name": "php5.6-mongo",
+      "status": "PASS"
+    },
+    {
+      "name": "php5.6-mongodb",
+      "status": "PASS"
+    },
+    {
+      "name": "php5.6-msgpack",
+      "status": "PASS"
+    },
+    {
+      "name": "php5.6-mysqlnd-ms",
+      "status": "PASS"
+    },
+    {
+      "name": "php5.6-oauth",
+      "status": "PASS"
+    },
+    {
+      "name": "php5.6-phalcon3",
+      "status": "PASS"
+    },
+    {
+      "name": "php5.6-propro",
+      "status": "PASS"
+    },
+    {
+      "name": "php5.6-protobuf",
+      "status": "PASS"
+    },
+    {
+      "name": "php5.6-ps",
+      "status": "PASS"
+    },
+    {
+      "name": "php5.6-radius",
+      "status": "PASS"
+    },
+    {
+      "name": "php5.6-raphf",
+      "status": "PASS"
+    },
+    {
+      "name": "php5.6-redis",
+      "status": "PASS"
+    },
+    {
+      "name": "php5.6-rrd",
+      "status": "PASS"
+    },
+    {
+      "name": "php5.6-solr",
+      "status": "PASS"
+    },
+    {
+      "name": "php5.6-ssh2",
+      "status": "PASS"
+    },
+    {
+      "name": "php5.6-stomp",
+      "status": "PASS"
+    },
+    {
+      "name": "php5.6-xdebug",
+      "status": "PASS"
+    },
+    {
+      "name": "php5.6-xhprof",
+      "status": "PASS"
+    },
+    {
+      "name": "php5.6-yaml",
+      "status": "PASS"
+    },
+    {
+      "name": "php5.6-zmq",
+      "status": "PASS"
+    },
+    {
+      "name": "php5.6-zstd",
+      "status": "PASS"
+    }
+  ],
+  "installed_cli_extension_checks": [
+    {
+      "exit_code": 0,
+      "name": "php5.6-amqp",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS amqp\n"
+    },
+    {
+      "exit_code": 0,
+      "name": "php5.6-apcu",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS apcu\n"
+    },
+    {
+      "exit_code": 0,
+      "name": "php5.6-gearman",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS gearman\n"
+    },
+    {
+      "exit_code": 0,
+      "name": "php5.6-geoip",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS geoip\n"
+    },
+    {
+      "exit_code": 0,
+      "name": "php5.6-gnupg",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS gnupg\n"
+    },
+    {
+      "exit_code": 0,
+      "name": "php5.6-grpc",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS grpc\n"
+    },
+    {
+      "exit_code": 0,
+      "name": "php5.6-http",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS http\n"
+    },
+    {
+      "exit_code": 0,
+      "name": "php5.6-igbinary",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS igbinary\n"
+    },
+    {
+      "exit_code": 0,
+      "name": "php5.6-imagick",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS imagick\n"
+    },
+    {
+      "exit_code": 0,
+      "name": "php5.6-inotify",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS inotify\n"
+    },
+    {
+      "exit_code": 0,
+      "name": "php5.6-lua",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS lua\n"
+    },
+    {
+      "exit_code": 0,
+      "name": "php5.6-lz4",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS lz4\n"
+    },
+    {
+      "exit_code": 0,
+      "name": "php5.6-mailparse",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS mailparse\n"
+    },
+    {
+      "exit_code": 0,
+      "name": "php5.6-memcache",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS memcache\n"
+    },
+    {
+      "exit_code": 0,
+      "name": "php5.6-memcached",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS memcached\n"
+    },
+    {
+      "exit_code": 0,
+      "name": "php5.6-mongo",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS mongo\n"
+    },
+    {
+      "exit_code": 0,
+      "name": "php5.6-mongodb",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS mongodb\n"
+    },
+    {
+      "exit_code": 0,
+      "name": "php5.6-msgpack",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS msgpack\n"
+    },
+    {
+      "exit_code": 0,
+      "name": "php5.6-mysqlnd-ms",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS mysqlnd-ms\n"
+    },
+    {
+      "exit_code": 0,
+      "name": "php5.6-oauth",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS oauth\n"
+    },
+    {
+      "exit_code": 0,
+      "name": "php5.6-phalcon3",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS phalcon3\n"
+    },
+    {
+      "exit_code": 0,
+      "name": "php5.6-propro",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS propro\n"
+    },
+    {
+      "exit_code": 0,
+      "name": "php5.6-protobuf",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS protobuf\n"
+    },
+    {
+      "exit_code": 0,
+      "name": "php5.6-ps",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS ps\n"
+    },
+    {
+      "exit_code": 0,
+      "name": "php5.6-radius",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS radius\n"
+    },
+    {
+      "exit_code": 0,
+      "name": "php5.6-raphf",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS raphf\n"
+    },
+    {
+      "exit_code": 0,
+      "name": "php5.6-redis",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS redis\n"
+    },
+    {
+      "exit_code": 0,
+      "name": "php5.6-rrd",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS rrd\n"
+    },
+    {
+      "exit_code": 0,
+      "name": "php5.6-solr",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS solr\n"
+    },
+    {
+      "exit_code": 0,
+      "name": "php5.6-ssh2",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS ssh2\n"
+    },
+    {
+      "exit_code": 0,
+      "name": "php5.6-stomp",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS stomp\n"
+    },
+    {
+      "exit_code": 0,
+      "name": "php5.6-xdebug",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS xdebug\n"
+    },
+    {
+      "exit_code": 0,
+      "name": "php5.6-xhprof",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS xhprof\n"
+    },
+    {
+      "exit_code": 0,
+      "name": "php5.6-yaml",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS yaml\n"
+    },
+    {
+      "exit_code": 0,
+      "name": "php5.6-zmq",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS zmq\n"
+    },
+    {
+      "exit_code": 0,
+      "name": "php5.6-zstd",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS zstd\n"
+    }
+  ],
+  "installed_module_directives": {
+    "apache_missing": [],
+    "cli_missing": [],
+    "expected_from_installed_ini": [
+      "amqp",
+      "apcu",
+      "bcmath",
+      "bz2",
+      "calendar",
+      "ctype",
+      "curl",
+      "dba",
+      "dom",
+      "enchant",
+      "exif",
+      "fileinfo",
+      "ftp",
+      "gd",
+      "gearman",
+      "geoip",
+      "gettext",
+      "gmp",
+      "gnupg",
+      "grpc",
+      "http",
+      "iconv",
+      "igbinary",
+      "imagick",
+      "imap",
+      "inotify",
+      "interbase",
+      "intl",
+      "json",
+      "ldap",
+      "lua",
+      "lz4",
+      "mailparse",
+      "mbstring",
+      "mcrypt",
+      "memcache",
+      "memcached",
+      "mongo",
+      "mongodb",
+      "msgpack",
+      "mssql",
+      "mysql",
+      "mysqli",
+      "mysqlnd",
+      "mysqlnd_ms",
+      "oauth",
+      "odbc",
+      "pdo",
+      "pdo_dblib",
+      "pdo_firebird",
+      "pdo_mysql",
+      "pdo_odbc",
+      "pdo_pgsql",
+      "pdo_sqlite",
+      "pgsql",
+      "phalcon",
+      "phar",
+      "posix",
+      "propro",
+      "protobuf",
+      "ps",
+      "pspell",
+      "radius",
+      "raphf",
+      "readline",
+      "recode",
+      "redis",
+      "rrd",
+      "shmop",
+      "simplexml",
+      "snmp",
+      "soap",
+      "sockets",
+      "solr",
+      "sqlite3",
+      "ssh2",
+      "stomp",
+      "sysvmsg",
+      "sysvsem",
+      "sysvshm",
+      "tidy",
+      "tokenizer",
+      "wddx",
+      "xdebug",
+      "xhprof",
+      "xml",
+      "xmlreader",
+      "xmlrpc",
+      "xmlwriter",
+      "xsl",
+      "yaml",
+      "zend opcache",
+      "zip",
+      "zmq",
+      "zstd"
+    ],
+    "status": "PASS"
+  },
+  "isolated_extension_checks": [
+    {
+      "name": "php5.6-amqp",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS amqp\n"
+    },
+    {
+      "name": "php5.6-apcu",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS apcu\n"
+    },
+    {
+      "name": "php5.6-gearman",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS gearman\n"
+    },
+    {
+      "name": "php5.6-geoip",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS geoip\n"
+    },
+    {
+      "name": "php5.6-gmagick",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS gmagick\n"
+    },
+    {
+      "name": "php5.6-gnupg",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS gnupg\n"
+    },
+    {
+      "name": "php5.6-grpc",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS grpc\n"
+    },
+    {
+      "name": "php5.6-igbinary",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS igbinary\n"
+    },
+    {
+      "name": "php5.6-imagick",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS imagick\n"
+    },
+    {
+      "name": "php5.6-inotify",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS inotify\n"
+    },
+    {
+      "name": "php5.6-lua",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS lua\n"
+    },
+    {
+      "name": "php5.6-lz4",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS lz4\n"
+    },
+    {
+      "name": "php5.6-mailparse",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS mailparse\n"
+    },
+    {
+      "name": "php5.6-memcache",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS memcache\n"
+    },
+    {
+      "name": "php5.6-msgpack",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS msgpack\n"
+    },
+    {
+      "name": "php5.6-memcached",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS memcached\n"
+    },
+    {
+      "name": "php5.6-mongo",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS mongo\n"
+    },
+    {
+      "name": "php5.6-mongodb",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS mongodb\n"
+    },
+    {
+      "name": "php5.6-mysqlnd-ms",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS mysqlnd-ms\n"
+    },
+    {
+      "name": "php5.6-oauth",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS oauth\n"
+    },
+    {
+      "name": "php5.6-propro",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS propro\n"
+    },
+    {
+      "name": "php5.6-raphf",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS raphf\n"
+    },
+    {
+      "name": "php5.6-http",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS http\n"
+    },
+    {
+      "name": "php5.6-phalcon3",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS phalcon3\n"
+    },
+    {
+      "name": "php5.6-protobuf",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS protobuf\n"
+    },
+    {
+      "name": "php5.6-ps",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS ps\n"
+    },
+    {
+      "name": "php5.6-radius",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS radius\n"
+    },
+    {
+      "name": "php5.6-redis",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS redis\n"
+    },
+    {
+      "name": "php5.6-rrd",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS rrd\n"
+    },
+    {
+      "name": "php5.6-smbclient",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS smbclient\n"
+    },
+    {
+      "name": "php5.6-solr",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS solr\n"
+    },
+    {
+      "name": "php5.6-ssh2",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS ssh2\n"
+    },
+    {
+      "name": "php5.6-stomp",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS stomp\n"
+    },
+    {
+      "name": "php5.6-uploadprogress",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS uploadprogress\n"
+    },
+    {
+      "name": "php5.6-xhprof",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS xhprof\n"
+    },
+    {
+      "name": "php5.6-yac",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS yac\n"
+    },
+    {
+      "name": "php5.6-yaml",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS yaml\n"
+    },
+    {
+      "name": "php5.6-zmq",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS zmq\n"
+    },
+    {
+      "name": "php5.6-zstd",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS zstd\n"
+    },
+    {
+      "name": "php5.6-xcache",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS xcache\n"
+    },
+    {
+      "name": "php5.6-xdebug",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS xdebug\n"
+    }
+  ],
+  "limits": [
+    "Ubuntu 20.04 was not tested.",
+    "No fresh OS reinstall, independent application-server upgrade or snapshot rollback test.",
+    "The complete historical PHP PHPT suite was not run.",
+    "No representative application/production workload; no external MongoDB, SMB, AMQP, SQL database or other remote backend integration.",
+    "Extension smoke checks are bounded and do not prove every feature or security property.",
+    "Reversing the MongoDB/SMBClient load order avoided the minimal crash, but is not a validated deployment workaround.",
+    "Raw native logs and host package inventory are retained privately; this export omits host identities and private paths.",
+    "No binary packages were published."
+  ],
+  "mongodb_smbclient_minimal_reproduction": [
+    {
+      "exit_code": 0,
+      "module_order": [
+        "smbclient"
+      ],
+      "stderr": "",
+      "stdout": "SMB call completed\n"
+    },
+    {
+      "exit_code": 0,
+      "module_order": [
+        "mongodb"
+      ],
+      "stderr": "",
+      "stdout": "MongoDB loaded\n"
+    },
+    {
+      "exit_code": -11,
+      "module_order": [
+        "mongodb",
+        "smbclient"
+      ],
+      "stderr": "",
+      "stdout": "SMB call completed\n"
+    },
+    {
+      "exit_code": 0,
+      "module_order": [
+        "smbclient",
+        "mongodb"
+      ],
+      "stderr": "",
+      "stdout": "SMB call completed\n"
+    }
+  ],
+  "patch": {
+    "commit": "add11c4715fbd62c2a7727136570b7e1d38a22cb",
+    "final_source_files_verified": 14,
+    "known_sury_session_guard_adjustment": "PASS",
+    "sha256": "35c8fb03fb6503d0182fa9964dad6c701a7797cb654593fcf7bd5183e8cee1ba"
+  },
+  "patch_specific_phpt": {
+    "failed": 0,
+    "passed": 3,
+    "skipped": 0,
+    "tests": [
+      "PASS session rfc1867: the upload progress update rejects session data whose objects carry the incomplete class bookkeeping property names [ext/session/tests/rfc1867_incomplete_class_reserved_props.phpt]",
+      "PASS session rfc1867: the upload progress update resolves no classes, keeps the session data intact and leaves no $_SESSION behind [ext/session/tests/rfc1867_no_user_code.phpt]",
+      "PASS serialize() keeps O: for incomplete classes whose properties look like raw C: payloads [ext/standard/tests/serialize/incomplete_class_raw_payload_markers.phpt]"
+    ]
+  },
+  "runtime_package_catalog": [
+    {
+      "architecture": "all",
+      "depends": "psmisc (>= 22.15-1~), init-system-helpers (>= 1.18~)",
+      "filename": "php-common_82+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_all.deb",
+      "name": "php-common",
+      "pre_depends": "",
+      "role": "support",
+      "sha256": "fb9df9624469621f12f94ac04c152a00db8aee39230293e988124996f2068fd6",
+      "source": "php-defaults (82+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2)",
+      "version": "2:82+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "libc6 (>= 2.14)",
+      "filename": "libtidy5deb1_5.6.0-6+ubuntu16.04.1+deb.sury.org+2+php2shell20261022.2_amd64.deb",
+      "name": "libtidy5deb1",
+      "pre_depends": "",
+      "role": "support",
+      "sha256": "3946275c1d41df64e88de7e119860cf3b3df33901f13981af9caae0a59a14530",
+      "source": "tidy-html5",
+      "version": "2:5.6.0-6+ubuntu16.04.1+deb.sury.org+2+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php-common (>= 1:81~), ucf, php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), libc6 (>= 2.14), libgcc1 (>= 1:3.0), libicu55 (>= 55.1-1~)",
+      "filename": "php5.6-intl_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-intl",
+      "pre_depends": "",
+      "role": "core",
+      "sha256": "3606ca7d4fe1efe47039aa130ba4d03453c1effe0cd5e87f92b9953c14b9aedb",
+      "source": "php5.6",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php-common (>= 1:81~), ucf, php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), libc6 (>= 2.14), libedit2 (>= 3.1-20130611)",
+      "filename": "php5.6-readline_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-readline",
+      "pre_depends": "",
+      "role": "core",
+      "sha256": "21899bf71e65995e476369d5f1a82320aff9869330ef041cc0cdf756103174f4",
+      "source": "php5.6",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php-common (>= 1:81~), ucf, php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), libc6 (>= 2.14), libodbc1 (>= 2.3.1)",
+      "filename": "php5.6-odbc_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-odbc",
+      "pre_depends": "",
+      "role": "core",
+      "sha256": "56652e21a5ed704a63a6895858116c1716cca03cce5124cdb861f00a8e15e287",
+      "source": "php5.6",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php-common (>= 1:81~), ucf, php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), libc6 (>= 2.14)",
+      "filename": "php5.6-opcache_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-opcache",
+      "pre_depends": "",
+      "role": "core",
+      "sha256": "6dfdfc8552a8d80bec0b353c4c503fe7aad45f9090d40c46861edadc192dce77",
+      "source": "php5.6",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "libmagic1, libpcre3 (>= 2:8.35), mime-support, php5.6-cli, php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), php5.6-json, php5.6-opcache, tzdata, ucf, libc6 (>= 2.15), libssl1.0.0 (>= 1.0.2~beta3), libxml2 (>= 2.8.0), zlib1g (>= 1:1.1.4)",
+      "filename": "libphp5.6-embed_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "libphp5.6-embed",
+      "pre_depends": "",
+      "role": "core",
+      "sha256": "3348d4a531228d3a0532dc1df1e7aabab1ed311a5796e6bd8011220a9f326495",
+      "source": "php5.6",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php-common (>= 1:81~), ucf, libc6 (>= 2.15), libssl1.0.0 (>= 1.0.0)",
+      "filename": "php5.6-common_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-common",
+      "pre_depends": "",
+      "role": "core",
+      "sha256": "3fff21ab192e27c4345bb786e76fd8f6b517a5bcd4a0329fadabff097e800244",
+      "source": "php5.6",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php-common (>= 1:81~), ucf, php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), libc6 (>= 2.14)",
+      "filename": "php5.6-mbstring_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-mbstring",
+      "pre_depends": "",
+      "role": "core",
+      "sha256": "b704f9980d16032f7dffd9b206337afa34a3140535255248fea2851d96192105",
+      "source": "php5.6",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php-common (>= 1:81~), ucf, php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), libc6 (>= 2.14), libdb5.3, libqdbm14 (>= 1.8.74)",
+      "filename": "php5.6-dba_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-dba",
+      "pre_depends": "",
+      "role": "core",
+      "sha256": "483aae944171976fec55963f9529bea9410523ba68b68df66a09533a97d04480",
+      "source": "php5.6",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php-common (>= 1:81~), ucf, php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), libc6 (>= 2.14), libfbclient2 (>= 2.5.0.25784~ReleaseCandidate1.ds2)",
+      "filename": "php5.6-interbase_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-interbase",
+      "pre_depends": "",
+      "role": "core",
+      "sha256": "5f03aa68c84a7c44bd6160a7a74862210c98cb88a165ddb4bc94a3c8c9a8e651",
+      "source": "php5.6",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php-common (>= 1:81~), ucf, php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), libc6 (>= 2.4), libsqlite3-0 (>= 3.7.4)",
+      "filename": "php5.6-sqlite3_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-sqlite3",
+      "pre_depends": "",
+      "role": "core",
+      "sha256": "7274ad8da079076e7c590c775fe191a194e03a745c8bec3f7b363550a391bd12",
+      "source": "php5.6",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php-common (>= 1:81~), ucf, php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), libc6 (>= 2.15)",
+      "filename": "php5.6-mysql_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-mysql",
+      "pre_depends": "",
+      "role": "core",
+      "sha256": "4feed0c2829c877575d4683d60c333be29bf2e5836b89c29529abd55e9198a18",
+      "source": "php5.6",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "libedit2 (>= 2.11-20080614-4), libmagic1, libpcre3 (>= 2:8.35), mime-support, php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), php5.6-json, php5.6-opcache, php5.6-readline, tzdata, ucf, libc6 (>= 2.15), libssl1.0.0 (>= 1.0.2~beta3), libxml2 (>= 2.8.0), zlib1g (>= 1:1.1.4)",
+      "filename": "php5.6-cli_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-cli",
+      "pre_depends": "",
+      "role": "core",
+      "sha256": "4af8a03d5d93b7aa572cb1db626550aa5564e9988d7b639147c6e05ce282b55c",
+      "source": "php5.6",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php-common (>= 1:81~), ucf, php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), libc6 (>= 2.4), libgmp10",
+      "filename": "php5.6-gmp_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-gmp",
+      "pre_depends": "",
+      "role": "core",
+      "sha256": "0643256f88a6e7d813fadf5b96e806d7178b9259aa45405f07c10cf1749eeb16",
+      "source": "php5.6",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php-common (>= 1:81~), ucf, php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), libc6 (>= 2.4), librecode0 (>= 3.6)",
+      "filename": "php5.6-recode_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-recode",
+      "pre_depends": "",
+      "role": "core",
+      "sha256": "8ed8dbf276c42557ed680f64c3ee741e63afdacdc026cc6583eff3e8fa84f34f",
+      "source": "php5.6",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "libmagic1, libpcre3 (>= 2:8.35), mime-support, php5.6-cli, php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), php5.6-json, php5.6-opcache, tzdata, ucf, libc6 (>= 2.15), libssl1.0.0 (>= 1.0.2~beta3), libxml2 (>= 2.8.0), zlib1g (>= 1:1.1.4)",
+      "filename": "php5.6-cgi_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-cgi",
+      "pre_depends": "",
+      "role": "core",
+      "sha256": "25c08de84683d7b4f8d94ededa261290e228d8d2d49d9fdc503070e1f389cd4d",
+      "source": "php5.6",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "libmagic1, libpcre3 (>= 2:8.35), mime-support, php5.6-cli, php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), php5.6-json, php5.6-opcache, tzdata, ucf, libc6 (>= 2.15), libedit2 (>= 2.11-20080614), libssl1.0.0 (>= 1.0.2~beta3), libxml2 (>= 2.8.0), zlib1g (>= 1:1.1.4)",
+      "filename": "php5.6-phpdbg_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-phpdbg",
+      "pre_depends": "",
+      "role": "core",
+      "sha256": "7f387efd4ec788b963da11cae643a476662320124c7567b63523782073c6119f",
+      "source": "php5.6",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php-common (>= 1:81~), ucf, php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), libbz2-1.0, libc6 (>= 2.14)",
+      "filename": "php5.6-bz2_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-bz2",
+      "pre_depends": "",
+      "role": "core",
+      "sha256": "8337c9605d68daf9332c9debef578c6fc63e73b7e89fd62cef89b6a7325ef1cb",
+      "source": "php5.6",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "libmagic1, libpcre3 (>= 2:8.35), mime-support, php5.6-cli, php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), php5.6-json, php5.6-opcache, procps, systemd | systemd-tmpfiles, tzdata, ucf, init-system-helpers (>= 1.18~), libacl1 (>= 2.2.51-8), libapparmor1 (>= 2.7.0~beta1+bzr1772), libc6 (>= 2.15), libssl1.0.0 (>= 1.0.2~beta3), libsystemd0, libxml2 (>= 2.8.0), zlib1g (>= 1:1.1.4)",
+      "filename": "php5.6-fpm_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-fpm",
+      "pre_depends": "",
+      "role": "core",
+      "sha256": "424ad494b58f9f6bc733c91f9dbd4c313036ee2ce519b72e144300571de9a16c",
+      "source": "php5.6",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php-common (>= 1:81~), ucf, php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), libc6 (>= 2.14), libsybdb5 (>= 0.63)",
+      "filename": "php5.6-sybase_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-sybase",
+      "pre_depends": "",
+      "role": "core",
+      "sha256": "43204b79ff3d9e848ab25f2e636ee0117a563985146767b30392ccadfc41ec21",
+      "source": "php5.6",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php-common (>= 1:81~), ucf, php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), libc-client2007e, libc6 (>= 2.14)",
+      "filename": "php5.6-imap_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-imap",
+      "pre_depends": "",
+      "role": "core",
+      "sha256": "f4f7e3f28b5d1ff657899186a6b02dc392ff63f149584bd348b0ba7110f8001f",
+      "source": "php5.6",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php-common (>= 1:81~), ucf, php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), libc6 (>= 2.14), libpq5 (>= 9.3~)",
+      "filename": "php5.6-pgsql_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-pgsql",
+      "pre_depends": "",
+      "role": "core",
+      "sha256": "479c51e47a9be50c21d9a70f888675b25352e11886031a864555a264c9590f46",
+      "source": "php5.6",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php-common (>= 1:81~), ucf, php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), libc6 (>= 2.14), libmcrypt4",
+      "filename": "php5.6-mcrypt_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-mcrypt",
+      "pre_depends": "",
+      "role": "core",
+      "sha256": "5fa2befae28b6bc395d39d649df55041487023f075390937d5928e4167c64919",
+      "source": "php5.6",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "all",
+      "depends": "php5.6-common, php5.6-xml",
+      "filename": "php5.6-xsl_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_all.deb",
+      "name": "php5.6-xsl",
+      "pre_depends": "",
+      "role": "core",
+      "sha256": "aa8eddf87702b7561574df4fe9afbf800e2313c38aef3b0c53cfae8a72baec83",
+      "source": "php5.6",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php-common (>= 1:81~), ucf, php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), libc6 (>= 2.4), libldap-2.4-2 (>= 2.4.7)",
+      "filename": "php5.6-ldap_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-ldap",
+      "pre_depends": "",
+      "role": "core",
+      "sha256": "a60576eb692d5abf3a5ce2c26d2756e8c3c5021cbacd940864051d35247b8707",
+      "source": "php5.6",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php-common (>= 1:81~), ucf, php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), libc6 (>= 2.4), libtidy5deb1 (>= 1:5.2.0)",
+      "filename": "php5.6-tidy_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-tidy",
+      "pre_depends": "",
+      "role": "core",
+      "sha256": "bf3ec6c5d3fe10273901c6aafd1f2af186beaf602434d6d76eb9a368cb6ffc5b",
+      "source": "php5.6",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php-common (>= 1:81~), ucf, php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), libc6 (>= 2.14), libxml2 (>= 2.9.0), libxslt1.1 (>= 1.1.25)",
+      "filename": "php5.6-xml_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-xml",
+      "pre_depends": "",
+      "role": "core",
+      "sha256": "4ecf61d1dd4e59bd9148e3ecb57243f19f4afdc569be335f61da382b6b6a0a3e",
+      "source": "php5.6",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php-common (>= 1:81~), ucf, php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), libc6 (>= 2.4), libenchant1c2a (>= 1.6.0)",
+      "filename": "php5.6-enchant_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-enchant",
+      "pre_depends": "",
+      "role": "core",
+      "sha256": "c16876cb4182b77b8f140f63052c7e63fc5bea84964f61e87aab0a9a57d9082c",
+      "source": "php5.6",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php-common (>= 1:81~), ucf, php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), libaspell15 (>= 0.60.7~20110707), libc6 (>= 2.4)",
+      "filename": "php5.6-pspell_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-pspell",
+      "pre_depends": "",
+      "role": "core",
+      "sha256": "a4e6bcb0ee3c040afed2f49016f580a05ee89e90e5bb4baffbbd5539466c0c16",
+      "source": "php5.6",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "all",
+      "depends": "libapache2-mod-php5.6 | php5.6-fpm | php5.6-cgi, php5.6-common",
+      "filename": "php5.6_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_all.deb",
+      "name": "php5.6",
+      "pre_depends": "",
+      "role": "core",
+      "sha256": "e3f653c51391483807009bdcfabdfa8cbe16fe780921619c68f0d24ecb50260c",
+      "source": "php5.6",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php-common (>= 1:81~), ucf, php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), libc6 (>= 2.14), libzip4 (>= 0.11.2)",
+      "filename": "php5.6-zip_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-zip",
+      "pre_depends": "",
+      "role": "core",
+      "sha256": "4bfae6d1b02a86043939c8c98624c3f3792fc383eb37bd4990afda8ea0951f46",
+      "source": "php5.6",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php-common (>= 1:81~), ucf, php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), libc6 (>= 2.14), libxml2 (>= 2.7.4)",
+      "filename": "php5.6-soap_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-soap",
+      "pre_depends": "",
+      "role": "core",
+      "sha256": "357507fd38ba8c6659cf4aba771be10ac39ae4148f8f1c17d9bbef0c6feff2f6",
+      "source": "php5.6",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php-common (>= 1:81~), ucf, php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), libc6 (>= 2.4), libgd3 (>= 2.1.1), libxpm4",
+      "filename": "php5.6-gd_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-gd",
+      "pre_depends": "",
+      "role": "core",
+      "sha256": "289322ba9d92b9f52d7bd279e13625f7ffc0e3645d1ba13e5d5dc295b242db9b",
+      "source": "php5.6",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "libmagic1, libpcre3 (>= 2:8.35), mime-support, php5.6-cli, php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), php5.6-json, php5.6-opcache, tzdata, ucf, apache2-api-20120211, apache2-bin (>= 2.4.16), libc6 (>= 2.15), libssl1.0.0 (>= 1.0.2~beta3), libxml2 (>= 2.8.0), zlib1g (>= 1:1.1.4)",
+      "filename": "libapache2-mod-php5.6_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "libapache2-mod-php5.6",
+      "pre_depends": "",
+      "role": "core",
+      "sha256": "a67d6693b520273ccab0ac121ed990439aa615253cd669d6e095057933ae6619",
+      "source": "php5.6",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php-common (>= 1:81~), ucf, php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), libc6 (>= 2.14), libcurl3 (>= 7.18.0)",
+      "filename": "php5.6-curl_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-curl",
+      "pre_depends": "",
+      "role": "core",
+      "sha256": "0dbd36e8f6367f896b582296f9255093156d41f3cb9158a09986b5c52898058b",
+      "source": "php5.6",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php-common (>= 1:81~), ucf, php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), libc6 (>= 2.4), libsnmp30 (>= 5.7.3+dfsg-1ubuntu4.6~dfsg)",
+      "filename": "php5.6-snmp_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-snmp",
+      "pre_depends": "",
+      "role": "core",
+      "sha256": "916f17369536239a8fc221ee8e44c166f7e1108e10f34b4f9c3e919d7133b02c",
+      "source": "php5.6",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php-common (>= 1:81~), ucf, php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), libc6 (>= 2.4), libxmlrpc-epi0",
+      "filename": "php5.6-xmlrpc_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-xmlrpc",
+      "pre_depends": "",
+      "role": "core",
+      "sha256": "9d5e6c25fa82d575a82d8566df4e7d5308be13e8d1530b8553ddc5eb757c183a",
+      "source": "php5.6",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "autoconf (>= 2.63), automake (>= 1.11), libpcre3-dev (>= 2:8.35), libssl-dev, pkg-config, php5.6-cli (>= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), shtool, libtool (>= 2.4.6-0.1~)",
+      "filename": "php5.6-dev_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-dev",
+      "pre_depends": "",
+      "role": "core",
+      "sha256": "c31f41c563b8c41c33243431d6bdbc99cbd34faae2f93ddc71b418cc0fdb9118",
+      "source": "php5.6",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php-common (>= 1:81~), ucf, php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), libc6 (>= 2.14)",
+      "filename": "php5.6-json_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-json",
+      "pre_depends": "",
+      "role": "core",
+      "sha256": "3c5a4066df2ae6b5ec0421d7c733da0ae7acff2be00df3ed89f97c5442a99fc6",
+      "source": "php5.6",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php-common (>= 1:81~), ucf, php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), libc6 (>= 2.14)",
+      "filename": "php5.6-bcmath_5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-bcmath",
+      "pre_depends": "",
+      "role": "core",
+      "sha256": "3590d1d8f7c9f7e5b6de4cd38b2a9731fbe1d1aabcaa32514bf0a712e24709ec",
+      "source": "php5.6",
+      "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), libc6 (>= 2.4), librabbitmq4 (>= 0.6.0)",
+      "filename": "php5.6-amqp_1.10.2-8+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-amqp",
+      "pre_depends": "php-common (>= 2:69~)",
+      "role": "extension",
+      "sha256": "d504527d69602d2c7fcd5b297751f1418785462d2def1685c82eebc4bc3c4912",
+      "source": "php-amqp",
+      "version": "1.10.2-8+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), libc6 (>= 2.14)",
+      "filename": "php5.6-apcu_5.1.19+4.0.11-7+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-apcu",
+      "pre_depends": "php-common (>= 2:69~)",
+      "role": "extension",
+      "sha256": "b01ef9ce41362d655a719f381634fe07e308cab7318ed727367aadd6f0c13beb",
+      "source": "php-apcu",
+      "version": "5.1.19+4.0.11-7+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), libc6 (>= 2.4), libgearman7",
+      "filename": "php5.6-gearman_2.1.0+1.1.2-5+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-gearman",
+      "pre_depends": "php-common (>= 2:69~)",
+      "role": "extension",
+      "sha256": "cf8b66ee4306c111a5991ea83e33bd867492292bcc1e819d52e4cc6cb88efbd7",
+      "source": "php-gearman",
+      "version": "2.1.0+1.1.2-5+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), libc6 (>= 2.4), libgeoip1",
+      "filename": "php5.6-geoip_1.1.1-12+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-geoip",
+      "pre_depends": "php-common (>= 2:69~)",
+      "role": "extension",
+      "sha256": "63c8e2facd584900e6ec2938a114f85df3549ff91d0dcdeb8702c7bbc5910ed3",
+      "source": "php-geoip",
+      "version": "1.1.1-12+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), libc6 (>= 2.4), libgraphicsmagick-q16-3 (>= 1.3.18)",
+      "filename": "php5.6-gmagick_2.0.6~rc1+1.1.7~rc3-5+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-gmagick",
+      "pre_depends": "php-common (>= 2:69~)",
+      "role": "extension",
+      "sha256": "0383be77390632f3bfec62ad7feda7b953d3fae32c9334d304c712f6821bcab6",
+      "source": "php-gmagick",
+      "version": "2.0.6~rc1+1.1.7~rc3-5+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), ucf, libc6 (>= 2.4), libgpgme11 (>= 1.2.0)",
+      "filename": "php5.6-gnupg_1.5.0~rc2+1.4.0-1+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-gnupg",
+      "pre_depends": "php-common (>= 2:69~)",
+      "role": "extension",
+      "sha256": "2fd5805840eddcced6d7d4bb2c89a3c31c5b3219cbb6abef0323451970a98150",
+      "source": "php-gnupg",
+      "version": "1.5.0~rc2+1.4.0-1+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), libc6 (>= 2.17), libstdc++6 (>= 5.2)",
+      "filename": "php5.6-grpc_1.36.0+1.33.1-1+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-grpc",
+      "pre_depends": "php-common (>= 2:69~)",
+      "role": "extension",
+      "sha256": "ba5490e84a2838620830fb180419ed819579f0e1be57a08f00c3dd9fcf5eb8f5",
+      "source": "php-grpc",
+      "version": "1.36.0+1.33.1-1+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), libc6 (>= 2.14)",
+      "filename": "php5.6-igbinary_3.2.1+2.0.8-6+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-igbinary",
+      "pre_depends": "php-common (>= 2:69~)",
+      "role": "extension",
+      "sha256": "f552b85bd04cd9f459e7d1e62aca0575741a920ac8738991b1e5d0b5a7c464d1",
+      "source": "php-igbinary",
+      "version": "3.2.1+2.0.8-6+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), libc6 (>= 2.14), libmagickcore-6.q16-2 (>= 8:6.8.8.2), libmagickwand-6.q16-2 (>= 8:6.8.8.9)",
+      "filename": "php5.6-imagick_3.4.4+php8.0+3.4.4-7+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-imagick",
+      "pre_depends": "php-common (>= 2:69~)",
+      "role": "extension",
+      "sha256": "c7785dea55bf1d2383ff499fe9307f7739c9733803d0caee67424d881de73a64",
+      "source": "php-imagick",
+      "version": "3.4.4+php8.0+3.4.4-7+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), libc6 (>= 2.4)",
+      "filename": "php5.6-inotify_3.0.0+0.1.6-1+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-inotify",
+      "pre_depends": "php-common (>= 2:69~)",
+      "role": "extension",
+      "sha256": "4c5fa2977c8154741c2740187d3ba35aac983cfa1a31d01159e0894474ce636c",
+      "source": "php-inotify",
+      "version": "3.0.0+0.1.6-1+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), ucf, libc6 (>= 2.4), liblua5.2-0",
+      "filename": "php5.6-lua_2.0.7+1.1.0-8+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-lua",
+      "pre_depends": "php-common (>= 2:69~)",
+      "role": "extension",
+      "sha256": "31c891eb49dcb6e61b0b4d5ff1b3512629bcb313ea0b5620b28d2862e9a175eb",
+      "source": "php-lua",
+      "version": "2.0.7+1.1.0-8+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), ucf, libc6 (>= 2.14), liblz4-1 (>= 0.0~r130)",
+      "filename": "php5.6-lz4_0.4.3-2+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-lz4",
+      "pre_depends": "php-common (>= 2:69~)",
+      "role": "extension",
+      "sha256": "da93678b0e04f064e0a96e8abf4fe2d396b4cff6731379c473135ae506f1e3ef",
+      "source": "php-lz4",
+      "version": "0.4.3-2+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), php5.6-mbstring, libc6 (>= 2.14)",
+      "filename": "php5.6-mailparse_3.1.1+2.1.7~dev20160128-7+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-mailparse",
+      "pre_depends": "php-common (>= 2:69~)",
+      "role": "extension",
+      "sha256": "b5365a7dcf52c89f5da30e677856b99c348d6ad65e39150cc7b0f7242374318d",
+      "source": "php-mailparse",
+      "version": "3.1.1+2.1.7~dev20160128-7+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), libc6 (>= 2.15), zlib1g (>= 1:1.1.4)",
+      "filename": "php5.6-memcache_8.0+4.0.5.2+3.0.9~20170802.e702b5f9+-1+ubuntu16.04.1+deb.sury.org+2+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-memcache",
+      "pre_depends": "php-common (>= 2:69~)",
+      "role": "extension",
+      "sha256": "c8cc7cdeb17dd2f629db94f3b9cd3c6fd70968127a676b0264d0c060e1bcbbf7",
+      "source": "php-memcache",
+      "version": "8.0+4.0.5.2+3.0.9~20170802.e702b5f9+-1+ubuntu16.04.1+deb.sury.org+2+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), libc6 (>= 2.14)",
+      "filename": "php5.6-msgpack_2.1.2+0.5.7-6+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-msgpack",
+      "pre_depends": "php-common (>= 2:69~)",
+      "role": "extension",
+      "sha256": "943a89a7873097252b8c94a48077880f21792988f69e8d8eadff3d1195ec1fa3",
+      "source": "php-msgpack",
+      "version": "2.1.2+0.5.7-6+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), ucf, php5.6-igbinary, php5.6-msgpack, libc6 (>= 2.4), libmemcached11, libsasl2-2, zlib1g (>= 1:1.1.4)",
+      "filename": "php5.6-memcached_3.1.5+2.2.0-9+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-memcached",
+      "pre_depends": "php-common (>= 2:69~)",
+      "role": "extension",
+      "sha256": "d6ba92b7524f1276c0fd9b559d55676c657f04622ebaad840a7c2ce602860724",
+      "source": "php-memcached",
+      "version": "3.1.5+2.2.0-9+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), libc6 (>= 2.14), libssl1.0.0 (>= 1.0.0)",
+      "filename": "php5.6-mongo_1.6.16-8+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-mongo",
+      "pre_depends": "php-common (>= 2:69~)",
+      "role": "extension",
+      "sha256": "a7179416f1e50870f13dba462d6fe4ba22d125ac060a1d69fb563123c7515c36",
+      "source": "php-mongo",
+      "version": "1.6.16-8+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), ucf, libc6 (>= 2.14), libicu55 (>= 55.1-1~), libsasl2-2, libssl1.0.0 (>= 1.0.2~beta3), zlib1g (>= 1:1.2.0)",
+      "filename": "php5.6-mongodb_1.9.0+1.7.5-6+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-mongodb",
+      "pre_depends": "php-common (>= 2:69~)",
+      "role": "extension",
+      "sha256": "24184351d2011405e18d866e02f5b94d1e9757c13c9036e2acece1dac846aabb",
+      "source": "php-mongodb",
+      "version": "1.9.0+1.7.5-6+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), libc6 (>= 2.14)",
+      "filename": "php5.6-mysqlnd-ms_1.6.0+svn333622-10+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-mysqlnd-ms",
+      "pre_depends": "php-common (>= 2:69~)",
+      "role": "extension",
+      "sha256": "ac5090ca987bd62d3f2bb6f545a02825e83ac58a064f56598d8710402229fa82",
+      "source": "php-mysqlnd-ms",
+      "version": "1.6.0+svn333622-10+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), libc6 (>= 2.14), libcurl3 (>= 7.16.2)",
+      "filename": "php5.6-oauth_2.0.7+1.2.3-7+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-oauth",
+      "pre_depends": "php-common (>= 2:69~)",
+      "role": "extension",
+      "sha256": "772008825eb1e6474b427ac9d06636838ebcfd5faebb975188ff9227e8ef970c",
+      "source": "php-oauth",
+      "version": "2.0.7+1.2.3-7+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), libc6 (>= 2.4)",
+      "filename": "php5.6-propro_2.1.0+1.0.2+nophp8-8+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-propro",
+      "pre_depends": "php-common (>= 2:69~)",
+      "role": "extension",
+      "sha256": "657b339a8e6d6791885007cbd406e0e4ddb5d471dc2acceca741fd6d40b8f3e1",
+      "source": "php-propro",
+      "version": "2.1.0+1.0.2+nophp8-8+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), libc6 (>= 2.4)",
+      "filename": "php5.6-raphf_2.0.1+1.1.2-8+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-raphf",
+      "pre_depends": "php-common (>= 2:69~)",
+      "role": "extension",
+      "sha256": "5120e2a350a647f445a852ce0999dea17a7cd40ed300a05991d528c02dd13c7b",
+      "source": "php-raphf",
+      "version": "2.0.1+1.1.2-8+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), libc6 (>= 2.14), libcurl3 (>= 7.16.3), libevent-2.0-5 (>= 2.0.10-stable), libidn2-0 (>= 0.6), zlib1g (>= 1:1.2.0)",
+      "filename": "php5.6-http_4.0.0+3.2.4+2.6.0-7+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-http",
+      "pre_depends": "php-common (>= 2:69~)",
+      "role": "extension",
+      "sha256": "bd49768e2b565df973ba1eacec1de7b0494de61e25218781a609e95de2d80652",
+      "source": "php-pecl-http",
+      "version": "4.0.0+3.2.4+2.6.0-7+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), ucf, libc6 (>= 2.14)",
+      "filename": "php5.6-phalcon3_3.4.5-5+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-phalcon3",
+      "pre_depends": "php-common (>= 2:69~)",
+      "role": "extension",
+      "sha256": "baf0e9fd2d098ef7d19703ccca15f30e42c8c340456ee132970530f554395526",
+      "source": "php-phalcon3",
+      "version": "3.4.5-5+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), libc6 (>= 2.14)",
+      "filename": "php5.6-protobuf_3.15.6+3.12.4-1+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-protobuf",
+      "pre_depends": "php-common (>= 2:69~)",
+      "role": "extension",
+      "sha256": "eb9a008d6eb78cd59086810f40e97d665ad310e6cfbbc4cf071e57fc962116b8",
+      "source": "php-protobuf",
+      "version": "3.15.6+3.12.4-1+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), php-gd, php-common (>= 1:7.0+33~), libc6 (>= 2.4), pslib1 (>= 0.4.0)",
+      "filename": "php5.6-ps_1.4.1+pecl+nophp8+1.3.7-6+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-ps",
+      "pre_depends": "",
+      "role": "extension",
+      "sha256": "5d0009e3d7ebd8b2ff4668c72ab48f839083121c36f9f621fb474d22a2d51c57",
+      "source": "php-ps",
+      "version": "1.4.1+pecl+nophp8+1.3.7-6+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), libc6 (>= 2.15)",
+      "filename": "php5.6-radius_1.4.0~b1-17+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-radius",
+      "pre_depends": "php-common (>= 2:69~)",
+      "role": "extension",
+      "sha256": "bc35a1c1afd15284481c9a19a08092ec57164c9245663210c97762bb9a84f6e5",
+      "source": "php-radius",
+      "version": "1.4.0~b1-17+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), php5.6-igbinary, libc6 (>= 2.14)",
+      "filename": "php5.6-redis_5.3.4+4.3.0-1+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-redis",
+      "pre_depends": "php-common (>= 2:69~)",
+      "role": "extension",
+      "sha256": "52e34069222515b3e548783caebb3e3c9d5f2b68ee7afd610acb7791780013c8",
+      "source": "php-redis",
+      "version": "5.3.4+4.3.0-1+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), libc6 (>= 2.14), librrd4 (>= 1.4~rc2)",
+      "filename": "php5.6-rrd_2.0.1+1.1.3-14+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-rrd",
+      "pre_depends": "php-common (>= 2:69~)",
+      "role": "extension",
+      "sha256": "feb036ad96214244329fcb077cd51bde1df9bc489d8c6c3e1e8bd3f6da040a05",
+      "source": "php-rrd",
+      "version": "2.0.1+1.1.3-14+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), ucf, libc6 (>= 2.14), libsmbclient (>= 2:4.1.1)",
+      "filename": "php5.6-smbclient_1.0.6-1+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-smbclient",
+      "pre_depends": "php-common (>= 2:69~)",
+      "role": "extension",
+      "sha256": "df7aae7b239ef25db62701edd26f11ee9fbf8beea041dd7e1a3874a132da8c48",
+      "source": "php-smbclient",
+      "version": "1.0.6-1+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), php5.6-xml, php5.6-curl, libc6 (>= 2.14), libcurl3 (>= 7.16.2), libxml2 (>= 2.7.4)",
+      "filename": "php5.6-solr_2.5.1+2.4.0-9+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-solr",
+      "pre_depends": "php-common (>= 2:69~)",
+      "role": "extension",
+      "sha256": "a422c45a39fd34a16912dceb396a473f3ed6d493bcad2f6246cd6feb35215b19",
+      "source": "php-solr",
+      "version": "2.5.1+2.4.0-9+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), libc6 (>= 2.4), libssh2-1 (>= 1.2.9)",
+      "filename": "php5.6-ssh2_1.3.1+0.13-1+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-ssh2",
+      "pre_depends": "php-common (>= 2:69~)",
+      "role": "extension",
+      "sha256": "a9e831ef8e538e2af76e89b995103e1e06f52f589f25fd26271aa2f90cd03dcb",
+      "source": "php-ssh2",
+      "version": "1.3.1+0.13-1+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), libc6 (>= 2.14)",
+      "filename": "php5.6-stomp_2.0.2+1.0.9-10+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-stomp",
+      "pre_depends": "php-common (>= 2:69~)",
+      "role": "extension",
+      "sha256": "4f0eb0c72c9108ffd664608e150a20284b709b865b94a634aa3d12610a46ec81",
+      "source": "php-stomp",
+      "version": "2.0.2+1.0.9-10+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), ucf, libc6 (>= 2.4)",
+      "filename": "php5.6-uploadprogress_1.1.3-9+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-uploadprogress",
+      "pre_depends": "php-common (>= 2:69~)",
+      "role": "extension",
+      "sha256": "7c7545beead4a999d8bccf1e684490b83f6553b004edd5feadb5e536252f054f",
+      "source": "php-uploadprogress",
+      "version": "1.1.3-9+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), libc6 (>= 2.17)",
+      "filename": "php5.6-xhprof_2.2.3+0.9.2-5+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-xhprof",
+      "pre_depends": "php-common (>= 2:69~)",
+      "role": "extension",
+      "sha256": "62fa424e841aaeab12ed7d69b5a8024d8244fb737573d991124854552346cfaa",
+      "source": "php-xhprof",
+      "version": "2.2.3+0.9.2-5+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), libc6 (>= 2.14)",
+      "filename": "php5.6-yac_2.3.0+0.9.2-6+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-yac",
+      "pre_depends": "php-common (>= 2:69~)",
+      "role": "extension",
+      "sha256": "36195298f876577b028071656051269e943008a9221fe15fa88fa9cbacfe58b8",
+      "source": "php-yac",
+      "version": "2.3.0+0.9.2-6+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), libc6 (>= 2.14), libyaml-0-2",
+      "filename": "php5.6-yaml_2.2.1+2.1.0+2.0.4+1.3.2-6+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-yaml",
+      "pre_depends": "php-common (>= 2:69~)",
+      "role": "extension",
+      "sha256": "7e3cce5566c28accd1d9ec76a6a2dd8c23179b0e1e3d8414774207f8ee595ff2",
+      "source": "php-yaml",
+      "version": "2.2.1+2.1.0+2.0.4+1.3.2-6+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), libc6 (>= 2.17), libzmq5 (>= 3.2.3+dfsg)",
+      "filename": "php5.6-zmq_1.1.3-18+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-zmq",
+      "pre_depends": "php-common (>= 2:69~)",
+      "role": "extension",
+      "sha256": "3c9f189638d92ddaf4466c95b6dace6dd26e70c40b287b5c1dea76f8ca5b662c",
+      "source": "php-zmq",
+      "version": "1.1.3-18+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), libc6 (>= 2.14)",
+      "filename": "php5.6-zstd_0.10.0-2+ubuntu16.04.1+deb.sury.org+3+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-zstd",
+      "pre_depends": "php-common (>= 2:69~)",
+      "role": "extension",
+      "sha256": "eb5356fbfc649af88379bdc068d84618d5e63c885c2c3c76a1d86e21615b27e4",
+      "source": "php-zstd",
+      "version": "0.10.0-2+ubuntu16.04.1+deb.sury.org+3+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), ucf, libc6 (>= 2.14)",
+      "filename": "php5.6-xcache_3.2.0-8+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-xcache",
+      "pre_depends": "php-common (>= 2:69~)",
+      "role": "extension",
+      "sha256": "6ab623b953635cb9379a9ba33883ea6d8dd6e2634c84e6c917d46d98481a0dcc",
+      "source": "xcache",
+      "version": "3.2.0-8+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    },
+    {
+      "architecture": "amd64",
+      "depends": "php5.6-common (= 5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2), ucf, libc6 (>= 2.14)",
+      "filename": "php5.6-xdebug_3.0.3+2.9.8+2.8.1+2.5.5-1+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2_amd64.deb",
+      "name": "php5.6-xdebug",
+      "pre_depends": "php-common (>= 2:69~)",
+      "role": "extension",
+      "sha256": "3c882c91369e236f0dab0cf7f9847c8c2735da03765e9a60edc6c7ea76ca5a65",
+      "source": "xdebug",
+      "version": "3.0.3+2.9.8+2.8.1+2.5.5-1+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+    }
+  ],
+  "schema_version": 1,
+  "selected_toolchain_and_library_versions": {
+    "apache2": "2.4.18-2ubuntu3.17",
+    "binutils": "2.26.1-1ubuntu1~16.04.8",
+    "g++": "4:5.3.1-1ubuntu1",
+    "gcc": "4:5.3.1-1ubuntu1",
+    "libapache2-mod-php5.6": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2",
+    "libc6": "2.23-0ubuntu11.3",
+    "libcurl4-openssl-dev": "7.47.0-1ubuntu2.19",
+    "libicu-dev": "55.1-7ubuntu0.5",
+    "libsasl2-2": "2.1.26.dfsg1-14ubuntu0.2",
+    "libsmbclient": "2:4.3.11+dfsg-0ubuntu0.16.04.34",
+    "libssl-dev": "1.0.2g-1ubuntu4.20",
+    "libtidy5deb1": "2:5.6.0-6+ubuntu16.04.1+deb.sury.org+2+php2shell20261022.2",
+    "make": "4.1-6",
+    "python3": "3.5.1-3"
+  },
+  "source_signatures": [
+    {
+      "cached_artifact_checksums": "PASS",
+      "original_dsc": "php-amqp_1.10.2-8+ubuntu16.04.1+deb.sury.org+1.dsc",
+      "original_version": "1.10.2-8+ubuntu16.04.1+deb.sury.org+1",
+      "signature": "PASS",
+      "source": "php-amqp"
+    },
+    {
+      "cached_artifact_checksums": "PASS",
+      "original_dsc": "php-apcu_5.1.19+4.0.11-7+ubuntu16.04.1+deb.sury.org+1.dsc",
+      "original_version": "5.1.19+4.0.11-7+ubuntu16.04.1+deb.sury.org+1",
+      "signature": "PASS",
+      "source": "php-apcu"
+    },
+    {
+      "cached_artifact_checksums": "PASS",
+      "original_dsc": "php-geoip_1.1.1-12+ubuntu16.04.1+deb.sury.org+1.dsc",
+      "original_version": "1.1.1-12+ubuntu16.04.1+deb.sury.org+1",
+      "signature": "PASS",
+      "source": "php-geoip"
+    },
+    {
+      "cached_artifact_checksums": "PASS",
+      "original_dsc": "php-gmagick_2.0.6~rc1+1.1.7~rc3-5+ubuntu16.04.1+deb.sury.org+1.dsc",
+      "original_version": "2.0.6~rc1+1.1.7~rc3-5+ubuntu16.04.1+deb.sury.org+1",
+      "signature": "PASS",
+      "source": "php-gmagick"
+    },
+    {
+      "cached_artifact_checksums": "PASS",
+      "original_dsc": "php-gearman_2.1.0+1.1.2-5+ubuntu16.04.1+deb.sury.org+1.dsc",
+      "original_version": "2.1.0+1.1.2-5+ubuntu16.04.1+deb.sury.org+1",
+      "signature": "PASS",
+      "source": "php-gearman"
+    },
+    {
+      "cached_artifact_checksums": "PASS",
+      "original_dsc": "php5.6_5.6.40-50+ubuntu16.04.1+deb.sury.org+1.dsc",
+      "original_version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1",
+      "signature": "PASS",
+      "source": "php5.6"
+    },
+    {
+      "cached_artifact_checksums": "PASS",
+      "original_dsc": "php-gnupg_1.5.0~rc2+1.4.0-1+ubuntu16.04.1+deb.sury.org+1.dsc",
+      "original_version": "1.5.0~rc2+1.4.0-1+ubuntu16.04.1+deb.sury.org+1",
+      "signature": "PASS",
+      "source": "php-gnupg"
+    },
+    {
+      "cached_artifact_checksums": "PASS",
+      "original_dsc": "php-pecl-http_4.0.0+3.2.4+2.6.0-7+ubuntu16.04.1+deb.sury.org+1.dsc",
+      "original_version": "4.0.0+3.2.4+2.6.0-7+ubuntu16.04.1+deb.sury.org+1",
+      "signature": "PASS",
+      "source": "php-pecl-http"
+    },
+    {
+      "cached_artifact_checksums": "PASS",
+      "original_dsc": "php-igbinary_3.2.1+2.0.8-6+ubuntu16.04.1+deb.sury.org+1.dsc",
+      "original_version": "3.2.1+2.0.8-6+ubuntu16.04.1+deb.sury.org+1",
+      "signature": "PASS",
+      "source": "php-igbinary"
+    },
+    {
+      "cached_artifact_checksums": "PASS",
+      "original_dsc": "php-imagick_3.4.4+php8.0+3.4.4-7+ubuntu16.04.1+deb.sury.org+1.dsc",
+      "original_version": "3.4.4+php8.0+3.4.4-7+ubuntu16.04.1+deb.sury.org+1",
+      "signature": "PASS",
+      "source": "php-imagick"
+    },
+    {
+      "cached_artifact_checksums": "PASS",
+      "original_dsc": "php-grpc_1.36.0+1.33.1-1+ubuntu16.04.1+deb.sury.org+1.dsc",
+      "original_version": "1.36.0+1.33.1-1+ubuntu16.04.1+deb.sury.org+1",
+      "signature": "PASS",
+      "source": "php-grpc"
+    },
+    {
+      "cached_artifact_checksums": "PASS",
+      "original_dsc": "php-inotify_3.0.0+0.1.6-1+ubuntu16.04.1+deb.sury.org+1.dsc",
+      "original_version": "3.0.0+0.1.6-1+ubuntu16.04.1+deb.sury.org+1",
+      "signature": "PASS",
+      "source": "php-inotify"
+    },
+    {
+      "cached_artifact_checksums": "PASS",
+      "original_dsc": "php-lua_2.0.7+1.1.0-8+ubuntu16.04.1+deb.sury.org+1.dsc",
+      "original_version": "2.0.7+1.1.0-8+ubuntu16.04.1+deb.sury.org+1",
+      "signature": "PASS",
+      "source": "php-lua"
+    },
+    {
+      "cached_artifact_checksums": "PASS",
+      "original_dsc": "php-lz4_0.4.3-2+ubuntu16.04.1+deb.sury.org+1.dsc",
+      "original_version": "0.4.3-2+ubuntu16.04.1+deb.sury.org+1",
+      "signature": "PASS",
+      "source": "php-lz4"
+    },
+    {
+      "cached_artifact_checksums": "PASS",
+      "original_dsc": "php-memcache_8.0+4.0.5.2+3.0.9~20170802.e702b5f9+-1+ubuntu16.04.1+deb.sury.org+2.dsc",
+      "original_version": "8.0+4.0.5.2+3.0.9~20170802.e702b5f9+-1+ubuntu16.04.1+deb.sury.org+2",
+      "signature": "PASS",
+      "source": "php-memcache"
+    },
+    {
+      "cached_artifact_checksums": "PASS",
+      "original_dsc": "php-mailparse_3.1.1+2.1.7~dev20160128-7+ubuntu16.04.1+deb.sury.org+1.dsc",
+      "original_version": "3.1.1+2.1.7~dev20160128-7+ubuntu16.04.1+deb.sury.org+1",
+      "signature": "PASS",
+      "source": "php-mailparse"
+    },
+    {
+      "cached_artifact_checksums": "PASS",
+      "original_dsc": "php-memcached_3.1.5+2.2.0-9+ubuntu16.04.1+deb.sury.org+1.dsc",
+      "original_version": "3.1.5+2.2.0-9+ubuntu16.04.1+deb.sury.org+1",
+      "signature": "PASS",
+      "source": "php-memcached"
+    },
+    {
+      "cached_artifact_checksums": "PASS",
+      "original_dsc": "php-mongo_1.6.16-8+ubuntu16.04.1+deb.sury.org+1.dsc",
+      "original_version": "1.6.16-8+ubuntu16.04.1+deb.sury.org+1",
+      "signature": "PASS",
+      "source": "php-mongo"
+    },
+    {
+      "cached_artifact_checksums": "PASS",
+      "original_dsc": "php-mongodb_1.9.0+1.7.5-6+ubuntu16.04.1+deb.sury.org+1.dsc",
+      "original_version": "1.9.0+1.7.5-6+ubuntu16.04.1+deb.sury.org+1",
+      "signature": "PASS",
+      "source": "php-mongodb"
+    },
+    {
+      "cached_artifact_checksums": "PASS",
+      "original_dsc": "php-msgpack_2.1.2+0.5.7-6+ubuntu16.04.1+deb.sury.org+1.dsc",
+      "original_version": "2.1.2+0.5.7-6+ubuntu16.04.1+deb.sury.org+1",
+      "signature": "PASS",
+      "source": "php-msgpack"
+    },
+    {
+      "cached_artifact_checksums": "PASS",
+      "original_dsc": "php-mysqlnd-ms_1.6.0+svn333622-10+ubuntu16.04.1+deb.sury.org+1.dsc",
+      "original_version": "1.6.0+svn333622-10+ubuntu16.04.1+deb.sury.org+1",
+      "signature": "PASS",
+      "source": "php-mysqlnd-ms"
+    },
+    {
+      "cached_artifact_checksums": "PASS",
+      "original_dsc": "php-oauth_2.0.7+1.2.3-7+ubuntu16.04.1+deb.sury.org+1.dsc",
+      "original_version": "2.0.7+1.2.3-7+ubuntu16.04.1+deb.sury.org+1",
+      "signature": "PASS",
+      "source": "php-oauth"
+    },
+    {
+      "cached_artifact_checksums": "PASS",
+      "original_dsc": "php-phalcon3_3.4.5-5+ubuntu16.04.1+deb.sury.org+1.dsc",
+      "original_version": "3.4.5-5+ubuntu16.04.1+deb.sury.org+1",
+      "signature": "PASS",
+      "source": "php-phalcon3"
+    },
+    {
+      "cached_artifact_checksums": "PASS",
+      "original_dsc": "php-propro_2.1.0+1.0.2+nophp8-8+ubuntu16.04.1+deb.sury.org+1.dsc",
+      "original_version": "2.1.0+1.0.2+nophp8-8+ubuntu16.04.1+deb.sury.org+1",
+      "signature": "PASS",
+      "source": "php-propro"
+    },
+    {
+      "cached_artifact_checksums": "PASS",
+      "original_dsc": "php-protobuf_3.15.6+3.12.4-1+ubuntu16.04.1+deb.sury.org+1.dsc",
+      "original_version": "3.15.6+3.12.4-1+ubuntu16.04.1+deb.sury.org+1",
+      "signature": "PASS",
+      "source": "php-protobuf"
+    },
+    {
+      "cached_artifact_checksums": "PASS",
+      "original_dsc": "php-ps_1.4.1+pecl+nophp8+1.3.7-6+ubuntu16.04.1+deb.sury.org+1.dsc",
+      "original_version": "1.4.1+pecl+nophp8+1.3.7-6+ubuntu16.04.1+deb.sury.org+1",
+      "signature": "PASS",
+      "source": "php-ps"
+    },
+    {
+      "cached_artifact_checksums": "PASS",
+      "original_dsc": "php-radius_1.4.0~b1-17+ubuntu16.04.1+deb.sury.org+1.dsc",
+      "original_version": "1.4.0~b1-17+ubuntu16.04.1+deb.sury.org+1",
+      "signature": "PASS",
+      "source": "php-radius"
+    },
+    {
+      "cached_artifact_checksums": "PASS",
+      "original_dsc": "php-raphf_2.0.1+1.1.2-8+ubuntu16.04.1+deb.sury.org+1.dsc",
+      "original_version": "2.0.1+1.1.2-8+ubuntu16.04.1+deb.sury.org+1",
+      "signature": "PASS",
+      "source": "php-raphf"
+    },
+    {
+      "cached_artifact_checksums": "PASS",
+      "original_dsc": "php-redis_5.3.4+4.3.0-1+ubuntu16.04.1+deb.sury.org+1.dsc",
+      "original_version": "5.3.4+4.3.0-1+ubuntu16.04.1+deb.sury.org+1",
+      "signature": "PASS",
+      "source": "php-redis"
+    },
+    {
+      "cached_artifact_checksums": "PASS",
+      "original_dsc": "php-rrd_2.0.1+1.1.3-14+ubuntu16.04.1+deb.sury.org+1.dsc",
+      "original_version": "2.0.1+1.1.3-14+ubuntu16.04.1+deb.sury.org+1",
+      "signature": "PASS",
+      "source": "php-rrd"
+    },
+    {
+      "cached_artifact_checksums": "PASS",
+      "original_dsc": "php-smbclient_1.0.6-1+ubuntu16.04.1+deb.sury.org+1.dsc",
+      "original_version": "1.0.6-1+ubuntu16.04.1+deb.sury.org+1",
+      "signature": "PASS",
+      "source": "php-smbclient"
+    },
+    {
+      "cached_artifact_checksums": "PASS",
+      "original_dsc": "php-ssh2_1.3.1+0.13-1+ubuntu16.04.1+deb.sury.org+1.dsc",
+      "original_version": "1.3.1+0.13-1+ubuntu16.04.1+deb.sury.org+1",
+      "signature": "PASS",
+      "source": "php-ssh2"
+    },
+    {
+      "cached_artifact_checksums": "PASS",
+      "original_dsc": "php-solr_2.5.1+2.4.0-9+ubuntu16.04.1+deb.sury.org+1.dsc",
+      "original_version": "2.5.1+2.4.0-9+ubuntu16.04.1+deb.sury.org+1",
+      "signature": "PASS",
+      "source": "php-solr"
+    },
+    {
+      "cached_artifact_checksums": "PASS",
+      "original_dsc": "php-stomp_2.0.2+1.0.9-10+ubuntu16.04.1+deb.sury.org+1.dsc",
+      "original_version": "2.0.2+1.0.9-10+ubuntu16.04.1+deb.sury.org+1",
+      "signature": "PASS",
+      "source": "php-stomp"
+    },
+    {
+      "cached_artifact_checksums": "PASS",
+      "original_dsc": "php-uploadprogress_1.1.3-9+ubuntu16.04.1+deb.sury.org+1.dsc",
+      "original_version": "1.1.3-9+ubuntu16.04.1+deb.sury.org+1",
+      "signature": "PASS",
+      "source": "php-uploadprogress"
+    },
+    {
+      "cached_artifact_checksums": "PASS",
+      "original_dsc": "xcache_3.2.0-8+ubuntu16.04.1+deb.sury.org+1.dsc",
+      "original_version": "3.2.0-8+ubuntu16.04.1+deb.sury.org+1",
+      "signature": "PASS",
+      "source": "xcache"
+    },
+    {
+      "cached_artifact_checksums": "PASS",
+      "original_dsc": "xdebug_3.0.3+2.9.8+2.8.1+2.5.5-1+ubuntu16.04.1+deb.sury.org+1.dsc",
+      "original_version": "3.0.3+2.9.8+2.8.1+2.5.5-1+ubuntu16.04.1+deb.sury.org+1",
+      "signature": "PASS",
+      "source": "xdebug"
+    },
+    {
+      "cached_artifact_checksums": "PASS",
+      "original_dsc": "php-xhprof_2.2.3+0.9.2-5+ubuntu16.04.1+deb.sury.org+1.dsc",
+      "original_version": "2.2.3+0.9.2-5+ubuntu16.04.1+deb.sury.org+1",
+      "signature": "PASS",
+      "source": "php-xhprof"
+    },
+    {
+      "cached_artifact_checksums": "PASS",
+      "original_dsc": "php-yac_2.3.0+0.9.2-6+ubuntu16.04.1+deb.sury.org+1.dsc",
+      "original_version": "2.3.0+0.9.2-6+ubuntu16.04.1+deb.sury.org+1",
+      "signature": "PASS",
+      "source": "php-yac"
+    },
+    {
+      "cached_artifact_checksums": "PASS",
+      "original_dsc": "php-yaml_2.2.1+2.1.0+2.0.4+1.3.2-6+ubuntu16.04.1+deb.sury.org+1.dsc",
+      "original_version": "2.2.1+2.1.0+2.0.4+1.3.2-6+ubuntu16.04.1+deb.sury.org+1",
+      "signature": "PASS",
+      "source": "php-yaml"
+    },
+    {
+      "cached_artifact_checksums": "PASS",
+      "original_dsc": "php-zmq_1.1.3-18+ubuntu16.04.1+deb.sury.org+1.dsc",
+      "original_version": "1.1.3-18+ubuntu16.04.1+deb.sury.org+1",
+      "signature": "PASS",
+      "source": "php-zmq"
+    },
+    {
+      "cached_artifact_checksums": "PASS",
+      "original_dsc": "php-zstd_0.10.0-2+ubuntu16.04.1+deb.sury.org+3.dsc",
+      "original_version": "0.10.0-2+ubuntu16.04.1+deb.sury.org+3",
+      "signature": "PASS",
+      "source": "php-zstd"
+    },
+    {
+      "cached_artifact_checksums": "PASS",
+      "original_dsc": "php-defaults_82+ubuntu16.04.1+deb.sury.org+1.dsc",
+      "original_version": "82+ubuntu16.04.1+deb.sury.org+1",
+      "signature": "PASS",
+      "source": "php-defaults"
+    },
+    {
+      "cached_artifact_checksums": "PASS",
+      "original_dsc": "dh-php_3.1+ubuntu16.04.1+deb.sury.org+1.dsc",
+      "original_version": "3.1+ubuntu16.04.1+deb.sury.org+1",
+      "signature": "PASS",
+      "source": "dh-php"
+    },
+    {
+      "cached_artifact_checksums": "PASS",
+      "original_dsc": "tidy-html5_5.6.0-6+ubuntu16.04.1+deb.sury.org+2.dsc",
+      "original_version": "2:5.6.0-6+ubuntu16.04.1+deb.sury.org+2",
+      "signature": "PASS",
+      "source": "tidy-html5"
+    }
+  ],
+  "source_signing_key_fingerprint": "6A1AAD7AE5B401C6E259A7B257067BAA1314C7FC",
+  "system_apache": {
+    "extensions": [
+      "Core",
+      "date",
+      "ereg",
+      "libxml",
+      "openssl",
+      "pcre",
+      "zlib",
+      "filter",
+      "hash",
+      "Reflection",
+      "SPL",
+      "session",
+      "standard",
+      "apache2handler",
+      "mysqlnd",
+      "PDO",
+      "xml",
+      "amqp",
+      "apcu",
+      "bcmath",
+      "bz2",
+      "calendar",
+      "ctype",
+      "curl",
+      "dba",
+      "dom",
+      "enchant",
+      "mbstring",
+      "fileinfo",
+      "ftp",
+      "gd",
+      "gearman",
+      "geoip",
+      "gettext",
+      "gmp",
+      "gnupg",
+      "iconv",
+      "igbinary",
+      "imagick",
+      "imap",
+      "interbase",
+      "intl",
+      "json",
+      "ldap",
+      "lua",
+      "lz4",
+      "exif",
+      "mcrypt",
+      "memcache",
+      "mongo",
+      "mongodb",
+      "msgpack",
+      "mssql",
+      "mysql",
+      "mysqli",
+      "OAuth",
+      "odbc",
+      "pdo_dblib",
+      "PDO_Firebird",
+      "pdo_mysql",
+      "PDO_ODBC",
+      "pdo_pgsql",
+      "pdo_sqlite",
+      "pgsql",
+      "phalcon",
+      "Phar",
+      "posix",
+      "propro",
+      "ps",
+      "pspell",
+      "radius",
+      "raphf",
+      "readline",
+      "recode",
+      "redis",
+      "rrd",
+      "shmop",
+      "SimpleXML",
+      "snmp",
+      "soap",
+      "sockets",
+      "solr",
+      "sqlite3",
+      "ssh2",
+      "Stomp",
+      "sysvmsg",
+      "sysvsem",
+      "sysvshm",
+      "tidy",
+      "tokenizer",
+      "wddx",
+      "xhprof",
+      "xmlreader",
+      "xmlrpc",
+      "xmlwriter",
+      "xsl",
+      "yaml",
+      "zip",
+      "zmq",
+      "http",
+      "mailparse",
+      "memcached",
+      "grpc",
+      "inotify",
+      "mysqlnd_ms",
+      "protobuf",
+      "zstd",
+      "mhash",
+      "apc",
+      "Zend OPcache",
+      "xdebug"
+    ],
+    "module_sha256": "d3c33cf1a289146bf6308814bcdeba2ef1fe876d0d9bbf9fa2ac5c4e34e2de6b",
+    "sapi": "apache2handler",
+    "version": "5.6.40-50+ubuntu16.04.1+deb.sury.org+1+php2shell20261022.2"
+  },
+  "ubuntu": "16.04"
+}

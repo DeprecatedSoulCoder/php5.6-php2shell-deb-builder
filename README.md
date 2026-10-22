@@ -4,15 +4,15 @@
 
 Build Ubuntu `.deb` packages for PHP 5.6.40, **including Apache `libapache2-mod-php5.6`**, with the pinned community php2shell patch. Optional external extensions include Memcached, Redis, Imagick and the historical Ondřej PHP 5.6 extension catalog for Xenial.
 
-**Every supported target requires a compilation test before use or publication. No target has been validated with this automation yet.**
+**Every target requires its own compilation test before use or publication. Native build and bounded installation tests passed for 16.04 and 18.04; 20.04 remains untested.**
 
 | Target | Architecture | Status of this automation |
 | --- | --- | --- |
-| Ubuntu 16.04 / Xenial | amd64 | **COMPILATION TEST REQUIRED** |
-| Ubuntu 18.04 / Bionic | amd64 | **COMPILATION TEST REQUIRED** |
+| Ubuntu 16.04 / Xenial | amd64 | [Native build + bounded installation PASS](validation/results/2026-10-22/README.md) |
+| Ubuntu 18.04 / Bionic | amd64 | [Native build + bounded installation PASS](validation/results/2026-10-22/README.md) |
 | Ubuntu 20.04 / Focal | amd64 | **COMPILATION TEST REQUIRED** |
 
-An earlier manual Xenial build is not a validation of this script. Passing Python/shell checks or source preparation is not a successful PHP compilation. Please keep these labels until complete build logs and runtime results exist for each target.
+The dated results cover the full historical catalog and a compatible co-installed selection, including actual Apache mod_php. They do not cover a representative application, PPA upgrade, snapshot rollback or the full historical PHPT suite. Passing Python/shell checks or source preparation alone is not a successful PHP compilation.
 
 [Validation and release criteria](VALIDATION.md) · [Source provenance](PROVENANCE.md)
 
@@ -264,7 +264,7 @@ Repeat the complete compilation, installation and rollback procedure independent
 * `checks.yml`: shell/Python syntax, source-lock consistency, dependency selection and failure-path tests. Runs on pushes and pull requests; **does not compile PHP**.
 * `build.yml`: explicitly manual (`workflow_dispatch`) Ubuntu matrix. It compiles only when a maintainer starts it. Each job uploads logs/status; it does not publish a binary release or mark the compatibility table as verified.
 
-For initial publication use a preview tag such as `v0.1.0-preview`. Keep all three targets marked **compilation test required**. Follow [VALIDATION.md](VALIDATION.md) before making support claims or sharing compiled packages.
+Use a preview tag such as `v0.1.0-preview` while application/upgrade/rollback validation remains outstanding. Keep untested targets marked **compilation test required**. Follow [VALIDATION.md](VALIDATION.md) before making support claims or sharing compiled packages.
 
 ## Scope and licenses
 
