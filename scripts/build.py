@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Pinned PHP 5.6 Debian builds. Python 3.5+; compilation runs in Docker only.
+"""Pinned PHP 5.6 Debian builds. Python 3.5+; Docker or explicit native mode.
 
 SPDX-License-Identifier: MIT
 """
@@ -426,6 +426,7 @@ def main():
     parser.add_argument('--extensions')
     parser.add_argument('--debug', action='store_true')
     parser.add_argument('--full-tests', action='store_true')
+    parser.add_argument('--native', action='store_true')
     parser.add_argument('--plan', action='store_true')
     args = parser.parse_args()
     if args.jobs < 1:
@@ -438,11 +439,15 @@ def main():
                           'debug': args.debug, 'full_tests': args.full_tests}, indent=2))
         return
     os_release = dict(line.strip().split('=', 1) for line in Path('/etc/os-release').read_text().splitlines() if '=' in line)
-    if not Path('/.dockerenv').exists() or os_release.get('ID', '').strip('"') != 'ubuntu' or os_release.get('VERSION_ID', '').strip('"') != args.ubuntu:
-        raise RuntimeError('Use build.sh with the matching Ubuntu Docker image')
+    if (not args.native and not Path('/.dockerenv').exists()) or os_release.get('ID', '').strip('"') != 'ubuntu' or os_release.get('VERSION_ID', '').strip('"') != args.ubuntu:
+        raise RuntimeError('Use the matching Ubuntu Docker image or explicit --native mode')
+    if args.native and os.geteuid() != 0:
+        raise RuntimeError('Native mode requires root')
     if subprocess.check_output(['dpkg', '--print-architecture']).strip() != b'amd64':
         raise RuntimeError('This catalog currently supports amd64 only')
-    work, output, cache = Path('/work'), Path('/output'), Path('/cache')
+    work = Path(os.environ.get('PHP56_WORK', '/work')).resolve()
+    output = Path(os.environ.get('PHP56_OUTPUT', '/output')).resolve()
+    cache = Path(os.environ.get('PHP56_CACHE', '/cache')).resolve()
     lock = (work / 'build.lock').open('w')
     fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
     evidence = output / 'evidence'
@@ -456,6 +461,7 @@ def main():
         if (output / name).exists():
             (output / name).unlink()
     status = {'ubuntu': args.ubuntu, 'status': 'IN_PROGRESS', 'patch_commit': PATCH_COMMIT,
+              'execution_mode': 'native' if args.native else 'docker',
               'compilation_test_required_for_every_target': True,
               'full_core_suite': 'required' if args.full_tests else 'not_run',
               'started_utc': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime())}
