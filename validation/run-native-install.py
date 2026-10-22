@@ -11,6 +11,7 @@ import http.client
 import json
 import os
 from pathlib import Path
+import re
 import shutil
 import subprocess
 import sys
@@ -224,10 +225,32 @@ def main():
         run(['systemctl', 'restart', 'apache2'], evidence, 'apache-system-restart')
         run(['systemctl', 'is-active', 'apache2'], evidence, 'service-apache2')
         run(['php-fpm5.6', '-t'], evidence, 'fpm-configtest')
+        libraries = run(['ldd', '/usr/lib/apache2/modules/libphp5.6.so'], evidence, 'apache-library-resolution')
+        if b'not found' in libraries:
+            raise RuntimeError('Apache PHP module has unresolved shared libraries')
         env = dict(os.environ, MIBS='')
         run(['php5.6', '-v'], evidence, 'php-version', env)
         run(['php5.6', '--ini'], evidence, 'php-ini', env)
         run(['php5.6', '-m'], evidence, 'php-modules', env)
+        loaded = json.loads(subprocess.check_output(
+            ['php5.6', '-r', 'echo json_encode(get_loaded_extensions());'], env=env).decode())
+        loaded = {name.lower() for name in loaded}
+        expected_modules = set()
+        for record in selected:
+            listing = subprocess.check_output(['dpkg-deb', '-c', str(release / 'packages' / record['filename'])]).decode()
+            for line in listing.splitlines():
+                relative = line.split()[-1].lstrip('./')
+                if '/mods-available/' not in relative or not relative.endswith('.ini'):
+                    continue
+                for directive in (Path('/') / relative).read_text().splitlines():
+                    match = re.match(r'\s*(?:zend_extension|extension)\s*=\s*([^;\s]+)', directive)
+                    if match:
+                        name = Path(match.group(1)).stem.lower()
+                        expected_modules.add('zend opcache' if name == 'opcache' else name)
+        missing = expected_modules - loaded
+        if missing:
+            raise RuntimeError('Installed module directives are not loaded in CLI: ' + ','.join(sorted(missing)))
+        report['module_directives_verified_in_cli'] = sorted(expected_modules)
         results = []
         for name in expected_extensions:
             process = subprocess.Popen(['php5.6', '-d', 'apc.enable_cli=1',
@@ -255,10 +278,15 @@ def main():
         if probe.exists():
             raise RuntimeError('Refusing to replace an existing HTTP probe')
         try:
-            probe.write_text('<?php header("Content-Type: application/json"); echo json_encode(array("version"=>PHP_VERSION,"sapi"=>PHP_SAPI,"extensions"=>get_loaded_extensions()));\n')
+            probe.write_text('<?php header("Content-Type: application/json"); echo json_encode(array("version"=>PHP_VERSION,"sapi"=>PHP_SAPI,"pid"=>getmypid(),"extensions"=>get_loaded_extensions()));\n')
             info = http_json(80, '/' + probe.name)
             if info['sapi'] != 'apache2handler' or 'php2shell' not in info['version']:
                 raise RuntimeError('System Apache serves an unexpected PHP runtime')
+            pid = info.pop('pid')
+            module = Path('/usr/lib/apache2/modules/libphp5.6.so')
+            if str(module) not in Path('/proc/%d/maps' % pid).read_text():
+                raise RuntimeError('System Apache is not using the expected module file')
+            info['module_sha256'] = hashlib.sha256(module.read_bytes()).hexdigest()
             save(evidence / 'apache-system-info.json', info)
         finally:
             if probe.exists():
