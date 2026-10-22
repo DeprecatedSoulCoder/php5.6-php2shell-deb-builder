@@ -72,7 +72,7 @@ For Bionic or Focal, substitute `18.04` or `20.04` **and run on that matching OS
 
 Service starts requested by package maintainer scripts are temporarily blocked during the build. The previous service policy is restored on normal completion or failure. Existing application services are not a suitable environment for this mode; use a disposable build/test VM. Review native logs before publishing them because they can contain local build paths.
 
-After a successful build, the optional native installation test installs the compatible catalog together and exercises CLI and Apache. Its default selection excludes YAC, Xcache and Gmagick in favor of APCu/OPcache and Imagick. It also excludes SMBClient: native 16.04/18.04 tests found a shutdown crash when SMBClient and MongoDB were loaded together. All four packages are still built and tested individually. Review and remove any already installed excluded extension before running this test:
+After a successful build, the optional native installation test installs the compatible catalog together and exercises CLI and Apache. Its default selection excludes YAC, Xcache and Gmagick in favor of APCu/OPcache and Imagick. It also excludes SMBClient: native 16.04/18.04 tests found a shutdown crash when SMBClient and MongoDB were loaded together. PECL Uploadprogress is excluded because it replaces the core multipart callback, breaking the core session upload-progress counter check. All five packages are still built and tested individually. Review and remove any already installed excluded extension before running this test:
 
 ```bash
 sudo python3 validation/run-native-install.py \
@@ -80,7 +80,7 @@ sudo python3 validation/run-native-install.py \
   --evidence "$PWD/validation-results/16.04" --debug --apply
 ```
 
-This test changes packages and Apache configuration and starts Apache, FPM, Memcached and Redis on the VM. It prefers APCu/OPcache and Imagick, excludes YAC/Xcache/Gmagick, simulates APT first, verifies installed versions and runs the extension smoke checks with all selected modules loaded together. It is an installation test for disposable VMs, not an unattended production deployment tool. Its raw results are ignored by Git; publish only reviewed/redacted evidence. All target status labels still require actual compilation and installation evidence.
+This test changes packages and Apache configuration and starts Apache, FPM, Memcached and Redis on the VM. It uses the compatible selection described above, simulates APT first, verifies installed versions and runs the extension smoke checks with all selected modules loaded together. It is an installation test for disposable VMs, not an unattended production deployment tool. Its raw results are ignored by Git; publish only reviewed/redacted evidence. All target status labels still require actual compilation and installation evidence.
 
 ## What it does
 
@@ -121,7 +121,7 @@ cd output/16.04
 sha256sum -c SHA256SUMS
 ```
 
-Select the core/SAPI packages and extensions actually in use. Do not install every `.deb` indiscriminately: APCu/YAC/Xcache and Imagick/Gmagick include historical alternatives/conflicts. SMBClient and MongoDB also crashed together during shutdown in native 16.04/18.04 tests; APT does not detect this runtime conflict. Select one of that pair unless you independently resolve and validate it. APT still needs matching Ubuntu repositories for system-library dependencies. Existing PHP extensions may need updating together because of exact `php5.6-common` dependencies. Validate an upgrade and rollback on a clone of the application server first.
+Select the core/SAPI packages and extensions actually in use. Do not install every `.deb` indiscriminately: APCu/YAC/Xcache and Imagick/Gmagick include historical alternatives/conflicts. SMBClient and MongoDB also crashed together during shutdown in native 16.04/18.04 tests; APT does not detect this runtime conflict. Select one of that pair unless you independently resolve and validate it. PECL Uploadprogress also overrides the core session upload-progress callback, so the tested selection uses the core feature instead. APT still needs matching Ubuntu repositories for system-library dependencies. Existing PHP extensions may need updating together because of exact `php5.6-common` dependencies. Validate an upgrade and rollback on a clone of the application server first.
 
 The generated local APT index is unsigned. Publishing a production APT repository, signing releases, and automatic deployment are separate work; this project does not perform them.
 

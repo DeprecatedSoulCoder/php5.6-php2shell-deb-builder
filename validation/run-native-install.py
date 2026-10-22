@@ -23,6 +23,7 @@ EXCLUDED = {
     'php5.6-xcache': 'APCu and OPcache selected; Xcache is an alternative cache.',
     'php5.6-gmagick': 'Imagick selected; Gmagick conflicts with the Imagick virtual package.',
     'php5.6-smbclient': 'MongoDB selected; SMBClient plus MongoDB crashed during SASL cleanup on native 16.04/18.04 tests.',
+    'php5.6-uploadprogress': 'Core session upload progress selected; this PECL extension replaces its multipart callback and breaks the counter regression check.',
 }
 
 
